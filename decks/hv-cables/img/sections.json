@@ -1,36 +1,36 @@
 {
  "layers.svg": [
-  ["Conductor", "ينقل التيار", "conductor", 70],
-  ["Conductor Screen", "ينعّم الجهد على سطح الموصل", "screen", 12],
-  ["XLPE Insulation", "العزل الرئيسي", "xlpe", 105],
-  ["Insulation Screen", "يحصر المجال داخل العزل", "screen", 12],
-  ["Metallic Screen", "يحمل تيار القصر ويوصل بالأرض", "wires", 20],
-  ["Outer Jacket", "يحمي الكابل من الخارج", "jacket", 40]
+  ["Conductor", "ينقل التيار", "conductor", 70, "Carries the current"],
+  ["Conductor Screen", "ينعّم الجهد على سطح الموصل", "screen", 12, "Smooths the field at the conductor"],
+  ["XLPE Insulation", "العزل الرئيسي", "xlpe", 105, "Main insulation"],
+  ["Insulation Screen", "يحصر المجال داخل العزل", "screen", 12, "Keeps the field inside the insulation"],
+  ["Metallic Screen", "يحمل تيار القصر ويوصل بالأرض", "wires", 20, "Carries fault current to earth"],
+  ["Outer Jacket", "يحمي الكابل من الخارج", "jacket", 40, "Protects the cable from outside"]
  ],
  "screen-cu-wire.svg": [
-  ["Conductor", "ينقل التيار", "conductor", 70],
-  ["Conductor Screen", "ينعّم الجهد على سطح الموصل", "screen", 12],
-  ["XLPE Insulation", "العزل الرئيسي", "xlpe", 105],
-  ["Insulation Screen", "يحصر المجال داخل العزل", "screen", 12],
-  ["Copper Wire Screen", "يحمل تيار القصر", "wires", 18],
-  ["AL Laminated Tape", "يمنع دخول الرطوبة", "tape", 6],
-  ["Outer Jacket", "يحمي الكابل من الخارج", "jacket", 38]
+  ["Conductor", "ينقل التيار", "conductor", 70, "Carries the current"],
+  ["Conductor Screen", "ينعّم الجهد على سطح الموصل", "screen", 12, "Smooths the field at the conductor"],
+  ["XLPE Insulation", "العزل الرئيسي", "xlpe", 105, "Main insulation"],
+  ["Insulation Screen", "يحصر المجال داخل العزل", "screen", 12, "Keeps the field inside the insulation"],
+  ["Copper Wire Screen", "يحمل تيار القصر", "wires", 18, "Carries fault current"],
+  ["AL Laminated Tape", "يمنع دخول الرطوبة", "tape", 6, "Keeps moisture out"],
+  ["Outer Jacket", "يحمي الكابل من الخارج", "jacket", 38, "Protects the cable from outside"]
  ],
  "screen-lead.svg": [
-  ["Conductor", "ينقل التيار", "conductor", 70],
-  ["Conductor Screen", "ينعّم الجهد على سطح الموصل", "screen", 12],
-  ["XLPE Insulation", "العزل الرئيسي", "xlpe", 105],
-  ["Insulation Screen", "يحصر المجال داخل العزل", "screen", 12],
-  ["Lead Sheath", "يمنع الرطوبة ويحمل تيار القصر", "lead", 24],
-  ["Outer Jacket", "يحمي الكابل من الخارج", "jacket", 38]
+  ["Conductor", "ينقل التيار", "conductor", 70, "Carries the current"],
+  ["Conductor Screen", "ينعّم الجهد على سطح الموصل", "screen", 12, "Smooths the field at the conductor"],
+  ["XLPE Insulation", "العزل الرئيسي", "xlpe", 105, "Main insulation"],
+  ["Insulation Screen", "يحصر المجال داخل العزل", "screen", 12, "Keeps the field inside the insulation"],
+  ["Lead Sheath", "يمنع الرطوبة ويحمل تيار القصر", "lead", 24, "Watertight, carries fault current"],
+  ["Outer Jacket", "يحمي الكابل من الخارج", "jacket", 38, "Protects the cable from outside"]
  ],
  "screen-lead-cu.svg": [
-  ["Conductor", "ينقل التيار", "conductor", 70],
-  ["Conductor Screen", "ينعّم الجهد على سطح الموصل", "screen", 12],
-  ["XLPE Insulation", "العزل الرئيسي", "xlpe", 105],
-  ["Insulation Screen", "يحصر المجال داخل العزل", "screen", 12],
-  ["Copper Wire Screen", "يكمّل الرصاص في حمل تيار القصر", "wires", 18],
-  ["Lead Sheath", "يمنع دخول الرطوبة", "lead", 22],
-  ["Outer Jacket", "يحمي الكابل من الخارج", "jacket", 38]
+  ["Conductor", "ينقل التيار", "conductor", 70, "Carries the current"],
+  ["Conductor Screen", "ينعّم الجهد على سطح الموصل", "screen", 12, "Smooths the field at the conductor"],
+  ["XLPE Insulation", "العزل الرئيسي", "xlpe", 105, "Main insulation"],
+  ["Insulation Screen", "يحصر المجال داخل العزل", "screen", 12, "Keeps the field inside the insulation"],
+  ["Copper Wire Screen", "يكمّل الرصاص في حمل تيار القصر", "wires", 18, "Helps the lead carry fault current"],
+  ["Lead Sheath", "يمنع دخول الرطوبة", "lead", 22, "Keeps moisture out"],
+  ["Outer Jacket", "يحمي الكابل من الخارج", "jacket", 38, "Protects the cable from outside"]
  ]
 }

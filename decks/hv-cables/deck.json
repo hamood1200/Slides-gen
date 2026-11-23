@@ -2,122 +2,255 @@
   "slug": "hv-cables",
   "discipline": "electrical",
   "languages": [
-    "ar"
+    "ar",
+    "en"
   ],
   "max_slides": 40,
   "offer": "excel-bundle",
   "cover": {
-    "title": "كوابل الضغط العالي XLPE",
-    "subtitle": "الطبقات، والتصنيع، والـ Sheath bonding، وحساب الـ Ampacity والقصر، وطرق التركيب",
+    "title": {
+      "ar": "كوابل الضغط العالي XLPE",
+      "en": "XLPE High-Voltage Cables"
+    },
+    "subtitle": {
+      "ar": "الطبقات، والتصنيع، والـ Sheath bonding، وحساب الـ Ampacity والقصر، وطرق التركيب",
+      "en": "Layers, manufacturing, sheath bonding, ampacity and short-circuit ratings, and laying methods"
+    },
     "photo": "decks/hv-cables/img/cover-cables.jpg",
     "year": "2026"
   },
   "slides": [
     {
       "type": "section",
-      "title": "الكابل في الشبكة",
-      "sub": "أين يُستخدم كابل الضغط العالي، ولماذا صار الـ XLPE هو المعتاد"
-    },
-    {
-      "type": "bullets",
-      "title": "دائرة كابل الضغط العالي",
-      "points": [
-        {
-          "text": "ينقل القدرة تحت الأرض بين محطتين، أو من محطة إلى خط هوائي",
-          "sub": "الجهود المعتادة بين 66 و 230 kV"
-        },
-        "كل دائرة ثلاثة كوابل Single-core، كابل لكل Phase",
-        {
-          "text": "الـ Sealing ends تربط الكابل بالمعدات أو بالخط الهوائي",
-          "sub": "وهي العوازل الطويلة التي تراها في الصورة"
-        },
-        "الـ Joints حين يكون المسار أطول من Drum واحد",
-        {
-          "text": "الـ Link boxes وكوابل التأريض للـ Metallic screen",
-          "sub": "نعود لها في جزء الـ Bonding"
-        }
-      ],
-      "image": "decks/hv-cables/img/circuit.jpg",
-      "eyebrow": "Uo/U (Um)",
-      "note": {
-        "label": "قراءة الجهد",
-        "text": "127/220 (245) kV تعني: Uo = 127 kV بين الموصل والأرض، و U = 220 kV بين Phase وآخر، و Um = 245 kV أعلى جهد تصل له الشبكة."
+      "title": {
+        "ar": "الكابل في الشبكة",
+        "en": "The cable in the network"
+      },
+      "sub": {
+        "ar": "أين يُستخدم كابل الضغط العالي، ولماذا صار الـ XLPE هو المعتاد",
+        "en": "Where HV cables are used, and why XLPE became the default"
       }
     },
     {
       "type": "bullets",
-      "title": "لماذا الـ XLPE",
+      "title": {
+        "ar": "دائرة كابل الضغط العالي",
+        "en": "An HV cable circuit"
+      },
       "points": [
         {
-          "text": "يعمل باستمرار على 90°C عند الـ Conductor",
-          "sub": "فيحمل تياراً أعلى من كوابل PVC أو كوابل الورق والزيت"
+          "text": {
+            "ar": "ينقل القدرة تحت الأرض بين محطتين، أو من محطة إلى خط هوائي",
+            "en": "Carries power underground between substations, or to an overhead line"
+          },
+          "sub": {
+            "ar": "الجهود المعتادة بين 66 و 230 kV",
+            "en": "Typical voltages run from 66 to 230 kV"
+          }
         },
         {
-          "text": "يتحمل 105°C في الطوارئ",
-          "sub": "بحد أقصى 216 ساعة في أي 12 شهراً، ومتوسط 72 ساعة في السنة"
-        },
-        "يصل إلى 250°C أثناء الـ Short circuit، لثوانٍ قليلة",
-        {
-          "text": "الـ Dielectric losses قليلة، والـ Charging current منخفض",
-          "sub": "الـ Dielectric losses تزيد مع مربع الجهد، لذلك تهم أكثر في الجهود العالية"
+          "ar": "كل دائرة ثلاثة كوابل Single-core، كابل لكل Phase",
+          "en": "Each circuit is three single-core cables, one per phase"
         },
         {
-          "text": "لا يحتوي زيتاً",
-          "sub": "فلا مشكلة مع فرق الارتفاع على المسار، ولا خطر تسريب"
+          "text": {
+            "ar": "الـ Sealing ends تربط الكابل بالمعدات أو بالخط الهوائي",
+            "en": "Sealing ends connect the cable to equipment or an overhead line"
+          },
+          "sub": {
+            "ar": "وهي العوازل الطويلة التي تراها في الصورة",
+            "en": "They are the tall insulators in the photo"
+          }
         },
-        "أخف وزناً، والـ Joints والـ Terminations أبسط في التركيب"
+        {
+          "ar": "الـ Joints حين يكون المسار أطول من Drum واحد",
+          "en": "Joints when the route is longer than one drum"
+        },
+        {
+          "text": {
+            "ar": "الـ Link boxes وكوابل التأريض للـ Metallic screen",
+            "en": "Link boxes and earthing cables for the metallic screen"
+          },
+          "sub": {
+            "ar": "نعود لها في جزء الـ Bonding",
+            "en": ""
+          }
+        }
+      ],
+      "image": "decks/hv-cables/img/circuit.jpg",
+      "eyebrow": {
+        "ar": "Uo/U (Um)",
+        "en": "Voltage rating"
+      },
+      "note": {
+        "label": {
+          "ar": "قراءة الجهد",
+          "en": "Reading the voltage"
+        },
+        "text": {
+          "ar": "127/220 (245) kV تعني: Uo = 127 kV بين الموصل والأرض، و U = 220 kV بين Phase وآخر، و Um = 245 kV أعلى جهد تصل له الشبكة.",
+          "en": "127/220 (245) kV: Uo = 127 kV conductor to earth, U = 220 kV phase to phase, Um = 245 kV the system maximum."
+        }
+      }
+    },
+    {
+      "type": "bullets",
+      "title": {
+        "ar": "لماذا الـ XLPE",
+        "en": "Why XLPE"
+      },
+      "points": [
+        {
+          "text": {
+            "ar": "يعمل باستمرار على 90°C عند الـ Conductor",
+            "en": "Runs continuously at 90°C at the conductor"
+          },
+          "sub": {
+            "ar": "فيحمل تياراً أعلى من كوابل PVC أو كوابل الورق والزيت",
+            "en": "So it carries more current than PVC or paper-oil cables"
+          }
+        },
+        {
+          "text": {
+            "ar": "يتحمل 105°C في الطوارئ",
+            "en": "Takes 105°C in emergencies"
+          },
+          "sub": {
+            "ar": "بحد أقصى 216 ساعة في أي 12 شهراً، ومتوسط 72 ساعة في السنة",
+            "en": "Up to 216 hours in any 12 months, and 72 hours a year on average"
+          }
+        },
+        {
+          "ar": "يصل إلى 250°C أثناء الـ Short circuit، لثوانٍ قليلة",
+          "en": "Reaches 250°C during a short circuit, for a few seconds"
+        },
+        {
+          "text": {
+            "ar": "الـ Dielectric losses قليلة، والـ Charging current منخفض",
+            "en": "Low dielectric losses and low charging current"
+          },
+          "sub": {
+            "ar": "الـ Dielectric losses تزيد مع مربع الجهد، لذلك تهم أكثر في الجهود العالية",
+            "en": "Dielectric losses grow with the square of the voltage, so they matter more at high voltage"
+          }
+        },
+        {
+          "text": {
+            "ar": "لا يحتوي زيتاً",
+            "en": "No oil inside"
+          },
+          "sub": {
+            "ar": "فلا مشكلة مع فرق الارتفاع على المسار، ولا خطر تسريب",
+            "en": "Height changes along the route are no problem, and nothing can leak"
+          }
+        },
+        {
+          "ar": "أخف وزناً، والـ Joints والـ Terminations أبسط في التركيب",
+          "en": "Lighter, with simpler joints and terminations"
+        }
       ],
       "image": "decks/hv-cables/img/xlpe-glow.jpg"
     },
     {
       "type": "section",
-      "title": "الكابل طبقة طبقة",
-      "sub": "ست طبقات، لكل واحدة وظيفة"
+      "title": {
+        "ar": "الكابل طبقة طبقة",
+        "en": "The cable, layer by layer"
+      },
+      "sub": {
+        "ar": "ست طبقات، لكل واحدة وظيفة",
+        "en": "Six layers, each with one job"
+      }
     },
     {
       "type": "bullets",
-      "title": "مقطع الكابل",
+      "title": {
+        "ar": "مقطع الكابل",
+        "en": "Cable cross-section"
+      },
       "points": [
         {
           "text": "Conductor",
-          "sub": "نحاس أو ألمنيوم، يحمل تيار الحمل"
+          "sub": {
+            "ar": "نحاس أو ألمنيوم، يحمل تيار الحمل",
+            "en": "Copper or aluminium; carries the load current"
+          }
         },
         {
           "text": "Conductor Screen",
-          "sub": "طبقة Semi-conductive تنعّم سطح الأسلاك، فيتوزع المجال الكهربائي بالتساوي"
+          "sub": {
+            "ar": "طبقة Semi-conductive تنعّم سطح الأسلاك، فيتوزع المجال الكهربائي بالتساوي",
+            "en": "A semi-conductive layer that smooths the strands, so the electric field spreads evenly"
+          }
         },
         {
           "text": "XLPE Insulation",
-          "sub": "الطبقة الأسمك، وعليها يقع كل الجهد"
+          "sub": {
+            "ar": "الطبقة الأسمك، وعليها يقع كل الجهد",
+            "en": "The thickest layer; it holds the full voltage"
+          }
         },
         {
           "text": "Insulation Screen",
-          "sub": "Semi-conductive أيضاً، تحبس المجال داخل العزل"
+          "sub": {
+            "ar": "Semi-conductive أيضاً، تحبس المجال داخل العزل",
+            "en": "Also semi-conductive; keeps the field inside the insulation"
+          }
         },
         {
           "text": "Metallic Screen",
-          "sub": "أسلاك نحاس أو Lead sheath، تحمل الـ Charging current وتيار العطل"
+          "sub": {
+            "ar": "أسلاك نحاس أو Lead sheath، تحمل الـ Charging current وتيار العطل",
+            "en": "Copper wires or a lead sheath; carries charging and fault current"
+          }
         },
         {
           "text": "Outer Jacket",
-          "sub": "PE أو PVC، يحمي كل ما سبق من الماء والصدمات"
+          "sub": {
+            "ar": "PE أو PVC، يحمي كل ما سبق من الماء والصدمات",
+            "en": "PE or PVC; protects everything inside from water and impact"
+          }
         }
       ],
-      "image": "decks/hv-cables/img/layers.svg",
+      "image": {
+        "ar": "decks/hv-cables/img/layers.svg",
+        "en": "decks/hv-cables/img/layers-en.svg"
+      },
       "fit": "contain"
     },
     {
       "type": "bullets",
-      "title": "كيف تبدو الطبقات في كابل حقيقي",
+      "title": {
+        "ar": "كيف تبدو الطبقات في كابل حقيقي",
+        "en": "What the layers look like in a real cable"
+      },
       "points": [
-        "الـ Conductor في القلب، وحوله طبقة سوداء رقيقة هي الـ Conductor screen",
         {
-          "text": "الطبقة البيضاء السميكة هي الـ XLPE insulation",
-          "sub": "في كابل 132 kV سماكتها حوالي 18 mm"
+          "ar": "الـ Conductor في القلب، وحوله طبقة سوداء رقيقة هي الـ Conductor screen",
+          "en": "The conductor sits in the core, wrapped in a thin black conductor screen"
         },
-        "طبقة سوداء ثانية فوق العزل هي الـ Insulation screen",
-        "الأسلاك النحاسية الملفوفة حلزونياً هي الـ Copper wire screen",
-        "فوقها Aluminium tape يمنع دخول الرطوبة، ثم الـ Outer jacket الأسود"
+        {
+          "text": {
+            "ar": "الطبقة البيضاء السميكة هي الـ XLPE insulation",
+            "en": "The thick white layer is the XLPE insulation"
+          },
+          "sub": {
+            "ar": "في كابل 132 kV سماكتها حوالي 18 mm",
+            "en": "About 18 mm thick on a 132 kV cable"
+          }
+        },
+        {
+          "ar": "طبقة سوداء ثانية فوق العزل هي الـ Insulation screen",
+          "en": "A second black layer over the insulation is the insulation screen"
+        },
+        {
+          "ar": "الأسلاك النحاسية الملفوفة حلزونياً هي الـ Copper wire screen",
+          "en": "The helical copper wires are the copper wire screen"
+        },
+        {
+          "ar": "فوقها Aluminium tape يمنع دخول الرطوبة، ثم الـ Outer jacket الأسود",
+          "en": "Over them, an aluminium tape keeps moisture out, then the black outer jacket"
+        }
       ],
       "image": "decks/hv-cables/img/cable-cut.jpg",
       "fit": "contain",
@@ -146,10 +279,16 @@
     },
     {
       "type": "table",
-      "title": "الـ Conductor: نحاس أم ألمنيوم",
+      "title": {
+        "ar": "الـ Conductor: نحاس أم ألمنيوم",
+        "en": "The conductor: copper or aluminium"
+      },
       "rows": [
         [
-          "الخاصية",
+          {
+            "ar": "الخاصية",
+            "en": "Property"
+          },
           "Copper",
           "Aluminium"
         ],
@@ -165,86 +304,185 @@
         ],
         [
           "Tensile strength (N/mm²)",
-          "200 إلى 300",
-          "70 إلى 90"
+          {
+            "ar": "200 إلى 300",
+            "en": "200 to 300"
+          },
+          {
+            "ar": "70 إلى 90",
+            "en": "70 to 90"
+          }
         ],
         [
-          "الشكل حتى 800 mm²",
+          {
+            "ar": "الشكل حتى 800 mm²",
+            "en": "Shape up to 800 mm²"
+          },
           "Round compacted",
           "Round compacted"
         ],
         [
-          "المقاطع الكبيرة",
-          "Milliken من 1000 mm²",
-          "Milliken فوق 1200 mm²"
+          {
+            "ar": "المقاطع الكبيرة",
+            "en": "Large sizes"
+          },
+          {
+            "ar": "Milliken من 1000 mm²",
+            "en": "Milliken from 1000 mm²"
+          },
+          {
+            "ar": "Milliken فوق 1200 mm²",
+            "en": "Milliken above 1200 mm²"
+          }
         ]
       ],
       "note": {
-        "label": "لماذا Milliken",
-        "text": "في المقاطع الكبيرة يدفع الـ Skin effect التيار نحو حافة الموصل. تقسيم الموصل إلى خمسة Segments معزولة عن بعضها يقلل هذا الأثر ويخفض المقاومة الفعلية."
+        "label": {
+          "ar": "لماذا Milliken",
+          "en": "Why Milliken"
+        },
+        "text": {
+          "ar": "في المقاطع الكبيرة يدفع الـ Skin effect التيار نحو حافة الموصل. تقسيم الموصل إلى خمسة Segments معزولة عن بعضها يقلل هذا الأثر ويخفض المقاومة الفعلية.",
+          "en": "In large sizes, skin effect pushes current to the outside of the conductor. Splitting it into five insulated segments reduces this and lowers the AC resistance."
+        }
       }
     },
     {
       "type": "formula",
-      "title": "كيف تُحسب سماكة الـ Insulation",
-      "rule": "نحسب السماكة بثلاث طرق ونأخذ أكبرها: A من جهد الـ AC test، و B من متوسط الـ Impulse voltage، و C من أعلى Impulse stress عند الموصل.",
+      "title": {
+        "ar": "كيف تُحسب سماكة الـ Insulation",
+        "en": "How insulation thickness is set"
+      },
+      "rule": {
+        "ar": "نحسب السماكة بثلاث طرق ونأخذ أكبرها: A من جهد الـ AC test، و B من متوسط الـ Impulse voltage، و C من أعلى Impulse stress عند الموصل.",
+        "en": "Work out the thickness three ways and take the largest: A from the AC test voltage, B from the average impulse voltage, C from the peak impulse stress at the conductor."
+      },
       "tex": "t_{ins} = \\max\\left(t_A,\\; t_B,\\; t_C\\right)",
-      "where": "الطريقة A مثلاً: $t_A = \\dfrac{U_0}{E_{ac}}\\, k_1 k_2 k_3$، حيث $E_{ac}$ الـ Stress المسموح لساعة، و $k$ معاملات الحرارة والـ Ageing والأمان.",
+      "where": {
+        "ar": "الطريقة A مثلاً: $t_A = \\dfrac{U_0}{E_{ac}}\\, k_1 k_2 k_3$، حيث $E_{ac}$ الـ Stress المسموح لساعة، و $k$ معاملات الحرارة والـ Ageing والأمان.",
+        "en": "Method A, for example: $t_A = \\dfrac{U_0}{E_{ac}}\\, k_1 k_2 k_3$, where $E_{ac}$ is the allowed one-hour stress and the $k$ factors cover temperature, ageing and safety."
+      },
       "example": {
-        "title": "من الكتالوج",
+        "title": {
+          "ar": "من الكتالوج",
+          "en": "From the catalogue"
+        },
         "rows": [
           [
-            "الكابل",
+            {
+              "ar": "الكابل",
+              "en": "Cable"
+            },
             "76/132 (145) kV"
           ],
           [
-            "المقطع",
-            "240 إلى 2000 mm²"
+            {
+              "ar": "المقطع",
+              "en": "Size"
+            },
+            {
+              "ar": "240 إلى 2000 mm²",
+              "en": "240 to 2000 mm²"
+            }
           ],
           [
             "BIL",
             "650 kV"
           ]
         ],
-        "result": "سماكة الـ XLPE = 18.0 mm"
+        "result": {
+          "ar": "سماكة الـ XLPE = 18.0 mm",
+          "en": "XLPE thickness = 18.0 mm"
+        }
       },
-      "note": "السماكة ثابتة لكل المقاطع على نفس الجهد، لأن ما يحددها هو الجهد وليس التيار."
+      "note": {
+        "ar": "السماكة ثابتة لكل المقاطع على نفس الجهد، لأن ما يحددها هو الجهد وليس التيار.",
+        "en": "The thickness is the same for every size at one voltage, because voltage sets it, not current."
+      }
     },
     {
       "type": "bullets",
-      "title": "وظائف الـ Metallic Screen",
+      "title": {
+        "ar": "وظائف الـ Metallic Screen",
+        "en": "What the metallic screen does"
+      },
       "points": [
         {
-          "text": "يحبس المجال الكهربائي داخل الكابل",
-          "sub": "فلا يظهر أي مجال خارجه"
+          "text": {
+            "ar": "يحبس المجال الكهربائي داخل الكابل",
+            "en": "Keeps the electric field inside the cable"
+          },
+          "sub": {
+            "ar": "فلا يظهر أي مجال خارجه",
+            "en": "No field shows outside it"
+          }
         },
-        "يحمل الـ Charging current في التشغيل العادي",
         {
-          "text": "يحمل الـ Earth fault current",
-          "sub": "وهو الذي يحدد مقطعه، مثلاً 95 mm² تتحمل 15.3 kA لثانية"
+          "ar": "يحمل الـ Charging current في التشغيل العادي",
+          "en": "Carries the charging current in normal service"
         },
-        "يحمل الـ Induced currents من الـ Phases المجاورة",
-        "يحمي من يلمس الكابل، ويقلل أثر الأعطال على ما حوله"
+        {
+          "text": {
+            "ar": "يحمل الـ Earth fault current",
+            "en": "Carries the earth fault current"
+          },
+          "sub": {
+            "ar": "وهو الذي يحدد مقطعه، مثلاً 95 mm² تتحمل 15.3 kA لثانية",
+            "en": "This sets its size: 95 mm² takes 15.3 kA for one second"
+          }
+        },
+        {
+          "ar": "يحمل الـ Induced currents من الـ Phases المجاورة",
+          "en": "Carries currents induced by the neighbouring phases"
+        },
+        {
+          "ar": "يحمي من يلمس الكابل، ويقلل أثر الأعطال على ما حوله",
+          "en": "Protects anyone who touches the cable and limits fault damage around it"
+        }
       ],
       "image": "decks/hv-cables/img/cable-132.jpg",
       "fit": "contain"
     },
     {
       "type": "bullets",
-      "title": "Copper Wire Screen مع Aluminium Tape",
+      "title": {
+        "ar": "Copper Wire Screen مع Aluminium Tape",
+        "en": "Copper wire screen with aluminium tape"
+      },
       "points": [
-        "أسلاك نحاس ملفوفة حول العزل، وفوقها Aluminium tape ملتصق بالـ Jacket",
-        "تُستخدم في الأنفاق والخنادق والـ Ducts",
         {
-          "text": "المزايا",
-          "sub": "خفيفة ورخيصة، وتتحمل Short-circuit current عالياً، والـ Tape يمنع الرطوبة من الجانب"
+          "ar": "أسلاك نحاس ملفوفة حول العزل، وفوقها Aluminium tape ملتصق بالـ Jacket",
+          "en": "Copper wires wound around the insulation, with an aluminium tape bonded to the jacket on top"
         },
         {
-          "text": "العيوب",
-          "sub": "مقاومتها منخفضة، فتحتاج Bonding خاصاً مثل Cross bonding لتقليل الـ Circulating currents"
+          "ar": "تُستخدم في الأنفاق والخنادق والـ Ducts",
+          "en": "Used in tunnels, trenches and ducts"
+        },
+        {
+          "text": {
+            "ar": "المزايا",
+            "en": "Pros"
+          },
+          "sub": {
+            "ar": "خفيفة ورخيصة، وتتحمل Short-circuit current عالياً، والـ Tape يمنع الرطوبة من الجانب",
+            "en": "Light and cheap, high short-circuit rating, and the tape blocks moisture from the side"
+          }
+        },
+        {
+          "text": {
+            "ar": "العيوب",
+            "en": "Cons"
+          },
+          "sub": {
+            "ar": "مقاومتها منخفضة، فتحتاج Bonding خاصاً مثل Cross bonding لتقليل الـ Circulating currents",
+            "en": "Low resistance, so it needs special bonding such as cross bonding to limit circulating currents"
+          }
         }
       ],
-      "image": "decks/hv-cables/img/screen-cu-wire.svg",
+      "image": {
+        "ar": "decks/hv-cables/img/screen-cu-wire.svg",
+        "en": "decks/hv-cables/img/screen-cu-wire-en.svg"
+      },
       "fit": "contain",
       "wide": true
     },
@@ -252,208 +490,427 @@
       "type": "bullets",
       "title": "Lead Sheath",
       "points": [
-        "غلاف متصل من الرصاص أو سبيكة رصاص، يُبثق حول العزل",
-        "يصلح لكل أنواع التركيب في التربة",
         {
-          "text": "المزايا",
-          "sub": "يمنع الماء تماماً لأنه بلا فواصل، ومقاومته العالية تقلل الـ Sheath losses، ويقاوم التآكل"
+          "ar": "غلاف متصل من الرصاص أو سبيكة رصاص، يُبثق حول العزل",
+          "en": "A seamless sheath of lead or lead alloy, extruded over the insulation"
         },
         {
-          "text": "العيوب",
-          "sub": "ثقيل وغالٍ، والـ Short-circuit current الذي يتحمله محدود، والرصاص مادة سامة"
+          "ar": "يصلح لكل أنواع التركيب في التربة",
+          "en": "Suits every kind of installation in soil"
+        },
+        {
+          "text": {
+            "ar": "المزايا",
+            "en": "Pros"
+          },
+          "sub": {
+            "ar": "يمنع الماء تماماً لأنه بلا فواصل، ومقاومته العالية تقلل الـ Sheath losses، ويقاوم التآكل",
+            "en": "Fully watertight with no seams; its high resistance cuts sheath losses; resists corrosion"
+          }
+        },
+        {
+          "text": {
+            "ar": "العيوب",
+            "en": "Cons"
+          },
+          "sub": {
+            "ar": "ثقيل وغالٍ، والـ Short-circuit current الذي يتحمله محدود، والرصاص مادة سامة",
+            "en": "Heavy and expensive, limited short-circuit rating, and lead is toxic"
+          }
         }
       ],
-      "image": "decks/hv-cables/img/screen-lead.svg",
+      "image": {
+        "ar": "decks/hv-cables/img/screen-lead.svg",
+        "en": "decks/hv-cables/img/screen-lead-en.svg"
+      },
       "fit": "contain",
       "wide": true
     },
     {
       "type": "bullets",
-      "title": "Lead Sheath مع Copper Wires",
+      "title": {
+        "ar": "Lead Sheath مع Copper Wires",
+        "en": "Lead sheath with copper wires"
+      },
       "points": [
-        "الـ Lead sheath يمنع الماء، والأسلاك النحاسية الإضافية تحمل تيار العطل",
-        "نلجأ له حين يكون الـ Earth fault current أكبر مما يتحمله الرصاص وحده",
         {
-          "text": "المزايا",
-          "sub": "حماية كاملة من الماء، و Short-circuit current أعلى بفضل النحاس"
+          "ar": "الـ Lead sheath يمنع الماء، والأسلاك النحاسية الإضافية تحمل تيار العطل",
+          "en": "The lead sheath keeps water out; the extra copper wires carry fault current"
         },
         {
-          "text": "العيوب",
-          "sub": "الأثقل والأغلى بين الأنواع الثلاثة، والرصاص سام"
+          "ar": "نلجأ له حين يكون الـ Earth fault current أكبر مما يتحمله الرصاص وحده",
+          "en": "Used when the earth fault current is more than the lead can carry alone"
+        },
+        {
+          "text": {
+            "ar": "المزايا",
+            "en": "Pros"
+          },
+          "sub": {
+            "ar": "حماية كاملة من الماء، و Short-circuit current أعلى بفضل النحاس",
+            "en": "Fully watertight, with a higher short-circuit rating thanks to the copper"
+          }
+        },
+        {
+          "text": {
+            "ar": "العيوب",
+            "en": "Cons"
+          },
+          "sub": {
+            "ar": "الأثقل والأغلى بين الأنواع الثلاثة، والرصاص سام",
+            "en": "The heaviest and most expensive of the three, and lead is toxic"
+          }
         }
       ],
-      "image": "decks/hv-cables/img/screen-lead-cu.svg",
+      "image": {
+        "ar": "decks/hv-cables/img/screen-lead-cu.svg",
+        "en": "decks/hv-cables/img/screen-lead-cu-en.svg"
+      },
       "fit": "contain",
       "wide": true
     },
     {
       "type": "compare",
-      "title": "الـ Outer Jacket: PE أم PVC",
+      "title": {
+        "ar": "الـ Outer Jacket: PE أم PVC",
+        "en": "Outer jacket: PE or PVC"
+      },
       "columns": [
         {
           "title": "PE",
           "points": [
-            "امتصاصه للماء أقل بكثير",
-            "أقوى ميكانيكياً وأصعب في الخدش أثناء السحب",
-            "يتحمل المواد الكيميائية في التربة",
+            {
+              "ar": "امتصاصه للماء أقل بكثير",
+              "en": "Absorbs far less water"
+            },
+            {
+              "ar": "أقوى ميكانيكياً وأصعب في الخدش أثناء السحب",
+              "en": "Tougher, and harder to scratch during pulling"
+            },
+            {
+              "ar": "يتحمل المواد الكيميائية في التربة",
+              "en": "Stands up to chemicals in the soil"
+            },
             "Halogen-free"
           ]
         },
         {
           "title": "PVC",
           "points": [
-            "أطرى وأسهل في الثني",
-            "أفضل في الـ Flame retardancy",
-            "يطلق غازات حمضية ودخاناً كثيفاً عند الاحتراق",
-            "ينفذ منه الماء مع الزمن أكثر من PE"
+            {
+              "ar": "أطرى وأسهل في الثني",
+              "en": "Softer and easier to bend"
+            },
+            {
+              "ar": "أفضل في الـ Flame retardancy",
+              "en": "Better flame retardancy"
+            },
+            {
+              "ar": "يطلق غازات حمضية ودخاناً كثيفاً عند الاحتراق",
+              "en": "Gives off acid gases and thick smoke when it burns"
+            },
+            {
+              "ar": "ينفذ منه الماء مع الزمن أكثر من PE",
+              "en": "Lets more water through over time than PE"
+            }
           ]
         }
       ],
-      "verdict": "يُطلى الـ Jacket عادة بطبقة Graphite أو Semi-conductive، حتى نفحصه بالـ DC sheath test بعد التركيب ونكشف أي خدش فيه."
+      "verdict": {
+        "ar": "يُطلى الـ Jacket عادة بطبقة Graphite أو Semi-conductive، حتى نفحصه بالـ DC sheath test بعد التركيب ونكشف أي خدش فيه.",
+        "en": "The jacket usually gets a graphite or semi-conductive coat, so a DC sheath test after laying can find any scratch in it."
+      }
     },
     {
       "type": "section",
-      "title": "التصنيع والاختبار",
-      "sub": "كيف يخرج العزل نظيفاً وبلا Voids"
+      "title": {
+        "ar": "التصنيع والاختبار",
+        "en": "Manufacturing and testing"
+      },
+      "sub": {
+        "ar": "كيف يخرج العزل نظيفاً وبلا Voids",
+        "en": "How the insulation comes out clean and free of voids"
+      }
     },
     {
       "type": "bullets",
-      "title": "الـ CV line: خط البثق المتصل",
+      "title": {
+        "ar": "الـ CV line: خط البثق المتصل",
+        "en": "The CV line: continuous extrusion"
+      },
       "points": [
         {
-          "text": "Raw material في غرفة مغلقة",
-          "sub": "بعيداً عن الرطوبة والغبار"
+          "text": {
+            "ar": "Raw material في غرفة مغلقة",
+            "en": "Raw material kept in a closed room"
+          },
+          "sub": {
+            "ar": "بعيداً عن الرطوبة والغبار",
+            "en": "Away from moisture and dust"
+          }
         },
-        "Pay-off: الـ Drum الذي عليه الموصل في بداية الخط",
-        "Extrusion: الـ Conductor screen والـ Insulation والـ Insulation screen تُبثق معاً في رأس واحد",
-        "Curing zone: يحصل الـ Cross-linking داخل أنبوب فيه نيتروجين جاف مضغوط",
-        "Cooling zone بالنيتروجين أيضاً، ثم Take-up على Drum للمرحلة التالية"
+        {
+          "ar": "Pay-off: الـ Drum الذي عليه الموصل في بداية الخط",
+          "en": "Pay-off: the drum holding the conductor at the start of the line"
+        },
+        {
+          "ar": "Extrusion: الـ Conductor screen والـ Insulation والـ Insulation screen تُبثق معاً في رأس واحد",
+          "en": "Extrusion: conductor screen, insulation and insulation screen go on together in one head"
+        },
+        {
+          "ar": "Curing zone: يحصل الـ Cross-linking داخل أنبوب فيه نيتروجين جاف مضغوط",
+          "en": "Curing zone: cross-linking happens in a tube of pressurised dry nitrogen"
+        },
+        {
+          "ar": "Cooling zone بالنيتروجين أيضاً، ثم Take-up على Drum للمرحلة التالية",
+          "en": "A nitrogen cooling zone, then take-up onto a drum for the next stage"
+        }
       ],
       "image": "decks/hv-cables/img/cv-line.png",
       "fit": "contain",
-      "tags": [
-        {
-          "x": 34.0,
-          "y": 10.8,
-          "text": "المواد الخام"
-        },
-        {
-          "x": 45.6,
-          "y": 24.7,
-          "text": "البثق"
-        },
-        {
-          "x": 11.4,
-          "y": 62.6,
-          "text": "فك الموصل من البكرة"
-        },
-        {
-          "x": 38.6,
-          "y": 75.2,
-          "text": "التشابك بالحرارة"
-        },
-        {
-          "x": 72.3,
-          "y": 38.4,
-          "text": "لف الكابل على البكرة"
-        },
-        {
-          "x": 61.2,
-          "y": 87.8,
-          "text": "التبريد"
-        }
-      ]
+      "tags": {
+        "ar": [
+          {
+            "x": 34.0,
+            "y": 10.8,
+            "text": "المواد الخام"
+          },
+          {
+            "x": 45.6,
+            "y": 24.7,
+            "text": "البثق"
+          },
+          {
+            "x": 11.4,
+            "y": 62.6,
+            "text": "فك الموصل من البكرة"
+          },
+          {
+            "x": 38.6,
+            "y": 75.2,
+            "text": "التشابك بالحرارة"
+          },
+          {
+            "x": 72.3,
+            "y": 38.4,
+            "text": "لف الكابل على البكرة"
+          },
+          {
+            "x": 61.2,
+            "y": 87.8,
+            "text": "التبريد"
+          }
+        ],
+        "en": []
+      }
     },
     {
       "type": "bullets",
-      "title": "الـ Triple Extrusion Head",
+      "title": {
+        "ar": "الـ Triple Extrusion Head",
+        "en": "The triple extrusion head"
+      },
       "points": [
-        "الطبقات الثلاث تخرج من رأس واحد في نفس اللحظة",
-        "لذلك تلتصق ببعضها بلا فجوات وبلا شوائب بين الطبقات",
         {
-          "text": "أي نتوء أو Void بين العزل والـ Screen يركّز المجال الكهربائي",
-          "sub": "ومن هناك يبدأ الـ Partial discharge، ثم الـ Breakdown مع الوقت"
+          "ar": "الطبقات الثلاث تخرج من رأس واحد في نفس اللحظة",
+          "en": "All three layers leave one head at the same moment"
         },
         {
-          "text": "نظافة المواد مهمة بنفس القدر",
-          "sub": "تُغذّى الـ Extruders بمادة عالية النقاء عبر نظام مغلق"
+          "ar": "لذلك تلتصق ببعضها بلا فجوات وبلا شوائب بين الطبقات",
+          "en": "So they bond with no gaps and no dirt between them"
+        },
+        {
+          "text": {
+            "ar": "أي نتوء أو Void بين العزل والـ Screen يركّز المجال الكهربائي",
+            "en": "Any bump or void between insulation and screen concentrates the field"
+          },
+          "sub": {
+            "ar": "ومن هناك يبدأ الـ Partial discharge، ثم الـ Breakdown مع الوقت",
+            "en": "Partial discharge starts there, and breakdown follows over time"
+          }
+        },
+        {
+          "text": {
+            "ar": "نظافة المواد مهمة بنفس القدر",
+            "en": "Clean material matters just as much"
+          },
+          "sub": {
+            "ar": "تُغذّى الـ Extruders بمادة عالية النقاء عبر نظام مغلق",
+            "en": "The extruders are fed high-purity compound through a closed system"
+          }
         }
       ],
       "image": "decks/hv-cables/img/extrusion-head.jpg"
     },
     {
       "type": "bullets",
-      "title": "الـ CDCC: Curing جاف بالنيتروجين",
+      "title": {
+        "ar": "الـ CDCC: Curing جاف بالنيتروجين",
+        "en": "CDCC: dry curing in nitrogen"
+      },
       "points": [
-        "الـ Curing والتبريد في نيتروجين جاف بدل البخار",
         {
-          "text": "الرطوبة في العزل: 0.018% بالـ CDCC مقابل 0.29% بالبخار",
-          "sub": "أي 100 إلى 200 ppm فقط"
+          "ar": "الـ Curing والتبريد في نيتروجين جاف بدل البخار",
+          "en": "Curing and cooling in dry nitrogen instead of steam"
         },
-        "الـ Voids بين 1 و 3 µm: حوالي 120 مقابل أكثر من 2000 بالبخار",
         {
-          "text": "الـ Voids الأكبر من 5 µm تختفي تقريباً",
-          "sub": "وكانت 77 Void بين 5 و 10 µm بالبخار"
+          "text": {
+            "ar": "الرطوبة في العزل: 0.018% بالـ CDCC مقابل 0.29% بالبخار",
+            "en": "Moisture in the insulation: 0.018% with CDCC against 0.29% with steam"
+          },
+          "sub": {
+            "ar": "أي 100 إلى 200 ppm فقط",
+            "en": "Only 100 to 200 ppm"
+          }
         },
-        "الخط كله يتحكم به حاسوب، فتبقى الجودة نفسها على طول الكابل"
+        {
+          "ar": "الـ Voids بين 1 و 3 µm: حوالي 120 مقابل أكثر من 2000 بالبخار",
+          "en": "Voids of 1 to 3 µm: about 120, against more than 2000 with steam"
+        },
+        {
+          "text": {
+            "ar": "الـ Voids الأكبر من 5 µm تختفي تقريباً",
+            "en": "Voids above 5 µm almost disappear"
+          },
+          "sub": {
+            "ar": "وكانت 77 Void بين 5 و 10 µm بالبخار",
+            "en": "Steam curing left 77 voids between 5 and 10 µm"
+          }
+        },
+        {
+          "ar": "الخط كله يتحكم به حاسوب، فتبقى الجودة نفسها على طول الكابل",
+          "en": "A computer runs the whole line, so quality stays the same along the cable"
+        }
       ],
       "image": "decks/hv-cables/img/cdcc-plant.jpg"
     },
     {
       "type": "bullets",
-      "title": "الـ Breakdown strength: جاف أمام بخار",
+      "title": {
+        "ar": "الـ Breakdown strength: جاف أمام بخار",
+        "en": "Breakdown strength: dry against steam"
+      },
       "points": [
-        "الرسم يقارن Probability of breakdown مقابل الـ Electrical stress بالـ kV/mm",
-        "الدوائر الوردية للبخار SCP-CV، والزرقاء للـ CDCC",
-        "في الـ AC test، العزل الجاف ينهار عند Stress أعلى بوضوح",
-        "ونفس الشيء في الـ Impulse test على يمين الرسم",
-        "السبب المباشر: رطوبة أقل و Voids أقل في العزل"
+        {
+          "ar": "الرسم يقارن Probability of breakdown مقابل الـ Electrical stress بالـ kV/mm",
+          "en": "The chart plots probability of breakdown against electrical stress in kV/mm"
+        },
+        {
+          "ar": "الدوائر الوردية للبخار SCP-CV، والزرقاء للـ CDCC",
+          "en": "Pink circles are steam (SCP-CV), blue are CDCC"
+        },
+        {
+          "ar": "في الـ AC test، العزل الجاف ينهار عند Stress أعلى بوضوح",
+          "en": "In the AC test, dry-cured insulation fails at a clearly higher stress"
+        },
+        {
+          "ar": "ونفس الشيء في الـ Impulse test على يمين الرسم",
+          "en": "The impulse test on the right shows the same"
+        },
+        {
+          "ar": "السبب المباشر: رطوبة أقل و Voids أقل في العزل",
+          "en": "The reason: less moisture and fewer voids in the insulation"
+        }
       ],
       "image": "decks/hv-cables/img/breakdown.png",
       "fit": "contain"
     },
     {
       "type": "bullets",
-      "title": "الاختبارات",
+      "title": {
+        "ar": "الاختبارات",
+        "en": "Tests"
+      },
       "points": [
         {
-          "text": "Routine tests على كل Drum",
-          "sub": "Partial discharge، و AC voltage test، و DC test على الـ Jacket"
+          "text": {
+            "ar": "Routine tests على كل Drum",
+            "en": "Routine tests on every drum"
+          },
+          "sub": {
+            "ar": "Partial discharge، و AC voltage test، و DC test على الـ Jacket",
+            "en": "Partial discharge, AC voltage test, and a DC test on the jacket"
+          }
         },
         {
-          "text": "Sample tests من الإنتاج",
-          "sub": "قياس الأبعاد والسماكات، و Hot set test للعزل"
+          "text": {
+            "ar": "Sample tests من الإنتاج",
+            "en": "Sample tests from production"
+          },
+          "sub": {
+            "ar": "قياس الأبعاد والسماكات، و Hot set test للعزل",
+            "en": "Dimensions and thicknesses, and a hot set test on the insulation"
+          }
         },
         {
-          "text": "Type tests مرة واحدة لكل تصميم",
-          "sub": "Bending، و Heating cycles، و Impulse، حسب IEC 60840 أو IEC 62067"
+          "text": {
+            "ar": "Type tests مرة واحدة لكل تصميم",
+            "en": "Type tests once per design"
+          },
+          "sub": {
+            "ar": "Bending، و Heating cycles، و Impulse، حسب IEC 60840 أو IEC 62067",
+            "en": "Bending, heating cycles and impulse, to IEC 60840 or IEC 62067"
+          }
         },
         {
-          "text": "After-installation tests في الموقع",
-          "sub": "على الكابل مع الـ Joints والـ Terminations قبل التشغيل"
+          "text": {
+            "ar": "After-installation tests في الموقع",
+            "en": "After-installation tests on site"
+          },
+          "sub": {
+            "ar": "على الكابل مع الـ Joints والـ Terminations قبل التشغيل",
+            "en": "On the cable with its joints and terminations, before energising"
+          }
         }
       ],
       "image": "decks/hv-cables/img/testing.jpg"
     },
     {
       "type": "section",
-      "title": "الـ Formation والـ Bonding",
-      "sub": "كيف نرصّ الكوابل الثلاثة، وماذا نفعل بالجهد على الـ Sheath"
+      "title": {
+        "ar": "الـ Formation والـ Bonding",
+        "en": "Formation and bonding"
+      },
+      "sub": {
+        "ar": "كيف نرصّ الكوابل الثلاثة، وماذا نفعل بالجهد على الـ Sheath",
+        "en": "How the three cables are laid, and what to do about the sheath voltage"
+      }
     },
     {
       "type": "bullets",
-      "title": "Trefoil أم Flat",
+      "title": {
+        "ar": "Trefoil أم Flat",
+        "en": "Trefoil or flat"
+      },
       "points": [
         {
-          "text": "Trefoil: الكوابل الثلاثة متلامسة",
-          "sub": "مجال مغناطيسي أقل حولها، و Induced voltage أقل على الـ Sheath"
+          "text": {
+            "ar": "Trefoil: الكوابل الثلاثة متلامسة",
+            "en": "Trefoil: the three cables touch"
+          },
+          "sub": {
+            "ar": "مجال مغناطيسي أقل حولها، و Induced voltage أقل على الـ Sheath",
+            "en": "Less magnetic field around them, and less induced voltage on the sheath"
+          }
         },
         {
-          "text": "Flat: مسافة 2De بين الكوابل",
-          "sub": "تبديد حرارة أفضل، فالـ Ampacity أعلى قليلاً"
+          "text": {
+            "ar": "Flat: مسافة 2De بين الكوابل",
+            "en": "Flat: 2De spacing between cables"
+          },
+          "sub": {
+            "ar": "تبديد حرارة أفضل، فالـ Ampacity أعلى قليلاً",
+            "en": "Better heat dissipation, so slightly higher ampacity"
+          }
         },
-        "لكن في الـ Flat الـ Sheath losses أعلى إذا كان الـ Bonding من الطرفين",
-        "جداول الكتالوج محسوبة على عمق 1.5 m من سطح الأرض إلى محور الكابل"
+        {
+          "ar": "لكن في الـ Flat الـ Sheath losses أعلى إذا كان الـ Bonding من الطرفين",
+          "en": "But flat formation has higher sheath losses when both ends are bonded"
+        },
+        {
+          "ar": "جداول الكتالوج محسوبة على عمق 1.5 m من سطح الأرض إلى محور الكابل",
+          "en": "Catalogue tables assume 1.5 m from ground level to the cable axis"
+        }
       ],
       "image": "decks/hv-cables/img/install-ground.png",
       "fit": "contain",
@@ -463,158 +920,233 @@
       "type": "bullets",
       "title": "Both Ends Bonding",
       "points": [
-        "الـ Sheath موصول بالأرض عند طرفي المسار",
-        "لا يظهر جهد على الـ Sheath، فهو الأكثر أماناً",
         {
-          "text": "لكن الـ Sheath والأرض يكوّنان حلقة مغلقة، فيمر فيها Circulating current",
-          "sub": "يتناسب مع تيار الموصل والمسافة بين الـ Phases"
+          "ar": "الـ Sheath موصول بالأرض عند طرفي المسار",
+          "en": "The sheath is earthed at both ends of the route"
         },
         {
-          "text": "هذا التيار يسخّن الكابل ويقلل الـ Ampacity",
-          "sub": "لذلك يناسب المسارات القصيرة أو الكوابل الصغيرة"
+          "ar": "لا يظهر جهد على الـ Sheath، فهو الأكثر أماناً",
+          "en": "No voltage builds on the sheath, so it is the safest option"
+        },
+        {
+          "text": {
+            "ar": "لكن الـ Sheath والأرض يكوّنان حلقة مغلقة، فيمر فيها Circulating current",
+            "en": "But sheath and earth form a closed loop, so a circulating current flows"
+          },
+          "sub": {
+            "ar": "يتناسب مع تيار الموصل والمسافة بين الـ Phases",
+            "en": "It rises with conductor current and with phase spacing"
+          }
+        },
+        {
+          "text": {
+            "ar": "هذا التيار يسخّن الكابل ويقلل الـ Ampacity",
+            "en": "That current heats the cable and lowers the ampacity"
+          },
+          "sub": {
+            "ar": "لذلك يناسب المسارات القصيرة أو الكوابل الصغيرة",
+            "en": "So it suits short routes or small cables"
+          }
         }
       ],
       "image": "decks/hv-cables/img/bond-both.png",
       "fit": "contain",
       "wide": true,
-      "tags": [
-        {
-          "x": 75.8,
-          "y": 15.6,
-          "text": "نهاية الكابل"
-        },
-        {
-          "x": 3.9,
-          "y": 28.2,
-          "text": "أسلاك الربط"
-        },
-        {
-          "x": 1.6,
-          "y": 63.1,
-          "text": "صندوق ربط مؤرض"
-        },
-        {
-          "x": 94.7,
-          "y": 63.1,
-          "text": "صندوق ربط مؤرض",
-          "end": true
-        }
-      ]
+      "tags": {
+        "ar": [
+          {
+            "x": 75.8,
+            "y": 15.6,
+            "text": "نهاية الكابل"
+          },
+          {
+            "x": 3.9,
+            "y": 28.2,
+            "text": "أسلاك الربط"
+          },
+          {
+            "x": 1.6,
+            "y": 63.1,
+            "text": "صندوق ربط مؤرض"
+          },
+          {
+            "x": 94.7,
+            "y": 63.1,
+            "text": "صندوق ربط مؤرض",
+            "end": true
+          }
+        ],
+        "en": []
+      }
     },
     {
       "type": "bullets",
       "title": "Single Point Bonding",
       "points": [
-        "الـ Sheath مؤرض من طرف واحد فقط، والطرف الآخر مفتوح",
         {
-          "text": "لا يمر Circulating current، لكن Induced voltage يظهر على الـ Sheath ويزيد مع الطول",
-          "sub": "عادة بضع عشرات من الفولتات في التشغيل العادي"
+          "ar": "الـ Sheath مؤرض من طرف واحد فقط، والطرف الآخر مفتوح",
+          "en": "The sheath is earthed at one end only; the other end is open"
         },
         {
-          "text": "عند الطرف المفتوح نركّب Sheath Voltage Limiter أو SVL",
-          "sub": "مقاومة لا خطية تفصل في العادي وتوصل عند الصواعق والأعطال"
+          "text": {
+            "ar": "لا يمر Circulating current، لكن Induced voltage يظهر على الـ Sheath ويزيد مع الطول",
+            "en": "No circulating current, but an induced voltage appears on the sheath and grows with length"
+          },
+          "sub": {
+            "ar": "عادة بضع عشرات من الفولتات في التشغيل العادي",
+            "en": "Usually a few tens of volts in normal service"
+          }
         },
-        "ونمد Earth Continuity Conductor أو ECC بالتوازي ليعيد تيار العطل"
+        {
+          "text": {
+            "ar": "عند الطرف المفتوح نركّب Sheath Voltage Limiter أو SVL",
+            "en": "The open end gets a sheath voltage limiter (SVL)"
+          },
+          "sub": {
+            "ar": "مقاومة لا خطية تفصل في العادي وتوصل عند الصواعق والأعطال",
+            "en": "A non-linear resistor: open in normal service, conducting during lightning and faults"
+          }
+        },
+        {
+          "ar": "ونمد Earth Continuity Conductor أو ECC بالتوازي ليعيد تيار العطل",
+          "en": "An earth continuity conductor (ECC) runs alongside to carry the fault current back"
+        }
       ],
       "image": "decks/hv-cables/img/bond-single.png",
       "fit": "contain",
       "wide": true,
-      "tags": [
-        {
-          "x": 34.7,
-          "y": 12.9,
-          "text": "الجهد المستحث على الغلاف"
-        },
-        {
-          "x": 41.7,
-          "y": 26.7,
-          "text": "طول المقطع"
-        },
-        {
-          "x": 94.7,
-          "y": 46.7,
-          "text": "صندوق ربط فيه محددات جهد",
-          "end": true
-        },
-        {
-          "x": 6.5,
-          "y": 45.5,
-          "text": "أسلاك الربط"
-        },
-        {
-          "x": 5.0,
-          "y": 73.2,
-          "text": "صندوق ربط مؤرض"
-        },
-        {
-          "x": 95.1,
-          "y": 89.0,
-          "text": "محددات جهد الغلاف",
-          "end": true
-        }
-      ]
+      "tags": {
+        "ar": [
+          {
+            "x": 34.7,
+            "y": 12.9,
+            "text": "الجهد المستحث على الغلاف"
+          },
+          {
+            "x": 41.7,
+            "y": 26.7,
+            "text": "طول المقطع"
+          },
+          {
+            "x": 94.7,
+            "y": 46.7,
+            "text": "صندوق ربط فيه محددات جهد",
+            "end": true
+          },
+          {
+            "x": 6.5,
+            "y": 45.5,
+            "text": "أسلاك الربط"
+          },
+          {
+            "x": 5.0,
+            "y": 73.2,
+            "text": "صندوق ربط مؤرض"
+          },
+          {
+            "x": 95.1,
+            "y": 89.0,
+            "text": "محددات جهد الغلاف",
+            "end": true
+          }
+        ],
+        "en": []
+      }
     },
     {
       "type": "bullets",
       "title": "Cross Bonding",
       "points": [
-        "نقسم المسار إلى ثلاثة Minor sections متساوية تكوّن Major section",
         {
-          "text": "في الـ Cross bond link boxes نبدّل الـ Sheaths بين الـ Phases",
-          "sub": "فتلغي الـ Induced voltages بعضها بعضاً"
+          "ar": "نقسم المسار إلى ثلاثة Minor sections متساوية تكوّن Major section",
+          "en": "The route is split into three equal minor sections that make one major section"
         },
-        "في الـ Flat نبدّل مواقع الكوابل نفسها أيضاً، وهذا اسمه Transposition",
         {
-          "text": "النتيجة: Circulating current شبه صفر، وجهد قليل على الـ Sheath",
-          "sub": "وهو الحل المعتاد في المسارات الطويلة"
+          "text": {
+            "ar": "في الـ Cross bond link boxes نبدّل الـ Sheaths بين الـ Phases",
+            "en": "Cross bond link boxes swap the sheaths between phases"
+          },
+          "sub": {
+            "ar": "فتلغي الـ Induced voltages بعضها بعضاً",
+            "en": "So the induced voltages cancel out"
+          }
         },
-        "الـ SVLs تُركّب في الـ Link boxes عند الـ Insulated joints"
+        {
+          "ar": "في الـ Flat نبدّل مواقع الكوابل نفسها أيضاً، وهذا اسمه Transposition",
+          "en": "In flat formation the cables also swap positions; this is called transposition"
+        },
+        {
+          "text": {
+            "ar": "النتيجة: Circulating current شبه صفر، وجهد قليل على الـ Sheath",
+            "en": "Result: almost no circulating current, and low sheath voltage"
+          },
+          "sub": {
+            "ar": "وهو الحل المعتاد في المسارات الطويلة",
+            "en": "The usual choice for long routes"
+          }
+        },
+        {
+          "ar": "الـ SVLs تُركّب في الـ Link boxes عند الـ Insulated joints",
+          "en": "SVLs sit in the link boxes at the insulated joints"
+        }
       ],
       "image": "decks/hv-cables/img/cross-bond.png",
       "fit": "contain",
-      "tags": [
-        {
-          "x": 50.3,
-          "y": 37.2,
-          "text": "وصلة تعزل الغلاف"
-        },
-        {
-          "x": 92.7,
-          "y": 34.9,
-          "text": "وصلة عادية",
-          "end": true
-        },
-        {
-          "x": 66.1,
-          "y": 84.8,
-          "text": "محدد جهد الغلاف"
-        },
-        {
-          "x": 4.1,
-          "y": 84.8,
-          "text": "سلك ربط محوري"
-        },
-        {
-          "x": 93.9,
-          "y": 72.7,
-          "text": "صندوق ربط مؤرض",
-          "end": true
-        },
-        {
-          "x": 19.7,
-          "y": 20.0,
-          "text": "قسم صغير"
-        }
-      ]
+      "tags": {
+        "ar": [
+          {
+            "x": 50.3,
+            "y": 37.2,
+            "text": "وصلة تعزل الغلاف"
+          },
+          {
+            "x": 92.7,
+            "y": 34.9,
+            "text": "وصلة عادية",
+            "end": true
+          },
+          {
+            "x": 66.1,
+            "y": 84.8,
+            "text": "محدد جهد الغلاف"
+          },
+          {
+            "x": 4.1,
+            "y": 84.8,
+            "text": "سلك ربط محوري"
+          },
+          {
+            "x": 93.9,
+            "y": 72.7,
+            "text": "صندوق ربط مؤرض",
+            "end": true
+          },
+          {
+            "x": 19.7,
+            "y": 20.0,
+            "text": "قسم صغير"
+          }
+        ],
+        "en": []
+      }
     },
     {
       "type": "section",
-      "title": "الـ Ampacity والـ Short Circuit",
-      "sub": "كم أمبير يحمل الكابل، وكيف يتغير الرقم مع الموقع"
+      "title": {
+        "ar": "الـ Ampacity والـ Short Circuit",
+        "en": "Ampacity and short circuit"
+      },
+      "sub": {
+        "ar": "كم أمبير يحمل الكابل، وكيف يتغير الرقم مع الموقع",
+        "en": "How many amps the cable carries, and how site conditions change that"
+      }
     },
     {
       "type": "chart",
-      "title": "الـ Ampacity لكابل 76/132 kV نحاس",
+      "title": {
+        "ar": "الـ Ampacity لكابل 76/132 kV نحاس",
+        "en": "Ampacity of a 76/132 kV copper cable"
+      },
       "chart": {
         "kind": "bar",
         "x": [
@@ -643,23 +1175,44 @@
             ]
           }
         ],
-        "x_label": "مقطع الموصل (mm²)",
+        "x_label": {
+          "ar": "مقطع الموصل (mm²)",
+          "en": "Conductor size (mm²)"
+        },
         "y_label": "Ampacity (A)",
         "labels": true
       },
-      "source": "Copper wire screen، تشكيل Trefoil، 60 Hz. الأرض 30°C، والهواء 40°C، والـ Soil thermal resistivity 1.5 K·m/W، والعمق 1.5 m.",
+      "source": {
+        "ar": "Copper wire screen، تشكيل Trefoil، 60 Hz. الأرض 30°C، والهواء 40°C، والـ Soil thermal resistivity 1.5 K·m/W، والعمق 1.5 m.",
+        "en": "Copper wire screen, trefoil, 60 Hz. Ground 30°C, air 40°C, soil thermal resistivity 1.5 K·m/W, depth 1.5 m."
+      },
       "points": [
-        "مضاعفة المقطع لا تضاعف التيار، لأن الحرارة هي الحد",
-        "في الهواء يحمل الكابل أكثر من المدفون بـ 50% إلى 75%",
         {
-          "text": "في الـ Flat مع Cross bonding يرتفع الرقم",
-          "sub": "مقطع 2500 مدفون: 1455 A بدل 1311 A"
+          "ar": "مضاعفة المقطع لا تضاعف التيار، لأن الحرارة هي الحد",
+          "en": "Doubling the size does not double the current, because heat is the limit"
+        },
+        {
+          "ar": "في الهواء يحمل الكابل أكثر من المدفون بـ 50% إلى 75%",
+          "en": "In air the cable carries 50% to 75% more than when buried"
+        },
+        {
+          "text": {
+            "ar": "في الـ Flat مع Cross bonding يرتفع الرقم",
+            "en": "Flat formation with cross bonding raises the figure"
+          },
+          "sub": {
+            "ar": "مقطع 2500 مدفون: 1455 A بدل 1311 A",
+            "en": "2500 mm² buried: 1455 A instead of 1311 A"
+          }
         }
       ]
     },
     {
       "type": "chart",
-      "title": "الـ Soil Thermal Resistivity تغيّر كل شيء",
+      "title": {
+        "ar": "الـ Soil Thermal Resistivity تغيّر كل شيء",
+        "en": "Soil thermal resistivity changes everything"
+      },
       "chart": {
         "kind": "line",
         "x": [
@@ -694,68 +1247,128 @@
         "lines": [
           {
             "y": 1.0,
-            "label": "قيمة الجداول"
+            "label": {
+              "ar": "قيمة الجداول",
+              "en": "Table value"
+            }
           }
         ],
         "labels": true
       },
       "points": [
-        "التربة الرطبة تنقل الحرارة جيداً، فترتفع الـ Ampacity",
         {
-          "text": "التربة الرملية الجافة قد تصل إلى 2.5 أو 3 K·m/W",
-          "sub": "فيخسر الكابل ربع قدرته أو أكثر"
+          "ar": "التربة الرطبة تنقل الحرارة جيداً، فترتفع الـ Ampacity",
+          "en": "Moist soil carries heat away well, so ampacity goes up"
         },
         {
-          "text": "لذلك نقيس التربة على المسار قبل اختيار المقطع",
-          "sub": "وأحياناً نستخدم Thermal backfill قليل المقاومية"
+          "text": {
+            "ar": "التربة الرملية الجافة قد تصل إلى 2.5 أو 3 K·m/W",
+            "en": "Dry sandy soil can reach 2.5 or 3 K·m/W"
+          },
+          "sub": {
+            "ar": "فيخسر الكابل ربع قدرته أو أكثر",
+            "en": "The cable loses a quarter of its rating or more"
+          }
+        },
+        {
+          "text": {
+            "ar": "لذلك نقيس التربة على المسار قبل اختيار المقطع",
+            "en": "So measure the soil along the route before choosing the size"
+          },
+          "sub": {
+            "ar": "وأحياناً نستخدم Thermal backfill قليل المقاومية",
+            "en": "Sometimes a low-resistivity thermal backfill is used"
+          }
         }
       ]
     },
     {
       "type": "formula",
-      "title": "مثال: Derating لظروف الموقع",
-      "rule": "نضرب تيار الجدول في Derating factor لكل ظرف يختلف عن ظروف الجدول.",
+      "title": {
+        "ar": "مثال: Derating لظروف الموقع",
+        "en": "Example: derating for site conditions"
+      },
+      "rule": {
+        "ar": "نضرب تيار الجدول في Derating factor لكل ظرف يختلف عن ظروف الجدول.",
+        "en": "Multiply the table current by a derating factor for each condition that differs from the table."
+      },
       "tex": "I = I_0 \\times k_{\\theta} \\times k_{d} \\times k_{\\rho}",
-      "where": "$I_0$: تيار الجدول. $k_{\\theta}$: حرارة الأرض. $k_{d}$: عمق الدفن. $k_{\\rho}$: الـ Soil thermal resistivity.",
+      "where": {
+        "ar": "$I_0$: تيار الجدول. $k_{\\theta}$: حرارة الأرض. $k_{d}$: عمق الدفن. $k_{\\rho}$: الـ Soil thermal resistivity.",
+        "en": "$I_0$: table current. $k_{\\theta}$: ground temperature. $k_{d}$: burial depth. $k_{\\rho}$: soil thermal resistivity."
+      },
       "example": {
-        "title": "كابل 1000 mm² نحاس Direct buried",
+        "title": {
+          "ar": "كابل 1000 mm² نحاس Direct buried",
+          "en": "1000 mm² copper, direct buried"
+        },
         "rows": [
           [
-            "من الجدول",
+            {
+              "ar": "من الجدول",
+              "en": "From the table"
+            },
             "$I_0 = 903$ A"
           ],
           [
-            "الأرض 40°C",
+            {
+              "ar": "الأرض 40°C",
+              "en": "Ground 40°C"
+            },
             "$k_{\\theta} = 0.91$"
           ],
           [
-            "العمق 2.0 m",
+            {
+              "ar": "العمق 2.0 m",
+              "en": "Depth 2.0 m"
+            },
             "$k_{d} = 0.97$"
           ],
           [
-            "التربة 2.0 K·m/W",
+            {
+              "ar": "التربة 2.0 K·m/W",
+              "en": "Soil 2.0 K·m/W"
+            },
             "$k_{\\rho} = 0.88$"
           ]
         ],
         "result": "$I = 903 \\times 0.91 \\times 0.97 \\times 0.88 \\approx 701$ A"
       },
-      "note": "خسر الكابل حوالي 22% من قدرته بسبب الموقع وحده. لهذا لا نأخذ رقم الجدول كما هو."
+      "note": {
+        "ar": "خسر الكابل حوالي 22% من قدرته بسبب الموقع وحده. لهذا لا نأخذ رقم الجدول كما هو.",
+        "en": "The site alone cost the cable about 22% of its rating. That is why the table figure is never used as it is."
+      }
     },
     {
       "type": "formula",
-      "title": "الـ Short-Circuit Current الذي يتحمله الموصل",
-      "rule": "أثناء القصر لا تجد الحرارة وقتاً لتخرج، فنفترض أنها كلها تبقى في الموصل. هذه طريقة الـ Adiabatic حسب IEC 60949.",
+      "title": {
+        "ar": "الـ Short-Circuit Current الذي يتحمله الموصل",
+        "en": "Short-circuit current the conductor can take"
+      },
+      "rule": {
+        "ar": "أثناء القصر لا تجد الحرارة وقتاً لتخرج، فنفترض أنها كلها تبقى في الموصل. هذه طريقة الـ Adiabatic حسب IEC 60949.",
+        "en": "During a short circuit the heat has no time to escape, so we assume it all stays in the conductor. This is the adiabatic method of IEC 60949."
+      },
       "tex": "I_{AD} = \\frac{K\\,S}{\\sqrt{t}}\\sqrt{\\ln\\frac{\\theta_f+\\beta}{\\theta_i+\\beta}}",
-      "where": "$S$: المقطع (mm²). $t$: زمن القصر (s). $\\theta_i = 90$°C قبل القصر، و $\\theta_f = 250$°C في نهايته. للنحاس $K = 226$ و $\\beta = 234.5$.",
+      "where": {
+        "ar": "$S$: المقطع (mm²). $t$: زمن القصر (s). $\\theta_i = 90$°C قبل القصر، و $\\theta_f = 250$°C في نهايته. للنحاس $K = 226$ و $\\beta = 234.5$.",
+        "en": "$S$: size (mm²). $t$: fault duration (s). $\\theta_i = 90$°C before the fault, $\\theta_f = 250$°C at the end. For copper $K = 226$ and $\\beta = 234.5$."
+      },
       "example": {
-        "title": "نحاس 1000 mm² لمدة 1 s",
+        "title": {
+          "ar": "نحاس 1000 mm² لمدة 1 s",
+          "en": "Copper 1000 mm² for 1 s"
+        },
         "rows": [
           [
             "$\\ln(484.5/324.5)$",
             "0.401"
           ],
           [
-            "الجذر",
+            {
+              "ar": "الجذر",
+              "en": "Square root"
+            },
             "0.633"
           ],
           [
@@ -765,33 +1378,72 @@
         ],
         "result": "$I_{AD} \\approx 143.1$ kA"
       },
-      "note": "التيار يتناسب مع $1/\\sqrt{t}$: لنفس الكابل 101 kA لمدة 2 s، و 202 kA لمدة 0.5 s. ونفس المقطع من الألمنيوم يتحمل 94.5 kA لثانية."
+      "note": {
+        "ar": "التيار يتناسب مع $1/\\sqrt{t}$: لنفس الكابل 101 kA لمدة 2 s، و 202 kA لمدة 0.5 s. ونفس المقطع من الألمنيوم يتحمل 94.5 kA لثانية.",
+        "en": "Current scales with $1/\\sqrt{t}$: the same cable takes 101 kA for 2 s and 202 kA for 0.5 s. The same size in aluminium takes 94.5 kA for one second."
+      }
     },
     {
       "type": "section",
-      "title": "التركيب",
-      "sub": "قواعد الـ Handling، وطرق الـ Laying"
+      "title": {
+        "ar": "التركيب",
+        "en": "Installation"
+      },
+      "sub": {
+        "ar": "قواعد الـ Handling، وطرق الـ Laying",
+        "en": "Handling rules and laying methods"
+      }
     },
     {
       "type": "bullets",
-      "title": "قواعد قبل الـ Pulling",
+      "title": {
+        "ar": "قواعد قبل الـ Pulling",
+        "en": "Rules before pulling"
+      },
       "points": [
         {
-          "text": "الـ Bending radius لا يقل عن 20 × القطر الخارجي",
-          "sub": "و 15 × القطر قرب الـ Joints إذا استُخدم Former"
-        },
-        "لا نمد الكابل إلا إذا بقيت الحرارة فوق 0°C طوال 24 ساعة قبلها",
-        {
-          "text": "الـ End caps تبقى مغلقة حتى لحظة عمل الـ Joint",
-          "sub": "الرطوبة في الموصل تضر العزل لاحقاً"
-        },
-        {
-          "text": "أقصى Pulling tension على الموصل: $T_m = 50 \\times A$ للنحاس، و $30 \\times A$ للألمنيوم",
-          "sub": "كابل نحاس 1000 mm²: 50 kN"
+          "text": {
+            "ar": "الـ Bending radius لا يقل عن 20 × القطر الخارجي",
+            "en": "Bending radius at least 20 × the outer diameter"
+          },
+          "sub": {
+            "ar": "و 15 × القطر قرب الـ Joints إذا استُخدم Former",
+            "en": "15 × near joints when a former is used"
+          }
         },
         {
-          "text": "الـ Sidewall pressure على الـ Rollers في المنعطفات $P = T/r$",
-          "sub": "نستخدم Tension meter إذا اقتربنا 10% من الحد"
+          "ar": "لا نمد الكابل إلا إذا بقيت الحرارة فوق 0°C طوال 24 ساعة قبلها",
+          "en": "Only lay the cable if the temperature stayed above 0°C for the previous 24 hours"
+        },
+        {
+          "text": {
+            "ar": "الـ End caps تبقى مغلقة حتى لحظة عمل الـ Joint",
+            "en": "End caps stay sealed until the joint is made"
+          },
+          "sub": {
+            "ar": "الرطوبة في الموصل تضر العزل لاحقاً",
+            "en": "Moisture in the conductor damages the insulation later"
+          }
+        },
+        {
+          "text": {
+            "ar": "أقصى Pulling tension على الموصل: $T_m = 50 \\times A$ للنحاس، و $30 \\times A$ للألمنيوم",
+            "en": "Maximum pulling tension on the conductor: $T_m = 50 \\times A$ for copper, $30 \\times A$ for aluminium"
+          },
+          "sub": {
+            "ar": "كابل نحاس 1000 mm²: 50 kN",
+            "en": "1000 mm² copper: 50 kN"
+          }
+        },
+        {
+          "text": {
+            "ar": "الـ Sidewall pressure على الـ Rollers في المنعطفات $P = T/r$",
+            "en": "Sidewall pressure on rollers at bends: $P = T/r$"
+          },
+          "sub": {
+            "ar": "نستخدم Tension meter إذا اقتربنا 10% من الحد",
+            "en": "Use a tension meter when within 10% of the limit"
+          }
         }
       ]
     },
@@ -799,136 +1451,196 @@
       "type": "bullets",
       "title": "Direct Burial",
       "points": [
-        "خندق مفتوح، والكابل يُسحب على Rollers من الـ Cable drum عند طرف الخندق",
-        "الـ Winch أو الـ Caterpillars تسحب، وعمال على طول الخندق يراقبون الكابل",
-        "نختاره حين يكون الطريق ضيقاً لا يتسع لـ Ducts، أو حين تكون الدوائر قليلة",
-        "وحين يسهل الحفر لاحقاً إذا احتجنا للإصلاح"
+        {
+          "ar": "خندق مفتوح، والكابل يُسحب على Rollers من الـ Cable drum عند طرف الخندق",
+          "en": "An open trench; the cable is pulled over rollers from the drum at the trench end"
+        },
+        {
+          "ar": "الـ Winch أو الـ Caterpillars تسحب، وعمال على طول الخندق يراقبون الكابل",
+          "en": "A winch or caterpillars pull, and workers along the trench watch the cable"
+        },
+        {
+          "ar": "نختاره حين يكون الطريق ضيقاً لا يتسع لـ Ducts، أو حين تكون الدوائر قليلة",
+          "en": "Chosen when the road is too narrow for ducts, or when there are few circuits"
+        },
+        {
+          "ar": "وحين يسهل الحفر لاحقاً إذا احتجنا للإصلاح",
+          "en": "And when digging again for repairs would be easy"
+        }
       ],
       "image": "decks/hv-cables/img/lay-direct.png",
       "fit": "contain",
       "wide": true,
-      "tags": [
-        {
-          "x": 80.1,
-          "y": 9.2,
-          "text": "بكرة الكابل"
-        },
-        {
-          "x": 73.4,
-          "y": 15.3,
-          "text": "جرّار يدفع الكابل"
-        },
-        {
-          "x": 14.3,
-          "y": 30.6,
-          "text": "سلك السحب"
-        },
-        {
-          "x": 8.9,
-          "y": 12.5,
-          "text": "مقياس الشد"
-        },
-        {
-          "x": 16.6,
-          "y": 73.4,
-          "text": "مجرى حماية عند الحاجة"
-        },
-        {
-          "x": 43.4,
-          "y": 37.1,
-          "text": "عروة السحب",
-          "end": true
-        },
-        {
-          "x": 47.2,
-          "y": 40.8,
-          "text": "بكرات أو جرّار"
-        }
-      ]
+      "tags": {
+        "ar": [
+          {
+            "x": 80.1,
+            "y": 9.2,
+            "text": "بكرة الكابل"
+          },
+          {
+            "x": 73.4,
+            "y": 15.3,
+            "text": "جرّار يدفع الكابل"
+          },
+          {
+            "x": 14.3,
+            "y": 30.6,
+            "text": "سلك السحب"
+          },
+          {
+            "x": 8.9,
+            "y": 12.5,
+            "text": "مقياس الشد"
+          },
+          {
+            "x": 16.6,
+            "y": 73.4,
+            "text": "مجرى حماية عند الحاجة"
+          },
+          {
+            "x": 43.4,
+            "y": 37.1,
+            "text": "عروة السحب",
+            "end": true
+          },
+          {
+            "x": 47.2,
+            "y": 40.8,
+            "text": "بكرات أو جرّار"
+          }
+        ],
+        "en": []
+      }
     },
     {
       "type": "bullets",
-      "title": "Ducts و Tunnels",
+      "title": {
+        "ar": "Ducts و Tunnels",
+        "en": "Ducts and tunnels"
+      },
       "points": [
-        "الـ Ducts تُدفن مرة واحدة، ثم يُسحب الكابل داخلها بين الـ Manholes",
-        "الـ Tunnels للمسارات التي ستحمل دوائر كثيرة الآن أو مستقبلاً",
-        "نختارها تحت الطرق المرصوفة أو التي ستُرصف قريباً",
-        "وحين يكون الحفر صعباً بسبب حركة المرور",
         {
-          "text": "داخل الـ Duct تقل الـ Ampacity قليلاً",
-          "sub": "لأن الهواء داخل الأنبوب يعيق خروج الحرارة"
+          "ar": "الـ Ducts تُدفن مرة واحدة، ثم يُسحب الكابل داخلها بين الـ Manholes",
+          "en": "Ducts are buried once, then the cable is pulled through them between manholes"
+        },
+        {
+          "ar": "الـ Tunnels للمسارات التي ستحمل دوائر كثيرة الآن أو مستقبلاً",
+          "en": "Tunnels are for routes that carry many circuits now or later"
+        },
+        {
+          "ar": "نختارها تحت الطرق المرصوفة أو التي ستُرصف قريباً",
+          "en": "Chosen under paved roads, or roads about to be paved"
+        },
+        {
+          "ar": "وحين يكون الحفر صعباً بسبب حركة المرور",
+          "en": "And where traffic makes digging hard"
+        },
+        {
+          "text": {
+            "ar": "داخل الـ Duct تقل الـ Ampacity قليلاً",
+            "en": "Ampacity drops a little inside a duct"
+          },
+          "sub": {
+            "ar": "لأن الهواء داخل الأنبوب يعيق خروج الحرارة",
+            "en": "The air in the pipe slows the heat getting out"
+          }
         }
       ],
       "image": "decks/hv-cables/img/lay-duct.png",
       "fit": "contain",
       "wide": true,
-      "tags": [
-        {
-          "x": 22.0,
-          "y": 7.9,
-          "text": "بكرة الكابل"
-        },
-        {
-          "x": 54.0,
-          "y": 14.6,
-          "text": "ونش السحب"
-        },
-        {
-          "x": 70.2,
-          "y": 44.9,
-          "text": "غرفة تفتيش"
-        },
-        {
-          "x": 10.5,
-          "y": 43.5,
-          "text": "غرفة تفتيش"
-        },
-        {
-          "x": 30.9,
-          "y": 44.5,
-          "text": "المجرى"
-        },
-        {
-          "x": 88.7,
-          "y": 49.9,
-          "text": "مقياس الشد",
-          "end": true
-        },
-        {
-          "x": 37.1,
-          "y": 63.7,
-          "text": "عروة السحب"
-        },
-        {
-          "x": 57.4,
-          "y": 62.2,
-          "text": "سلك السحب"
-        }
-      ]
+      "tags": {
+        "ar": [
+          {
+            "x": 22.0,
+            "y": 7.9,
+            "text": "بكرة الكابل"
+          },
+          {
+            "x": 54.0,
+            "y": 14.6,
+            "text": "ونش السحب"
+          },
+          {
+            "x": 70.2,
+            "y": 44.9,
+            "text": "غرفة تفتيش"
+          },
+          {
+            "x": 10.5,
+            "y": 43.5,
+            "text": "غرفة تفتيش"
+          },
+          {
+            "x": 30.9,
+            "y": 44.5,
+            "text": "المجرى"
+          },
+          {
+            "x": 88.7,
+            "y": 49.9,
+            "text": "مقياس الشد",
+            "end": true
+          },
+          {
+            "x": 37.1,
+            "y": 63.7,
+            "text": "عروة السحب"
+          },
+          {
+            "x": 57.4,
+            "y": 62.2,
+            "text": "سلك السحب"
+          }
+        ],
+        "en": []
+      }
     },
     {
       "type": "bullets",
-      "title": "المراجع",
+      "title": {
+        "ar": "المراجع",
+        "en": "References"
+      },
       "points": [
         {
-          "text": "كتالوج كوابل الضغط العالي من alfanar",
-          "sub": "الصور والرسومات والجداول والأرقام في هذا العرض مأخوذة منه"
+          "text": {
+            "ar": "كتالوج كوابل الضغط العالي من alfanar",
+            "en": "alfanar high-voltage cables catalogue"
+          },
+          "sub": {
+            "ar": "الصور والرسومات والجداول والأرقام في هذا العرض مأخوذة منه",
+            "en": "The photos, drawings, tables and figures in this deck come from it"
+          }
         },
         {
           "text": "IEC 60840",
-          "sub": "كوابل من 30 إلى 150 kV واختباراتها"
+          "sub": {
+            "ar": "كوابل من 30 إلى 150 kV واختباراتها",
+            "en": "Cables from 30 to 150 kV and their tests"
+          }
         },
         {
           "text": "IEC 62067",
-          "sub": "كوابل فوق 150 kV حتى 500 kV"
+          "sub": {
+            "ar": "كوابل فوق 150 kV حتى 500 kV",
+            "en": "Cables above 150 kV up to 500 kV"
+          }
         },
         {
           "text": "IEC 60287",
-          "sub": "حساب الـ Ampacity"
+          "sub": {
+            "ar": "حساب الـ Ampacity",
+            "en": "Ampacity calculation"
+          }
         },
         {
           "text": "IEC 60949",
-          "sub": "حساب الـ Short-circuit current المسموح"
+          "sub": {
+            "ar": "حساب الـ Short-circuit current المسموح",
+            "en": "Permissible short-circuit current"
+          }
         }
       ]
     }

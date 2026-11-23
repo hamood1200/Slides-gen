@@ -87,7 +87,7 @@ const credits = {};
 const credFile = resolve(deckDir.endsWith('.json') ? resolve(deckDir, '..') : deckDir, 'img/credits.json');
 if (existsSync(credFile)) for (const [k, v] of Object.entries(JSON.parse(readFileSync(credFile, 'utf8')))) credits[normalize(k)] = v;
 for (const s of [deck.cover, ...deck.slides]) {
-  const img = s.image || s.photo;
+  for (const img of [s.image || s.photo].flatMap(v => v && typeof v === 'object' ? Object.values(v) : [v]))   // an image may differ per language
   if (img && !/^https?:/.test(img) && !credits[normalize(img)] && !img.startsWith('brand/')) console.warn(`  warn  no credit for ${img}; add it with tools/find-photo.mjs or to img/credits.json`);
 }
 const drawing = deck.cover.drawing ? readFileSync(resolve(repo, deck.cover.drawing), 'utf8') : null;
