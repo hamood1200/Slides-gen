@@ -3,7 +3,7 @@
   "discipline": "electrical",
   "languages": ["ar", "en"],
   "palette": "palette-10-navy-led",
-  "offer": "auto",
+  "offer": "najdeah-space",
 
   "cover": {
     "title": { "en": "132/13.8 kV substations", "ar": "محطات التحويل 132/13.8 kV" },
