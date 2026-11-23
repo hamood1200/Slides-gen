@@ -7,6 +7,7 @@ Use this when the user hands over content for a free deck. CLAUDE.md has the bin
 - **One idea per slide.** If a slide needs two titles, it is two slides.
 - **Pick the type from the idea**, never the other way round:
   - a list of facts → `bullets` (add a real photo from `tools/find-photo.mjs`, with `callouts` when the parts matter)
+  - a drawing (from a reference PDF or an SVG) → `bullets` with `image` and Arabic `tags` written on it; in Arabic decks keep technical terms in English (the user finds many translations silly)
   - a trend or a comparison of numbers → `bullets` with a `chart`, and the points saying what the chart shows
   - two options → `compare`, always with a one-line `verdict`
   - a process → `steps`

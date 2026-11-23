@@ -102,6 +102,9 @@ html[lang="ar"] ul.pts.dense li .sub{font-size:23px;line-height:1.5}
 .fig.wide{flex-basis:56%;align-self:center}
 .fig.wide img{max-height:600px}
 .fig:has(.leg) img{max-height:480px}
+.fig .shot > svg{display:block;width:100%;height:auto;max-height:600px}
+/* an Arabic note written on a drawing, under its English label */
+.tag{position:absolute;white-space:nowrap;font:500 17px/1.25 var(--f-body);color:var(--red);background:rgba(255,255,255,.88);padding:0 4px;direction:rtl}
 .fig .credit{font:400 14px/1.35 var(--f-mono);color:var(--muted);margin-top:8px}
 html[lang="ar"] .fig .credit{font-family:var(--f-body);font-size:15px}
 .ball{position:absolute;width:50px;height:50px;border-radius:50%;background:#fff;border:3px solid var(--red);color:var(--red);font:600 23px/44px var(--f-mono);text-align:center;transform:translate(-50%,-50%);box-shadow:0 2px 8px rgba(0,0,0,.25)}
