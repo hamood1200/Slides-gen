@@ -3,7 +3,7 @@
 // Writes out/<slug>/<slug>-<lang>.html, .pdf and -sheet.png. No npm packages; needs Google Chrome.
 import { readFileSync, writeFileSync, mkdirSync, existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
-import { join, resolve, basename } from 'node:path';
+import { join, resolve, basename, normalize } from 'node:path';
 import { tmpdir } from 'node:os';
 import { pathToFileURL, fileURLToPath } from 'node:url';
 import { renderDeck } from './lib/render.mjs';
@@ -80,9 +80,21 @@ const chrome = (extra, url) => {
   } finally { rmSync(prof, { recursive: true, force: true }); }
 };
 
+// photo credits (tools/find-photo.mjs writes them) and the optional cover drawing, an SVG file inlined
+// so it picks up the theme's fonts and colours
+const repo = fileURLToPath(ROOT);
+const credits = {};
+const credFile = resolve(deckDir.endsWith('.json') ? resolve(deckDir, '..') : deckDir, 'img/credits.json');
+if (existsSync(credFile)) for (const [k, v] of Object.entries(JSON.parse(readFileSync(credFile, 'utf8')))) credits[normalize(k)] = v;
+for (const s of [deck.cover, ...deck.slides]) {
+  const img = s.image || s.photo;
+  if (img && !/^https?:/.test(img) && !credits[normalize(img)] && !img.startsWith('brand/')) console.warn(`  warn  no credit for ${img}; add it with tools/find-photo.mjs or to img/credits.json`);
+}
+const drawing = deck.cover.drawing ? readFileSync(resolve(repo, deck.cover.drawing), 'utf8') : null;
+
 let bad = 0;
 for (const lang of langs) {
-  const html = renderDeck(deck, plan, lang, { brand });
+  const html = renderDeck(deck, plan, lang, { brand, credits: new Proxy(credits, { get: (o, k) => o[normalize(String(k))] }), drawing });
   const file = new URL(`${slug}-${lang}.html`, outDir);
   writeFileSync(file, html);
   const url = pathToFileURL(fileURLToPath(file)).href;
@@ -91,6 +103,7 @@ for (const lang of langs) {
 
   const dom = chrome(['--dump-dom'], url);
   if (!dom.includes('data-checked="1"')) console.warn('  warn  layout check did not finish (fonts slow?); look at the sheet by eye');
+  if (dom.includes('data-katex="missing"')) { bad++; console.error('  LaTeX did not render: KaTeX could not load from cdn.jsdelivr.net (offline?)'); }
   for (const m of dom.matchAll(/data-i="(\d+)" data-type="(\w+)"[^>]*?data-overflow="([^"]*)"/g)) {
     bad++; console.error(`  OVERFLOW ${lang} slide ${m[1]} (${m[2]}): ${m[3]}`);
   }

@@ -1,0 +1,27 @@
+<svg class="sld" direction="ltr" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="3" font-size="20">
+  <!-- incoming 132 kV lines -->
+  <path d="M170 20 V90 M158 38 l12 -18 l12 18 M430 20 V90 M418 38 l12 -18 l12 18"/>
+  <text x="190" y="44">LINE 1</text><text x="450" y="44">LINE 2</text>
+  <!-- 132 kV bus -->
+  <path d="M60 90 H540" stroke-width="7"/><text x="60" y="76">132 kV</text>
+  <!-- two transformer bays -->
+  <path d="M170 90 V130 M170 178 V220 M170 390 V440 M170 488 V540"/>
+  <rect x="146" y="130" width="48" height="48"/><rect x="146" y="440" width="48" height="48"/>
+  <circle cx="170" cy="270" r="50"/><circle cx="170" cy="340" r="50" class="acc"/>
+  <text x="34" y="280">T1</text><text x="34" y="306" font-size="16">67 MVA</text>
+  <path d="M430 90 V130 M430 178 V220 M430 390 V440 M430 488 V540"/>
+  <rect x="406" y="130" width="48" height="48"/><rect x="406" y="440" width="48" height="48"/>
+  <circle cx="430" cy="270" r="50"/><circle cx="430" cy="340" r="50" class="acc"/>
+  <text x="494" y="280">T2</text><text x="494" y="306" font-size="16">67 MVA</text>
+  <text x="494" y="330" font-size="16">Z 12 %</text>
+  <!-- 13.8 kV bus in two halves with a bus section breaker -->
+  <path d="M50 540 H272 M328 540 H550" class="acc" stroke-width="9"/>
+  <path d="M272 540 H286 M314 540 H328"/><rect x="286" y="526" width="28" height="28"/>
+  <text x="50" y="522" class="acc">13.8 kV</text><text x="262" y="590" font-size="14">BUS SECTION</text>
+  <!-- outgoing feeders -->
+  <path d="M80 540 V600 M80 628 V700 M68 682 l12 18 l12 -18 M240 540 V600 M240 628 V700 M228 682 l12 18 l12 -18 M360 540 V600 M360 628 V700 M348 682 l12 18 l12 -18 M520 540 V600 M520 628 V700 M508 682 l12 18 l12 -18"/>
+  <rect x="66" y="600" width="28" height="28"/><rect x="226" y="600" width="28" height="28"/><rect x="346" y="600" width="28" height="28"/><rect x="506" y="600" width="28" height="28"/>
+  <text x="50" y="740" font-size="16">FEEDERS TO THE DISTRIBUTION NETWORK</text>
+  <path d="M0 772 H600" stroke-width="1.5"/>
+  <text x="0" y="796" font-size="15">SINGLE LINE DIAGRAM · NOT TO SCALE</text>
+</svg>

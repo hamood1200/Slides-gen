@@ -1,111 +1,360 @@
 {
   "slug": "substation-132-13-8kv",
   "discipline": "electrical",
-  "languages": ["ar", "en"],
-  "palette": "palette-10-navy-led",
+  "languages": [
+    "ar",
+    "en"
+  ],
   "offer": "najdeah-space",
-
   "cover": {
-    "title": { "en": "132/13.8 kV substations", "ar": "محطات التحويل 132/13.8 kV" },
+    "title": {
+      "en": "132/13.8 kV substations",
+      "ar": "محطات التحويل 132/13.8 kV"
+    },
     "subtitle": {
       "en": "What each part does and how to work out the main ratings",
       "ar": "وظيفة كل جزء فيها، وكيف نحسب التصنيفات الأساسية"
     },
     "photo": null,
-    "year": "2026"
+    "year": "2026",
+    "drawing": "decks/substation-132-13-8kv/img/sld.svg"
   },
-
   "slides": [
-    { "type": "section", "title": { "en": "Where the substation fits", "ar": "دور المحطة في الشبكة" },
-      "sub": { "en": "From the transmission line to the feeders", "ar": "من خط النقل إلى المغذيات" } },
-
-    { "type": "bullets",
-      "title": { "en": "Why two voltages", "ar": "لماذا جهدان" },
+    {
+      "type": "section",
+      "title": {
+        "en": "Where the substation fits",
+        "ar": "دور المحطة في الشبكة"
+      },
+      "sub": {
+        "en": "From the transmission line to the feeders",
+        "ar": "من خط النقل إلى المغذيات"
+      }
+    },
+    {
+      "type": "chart",
+      "title": {
+        "en": "Why two voltages",
+        "ar": "لماذا جهدان"
+      },
+      "chart": {
+        "kind": "bar",
+        "x": [
+          "132",
+          "66",
+          "33",
+          "13.8"
+        ],
+        "series": [
+          {
+            "values": [
+              293,
+              586,
+              1172,
+              2803
+            ]
+          }
+        ],
+        "x_label": {
+          "en": "Line voltage (kV)",
+          "ar": "جهد الخط (kV)"
+        },
+        "y_label": {
+          "en": "Current for 67 MVA (A)",
+          "ar": "التيار لقدرة 67 MVA (A)"
+        },
+        "labels": true
+      },
+      "source": {
+        "en": "From $I = S/(\\sqrt{3}\\,V)$ with S = 67 MVA (example value).",
+        "ar": "من المعادلة $I = S/(\\sqrt{3}\\,V)$ مع S = 67 MVA (قيمة مثال)."
+      },
       "points": {
         "en": [
-          "Line losses grow with the square of the current (I²R)",
-          "The same power at 132 kV needs almost 10 times less current than at 13.8 kV",
-          "So we carry power over long distances at 132 kV and distribute it near the load at 13.8 kV",
-          { "text": "13.8 kV is the usual distribution voltage in Saudi Arabia", "sub": "Other countries use 11, 22 or 33 kV. The ideas in this deck stay the same" }
+          "Line losses grow with the square of the current ($I^2R$)",
+          "So we carry power far at 132 kV and distribute it near the load at 13.8 kV",
+          {
+            "text": "13.8 kV is the usual distribution voltage in Saudi Arabia",
+            "sub": "Other countries use 11, 22 or 33 kV. The ideas stay the same"
+          }
         ],
         "ar": [
-          "الفواقد في الخط تزيد مع مربع التيار (I²R)",
-          "نفس القدرة على 132 kV تحتاج تياراً أقل بحوالي 10 مرات من 13.8 kV",
+          "الفواقد في الخط تزيد مع مربع التيار ($I^2R$)",
           "لذلك ننقل القدرة لمسافات طويلة على 132 kV، ونوزعها قرب الأحمال على 13.8 kV",
-          { "text": "جهد 13.8 kV هو جهد التوزيع المعتاد في السعودية", "sub": "دول أخرى تستخدم 11 أو 22 أو 33 kV، والأفكار في هذا العرض لا تتغير" }
+          {
+            "text": "جهد 13.8 kV هو جهد التوزيع المعتاد في السعودية",
+            "sub": "دول أخرى تستخدم 11 أو 22 أو 33 kV، والأفكار لا تتغير"
+          }
         ]
-      } },
-
-    { "type": "steps",
-      "title": { "en": "The path of power through the substation", "ar": "مسار القدرة داخل المحطة" },
+      }
+    },
+    {
+      "type": "steps",
+      "title": {
+        "en": "The path of power through the substation",
+        "ar": "مسار القدرة داخل المحطة"
+      },
       "steps": [
-        { "title": { "en": "132 kV line", "ar": "خط 132 kV" }, "text": { "en": "Power arrives from the grid by overhead line or cable", "ar": "تصل القدرة من الشبكة بخط هوائي أو كابل" } },
-        { "title": { "en": "132 kV bay", "ar": "خلية 132 kV" }, "text": { "en": "A breaker, disconnectors and instrument transformers switch and measure it", "ar": "قاطع وفواصل ومحولات قياس تفصل القدرة وتقيسها" } },
-        { "title": { "en": "Power transformer", "ar": "محول القدرة" }, "text": { "en": "Steps the voltage down from 132 to 13.8 kV", "ar": "يخفض الجهد من 132 إلى 13.8 kV" } },
-        { "title": { "en": "13.8 kV switchgear", "ar": "لوحات 13.8 kV" }, "text": { "en": "Collects the power on a busbar", "ar": "تجمع القدرة على قضيب التوزيع (busbar)" } },
-        { "title": { "en": "Feeders", "ar": "المغذيات" }, "text": { "en": "Carry it to 13.8/0.4 kV transformers near the customers", "ar": "تنقلها إلى محولات 13.8/0.4 kV قرب المشتركين" } }
-      ] },
-
-    { "type": "compare",
-      "title": { "en": "Air insulated (AIS) or gas insulated (GIS)", "ar": "معزولة بالهواء (AIS) أم بالغاز (GIS)" },
+        {
+          "title": {
+            "en": "132 kV line",
+            "ar": "خط 132 kV"
+          },
+          "text": {
+            "en": "Power arrives from the grid by overhead line or cable",
+            "ar": "تصل القدرة من الشبكة بخط هوائي أو كابل"
+          }
+        },
+        {
+          "title": {
+            "en": "132 kV bay",
+            "ar": "خلية 132 kV"
+          },
+          "text": {
+            "en": "A breaker, disconnectors and instrument transformers switch and measure it",
+            "ar": "قاطع وفواصل ومحولات قياس تفصل القدرة وتقيسها"
+          }
+        },
+        {
+          "title": {
+            "en": "Power transformer",
+            "ar": "محول القدرة"
+          },
+          "text": {
+            "en": "Steps the voltage down from 132 to 13.8 kV",
+            "ar": "يخفض الجهد من 132 إلى 13.8 kV"
+          }
+        },
+        {
+          "title": {
+            "en": "13.8 kV switchgear",
+            "ar": "لوحات 13.8 kV"
+          },
+          "text": {
+            "en": "Collects the power on a busbar",
+            "ar": "تجمع القدرة على قضيب التوزيع (busbar)"
+          }
+        },
+        {
+          "title": {
+            "en": "Feeders",
+            "ar": "المغذيات"
+          },
+          "text": {
+            "en": "Carry it to 13.8/0.4 kV transformers near the customers",
+            "ar": "تنقلها إلى محولات 13.8/0.4 kV قرب المشتركين"
+          }
+        }
+      ]
+    },
+    {
+      "type": "compare",
+      "title": {
+        "en": "Air insulated (AIS) or gas insulated (GIS)",
+        "ar": "معزولة بالهواء (AIS) أم بالغاز (GIS)"
+      },
       "columns": [
-        { "title": { "en": "AIS", "ar": "AIS" },
+        {
+          "title": {
+            "en": "AIS",
+            "ar": "AIS"
+          },
           "points": {
-            "en": ["Equipment stands in open air, spaced apart for insulation", "Needs a large plot of land", "Lower equipment cost and easy to inspect", "Dust, sand and salt on insulators need regular washing"],
-            "ar": ["المعدات في الهواء الطلق، والمسافات بينها هي العزل", "تحتاج قطعة أرض كبيرة", "تكلفة المعدات أقل والفحص سهل", "الغبار والرمل والملح على العوازل تحتاج غسيلاً دورياً"]
-          } },
-        { "title": { "en": "GIS", "ar": "GIS" },
+            "en": [
+              "Equipment stands in open air, spaced apart for insulation",
+              "Needs a large plot of land",
+              "Lower equipment cost and easy to inspect",
+              "Dust, sand and salt on insulators need regular washing"
+            ],
+            "ar": [
+              "المعدات في الهواء الطلق، والمسافات بينها هي العزل",
+              "تحتاج قطعة أرض كبيرة",
+              "تكلفة المعدات أقل والفحص سهل",
+              "الغبار والرمل والملح على العوازل تحتاج غسيلاً دورياً"
+            ]
+          }
+        },
+        {
+          "title": {
+            "en": "GIS",
+            "ar": "GIS"
+          },
           "points": {
-            "en": ["Equipment sits in metal enclosures filled with SF6 gas", "Takes a small part of the AIS area", "Higher equipment cost", "SF6 is a strong greenhouse gas, so leaks are monitored"],
-            "ar": ["المعدات داخل غلاف معدني مملوء بغاز SF6", "تأخذ جزءاً صغيراً من مساحة AIS", "تكلفة المعدات أعلى", "غاز SF6 من غازات الاحتباس الحراري القوية، لذلك نراقب أي تسريب"]
-          } }
+            "en": [
+              "Equipment sits in metal enclosures filled with SF6 gas",
+              "Takes a small part of the AIS area",
+              "Higher equipment cost",
+              "SF6 is a strong greenhouse gas, so leaks are monitored"
+            ],
+            "ar": [
+              "المعدات داخل غلاف معدني مملوء بغاز SF6",
+              "تأخذ جزءاً صغيراً من مساحة AIS",
+              "تكلفة المعدات أعلى",
+              "غاز SF6 من غازات الاحتباس الحراري القوية، لذلك نراقب أي تسريب"
+            ]
+          }
+        }
       ],
-      "verdict": { "en": "AIS where land is cheap and the air is clean. GIS in cities and at dusty or coastal sites.", "ar": "نختار AIS حين تكون الأرض رخيصة والجو نظيفاً، و GIS داخل المدن وفي المواقع المغبرة أو الساحلية." } },
-
-    { "type": "section", "title": { "en": "The main equipment", "ar": "المعدات الرئيسية" },
-      "sub": { "en": "What each part does", "ar": "وظيفة كل جزء" } },
-
-    { "type": "bullets",
-      "title": { "en": "The 132 kV bay, piece by piece", "ar": "خلية 132 kV جزءاً جزءاً" },
+      "verdict": {
+        "en": "AIS where land is cheap and the air is clean. GIS in cities and at dusty or coastal sites.",
+        "ar": "نختار AIS حين تكون الأرض رخيصة والجو نظيفاً، و GIS داخل المدن وفي المواقع المغبرة أو الساحلية."
+      }
+    },
+    {
+      "type": "section",
+      "title": {
+        "en": "The main equipment",
+        "ar": "المعدات الرئيسية"
+      },
+      "sub": {
+        "en": "What each part does",
+        "ar": "وظيفة كل جزء"
+      }
+    },
+    {
+      "type": "bullets",
+      "title": {
+        "en": "The 132 kV bay, piece by piece",
+        "ar": "خلية 132 kV جزءاً جزءاً"
+      },
       "points": {
         "en": [
-          { "text": "Surge arresters", "sub": "Clip lightning and switching surges before they reach the transformer" },
-          { "text": "Disconnectors and earthing switches", "sub": "Opened with no current flowing, to isolate and earth equipment for safe work" },
-          { "text": "Circuit breaker", "sub": "Interrupts load and fault current. SF6 breakers are the common type at 132 kV" },
-          { "text": "Current and voltage transformers (CT, VT)", "sub": "Bring current and voltage down to levels that meters and relays can read" },
-          { "text": "Busbar", "sub": "Connects the bays to each other" }
+          {
+            "text": "Surge arresters",
+            "sub": "Clip lightning and switching surges before they reach the transformer"
+          },
+          {
+            "text": "Disconnectors and earthing switches",
+            "sub": "Opened with no current flowing, to isolate and earth equipment for safe work"
+          },
+          {
+            "text": "Circuit breaker",
+            "sub": "Interrupts load and fault current. SF6 breakers are the common type at 132 kV"
+          },
+          {
+            "text": "Current and voltage transformers (CT, VT)",
+            "sub": "Bring current and voltage down to levels that meters and relays can read"
+          },
+          {
+            "text": "Busbar",
+            "sub": "Connects the bays to each other"
+          }
         ],
         "ar": [
-          { "text": "مانعات الصواعق (surge arresters)", "sub": "تقص ارتفاعات الجهد من الصواعق والفصل قبل أن تصل للمحول" },
-          { "text": "الفواصل ومفاتيح التأريض", "sub": "تُفتح بدون تيار، لعزل المعدة وتأريضها حتى نعمل عليها بأمان" },
-          { "text": "القاطع (circuit breaker)", "sub": "يقطع تيار الحمل وتيار القصر. قواطع SF6 هي الأشيع على 132 kV" },
-          { "text": "محولات التيار والجهد (CT, VT)", "sub": "تخفض التيار والجهد لقيم تقرأها العدادات وأجهزة الحماية" },
-          { "text": "قضيب التوزيع (busbar)", "sub": "يربط الخلايا ببعضها" }
+          {
+            "text": "مانعات الصواعق (surge arresters)",
+            "sub": "تقص ارتفاعات الجهد من الصواعق والفصل قبل أن تصل للمحول"
+          },
+          {
+            "text": "الفواصل ومفاتيح التأريض",
+            "sub": "تُفتح بدون تيار، لعزل المعدة وتأريضها حتى نعمل عليها بأمان"
+          },
+          {
+            "text": "القاطع (circuit breaker)",
+            "sub": "يقطع تيار الحمل وتيار القصر. قواطع SF6 هي الأشيع على 132 kV"
+          },
+          {
+            "text": "محولات التيار والجهد (CT, VT)",
+            "sub": "تخفض التيار والجهد لقيم تقرأها العدادات وأجهزة الحماية"
+          },
+          {
+            "text": "قضيب التوزيع (busbar)",
+            "sub": "يربط الخلايا ببعضها"
+          }
         ]
-      } },
-
-    { "type": "bullets",
-      "title": { "en": "The power transformer", "ar": "محول القدرة" },
+      },
+      "image": "decks/substation-132-13-8kv/img/switchyard.jpg"
+    },
+    {
+      "type": "bullets",
+      "title": {
+        "en": "The power transformer",
+        "ar": "محول القدرة"
+      },
       "points": {
         "en": [
-          { "text": "Rated in MVA for each cooling stage", "sub": "ONAN is natural oil and air. ONAF adds fans for more output, for example 50/67 MVA" },
-          { "text": "On-load tap changer (OLTC)", "sub": "Changes the ratio under load to hold 13.8 kV steady as the grid voltage moves" },
-          { "text": "Impedance (Z %)", "sub": "Sets the short-circuit current on the 13.8 kV side. We use it in the last part" },
-          { "text": "Neutral earthing on the 13.8 kV side", "sub": "Often through a resistor (NER) to limit the earth fault current" },
-          { "text": "Protection on the tank", "sub": "Buchholz relay, oil and winding temperature, pressure relief" }
+          {
+            "text": "Rated in MVA for each cooling stage",
+            "sub": "ONAN is natural oil and air. ONAF adds fans for more output, for example 50/67 MVA"
+          },
+          {
+            "text": "On-load tap changer (OLTC)",
+            "sub": "Changes the ratio under load to hold 13.8 kV steady as the grid voltage moves"
+          },
+          {
+            "text": "Impedance (Z %)",
+            "sub": "Sets the short-circuit current on the 13.8 kV side. We use it in the last part"
+          },
+          {
+            "text": "Neutral earthing on the 13.8 kV side",
+            "sub": "Often through a resistor (NER) to limit the earth fault current"
+          },
+          {
+            "text": "Protection on the tank",
+            "sub": "Buchholz relay, oil and winding temperature, pressure relief"
+          }
         ],
         "ar": [
-          { "text": "قدرته بالـ MVA لكل مرحلة تبريد", "sub": "ONAN تبريد طبيعي بالزيت والهواء، و ONAF يضيف مراوح لقدرة أعلى، مثلاً 50/67 MVA" },
-          { "text": "مغيّر الخطوات تحت الحمل (OLTC)", "sub": "يغير نسبة التحويل أثناء التشغيل ليثبت 13.8 kV مهما تغير جهد الشبكة" },
-          { "text": "الممانعة (Z %)", "sub": "تحدد تيار القصر على جهة 13.8 kV، وسنستخدمها في الجزء الأخير" },
-          { "text": "تأريض نقطة التعادل على جهة 13.8 kV", "sub": "غالباً عبر مقاومة (NER) لتحديد تيار العطل الأرضي" },
-          { "text": "حماية على خزان المحول", "sub": "ريليه بوخهولز، وحرارة الزيت والملفات، وصمام تنفيس الضغط" }
+          {
+            "text": "قدرته بالـ MVA لكل مرحلة تبريد",
+            "sub": "ONAN تبريد طبيعي بالزيت والهواء، و ONAF يضيف مراوح لقدرة أعلى، مثلاً 50/67 MVA"
+          },
+          {
+            "text": "مغيّر الخطوات تحت الحمل (OLTC)",
+            "sub": "يغير نسبة التحويل أثناء التشغيل ليثبت 13.8 kV مهما تغير جهد الشبكة"
+          },
+          {
+            "text": "الممانعة (Z %)",
+            "sub": "تحدد تيار القصر على جهة 13.8 kV، وسنستخدمها في الجزء الأخير"
+          },
+          {
+            "text": "تأريض نقطة التعادل على جهة 13.8 kV",
+            "sub": "غالباً عبر مقاومة (NER) لتحديد تيار العطل الأرضي"
+          },
+          {
+            "text": "حماية على خزان المحول",
+            "sub": "ريليه بوخهولز، وحرارة الزيت والملفات، وصمام تنفيس الضغط"
+          }
         ]
-      } },
-
-    { "type": "bullets",
-      "title": { "en": "The 13.8 kV switchgear", "ar": "لوحات 13.8 kV" },
-      "lead": { "en": "Metal-clad panels in a building, each with a withdrawable vacuum circuit breaker.", "ar": "لوحات معدنية داخل مبنى، في كل لوحة قاطع فاكيوم قابل للسحب." },
+      },
+      "image": "decks/substation-132-13-8kv/img/transformer.jpg",
+      "callouts": [
+        {
+          "x": 45,
+          "y": 18,
+          "label": {
+            "en": "132 kV bushings",
+            "ar": "عوازل 132 kV"
+          }
+        },
+        {
+          "x": 52,
+          "y": 72,
+          "label": {
+            "en": "Tank: core and windings in oil",
+            "ar": "الخزان: القلب والملفات في الزيت"
+          }
+        },
+        {
+          "x": 92,
+          "y": 44,
+          "label": {
+            "en": "Oil pipework",
+            "ar": "أنابيب الزيت"
+          }
+        }
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": {
+        "en": "The 13.8 kV switchgear",
+        "ar": "لوحات 13.8 kV"
+      },
+      "lead": {
+        "en": "Metal-clad panels in a building, each with a withdrawable vacuum circuit breaker.",
+        "ar": "لوحات معدنية داخل مبنى، في كل لوحة قاطع فاكيوم قابل للسحب."
+      },
       "points": {
         "en": [
           "Incomer panels, one from each transformer",
@@ -121,134 +370,509 @@
           "لوحات المكثفات لتحسين معامل القدرة",
           "محول خدمة المحطة لتغذية أحمال المحطة نفسها"
         ]
-      } },
-
-    { "type": "bullets",
-      "title": { "en": "Systems that keep it running", "ar": "أنظمة تبقي المحطة شغالة" },
+      },
+      "image": "decks/substation-132-13-8kv/img/switchgear.jpg"
+    },
+    {
+      "type": "bullets",
+      "title": {
+        "en": "Systems that keep it running",
+        "ar": "أنظمة تبقي المحطة شغالة"
+      },
       "points": {
         "en": [
-          { "text": "DC system", "sub": "Batteries and chargers feed the trip and close coils, so protection works even when AC is lost" },
-          { "text": "Control and protection panels", "sub": "Relays, interlocks and a local control point for each bay" },
-          { "text": "SCADA", "sub": "Lets the control centre watch and operate the substation remotely" },
-          { "text": "Earthing grid", "sub": "A buried copper mesh that keeps touch and step voltages safe during a fault" },
-          { "text": "Fire protection", "sub": "Firewalls between transformers and fire detection in the buildings" }
+          {
+            "text": "DC system",
+            "sub": "Batteries and chargers feed the trip and close coils, so protection works even when AC is lost"
+          },
+          {
+            "text": "Control and protection panels",
+            "sub": "Relays, interlocks and a local control point for each bay"
+          },
+          {
+            "text": "SCADA",
+            "sub": "Lets the control centre watch and operate the substation remotely"
+          },
+          {
+            "text": "Earthing grid",
+            "sub": "A buried copper mesh that keeps touch and step voltages safe during a fault"
+          },
+          {
+            "text": "Fire protection",
+            "sub": "Firewalls between transformers and fire detection in the buildings"
+          }
         ],
         "ar": [
-          { "text": "نظام التيار المستمر (DC)", "sub": "بطاريات وشواحن تغذي ملفات الفصل والوصل، فتعمل الحماية حتى لو انقطع الـ AC" },
-          { "text": "لوحات التحكم والحماية", "sub": "أجهزة الحماية والإقفال المتبادل، ونقطة تحكم محلية لكل خلية" },
-          { "text": "نظام SCADA", "sub": "يتيح لمركز التحكم مراقبة المحطة وتشغيلها عن بعد" },
-          { "text": "شبكة التأريض", "sub": "شبكة نحاس مدفونة تبقي جهد اللمس والخطوة آمناً أثناء العطل" },
-          { "text": "الحماية من الحريق", "sub": "جدران عازلة للنار بين المحولات، وكواشف حريق داخل المباني" }
+          {
+            "text": "نظام التيار المستمر (DC)",
+            "sub": "بطاريات وشواحن تغذي ملفات الفصل والوصل، فتعمل الحماية حتى لو انقطع الـ AC"
+          },
+          {
+            "text": "لوحات التحكم والحماية",
+            "sub": "أجهزة الحماية والإقفال المتبادل، ونقطة تحكم محلية لكل خلية"
+          },
+          {
+            "text": "نظام SCADA",
+            "sub": "يتيح لمركز التحكم مراقبة المحطة وتشغيلها عن بعد"
+          },
+          {
+            "text": "شبكة التأريض",
+            "sub": "شبكة نحاس مدفونة تبقي جهد اللمس والخطوة آمناً أثناء العطل"
+          },
+          {
+            "text": "الحماية من الحريق",
+            "sub": "جدران عازلة للنار بين المحولات، وكواشف حريق داخل المباني"
+          }
         ]
-      } },
-
-    { "type": "section", "title": { "en": "The single line diagram and protection", "ar": "المخطط أحادي الخط والحماية" },
-      "sub": { "en": "How the bays connect and what guards them", "ar": "كيف ترتبط الخلايا، ومن يحميها" } },
-
-    { "type": "table",
-      "title": { "en": "Busbar arrangements", "ar": "ترتيبات قضبان التوزيع" },
+      },
+      "image": "decks/substation-132-13-8kv/img/battery.jpg"
+    },
+    {
+      "type": "section",
+      "title": {
+        "en": "The single line diagram and protection",
+        "ar": "المخطط أحادي الخط والحماية"
+      },
+      "sub": {
+        "en": "How the bays connect and what guards them",
+        "ar": "كيف ترتبط الخلايا، ومن يحميها"
+      }
+    },
+    {
+      "type": "table",
+      "title": {
+        "en": "Busbar arrangements",
+        "ar": "ترتيبات قضبان التوزيع"
+      },
       "rows": {
         "en": [
-          ["Scheme", "How it works", "Main strength", "Where you see it"],
-          ["Single bus", "All circuits on one busbar", "Simple and cheap", "Small substations"],
-          ["Single bus with bus section", "One busbar split in two by a breaker", "A bus fault takes out only half", "The 13.8 kV side"],
-          ["Double bus", "Each circuit can switch to either busbar", "One bus can be maintained while the other carries the load", "Larger 132 kV substations"],
-          ["Breaker and a half", "Three breakers for every two circuits", "A bus fault drops no circuit", "Very important grid nodes"]
+          [
+            "Scheme",
+            "How it works",
+            "Main strength",
+            "Where you see it"
+          ],
+          [
+            "Single bus",
+            "All circuits on one busbar",
+            "Simple and cheap",
+            "Small substations"
+          ],
+          [
+            "Single bus with bus section",
+            "One busbar split in two by a breaker",
+            "A bus fault takes out only half",
+            "The 13.8 kV side"
+          ],
+          [
+            "Double bus",
+            "Each circuit can switch to either busbar",
+            "One bus can be maintained while the other carries the load",
+            "Larger 132 kV substations"
+          ],
+          [
+            "Breaker and a half",
+            "Three breakers for every two circuits",
+            "A bus fault drops no circuit",
+            "Very important grid nodes"
+          ]
         ],
         "ar": [
-          ["الترتيب", "طريقة العمل", "أهم ميزة", "أين نراه"],
-          ["قضيب واحد", "كل الدوائر على قضيب واحد", "بسيط ورخيص", "المحطات الصغيرة"],
-          ["قضيب واحد مع فاصل", "قضيب مقسوم لنصفين بقاطع", "عطل القضيب يفصل النصف فقط", "جهة 13.8 kV"],
-          ["قضيبان", "كل دائرة يمكن نقلها لأي من القضيبين", "صيانة قضيب والآخر يحمل الحمل", "محطات 132 kV الأكبر"],
-          ["قاطع ونصف", "ثلاثة قواطع لكل دائرتين", "عطل القضيب لا يفصل أي دائرة", "العقد المهمة جداً في الشبكة"]
+          [
+            "الترتيب",
+            "طريقة العمل",
+            "أهم ميزة",
+            "أين نراه"
+          ],
+          [
+            "قضيب واحد",
+            "كل الدوائر على قضيب واحد",
+            "بسيط ورخيص",
+            "المحطات الصغيرة"
+          ],
+          [
+            "قضيب واحد مع فاصل",
+            "قضيب مقسوم لنصفين بقاطع",
+            "عطل القضيب يفصل النصف فقط",
+            "جهة 13.8 kV"
+          ],
+          [
+            "قضيبان",
+            "كل دائرة يمكن نقلها لأي من القضيبين",
+            "صيانة قضيب والآخر يحمل الحمل",
+            "محطات 132 kV الأكبر"
+          ],
+          [
+            "قاطع ونصف",
+            "ثلاثة قواطع لكل دائرتين",
+            "عطل القضيب لا يفصل أي دائرة",
+            "العقد المهمة جداً في الشبكة"
+          ]
         ]
-      } },
-
-    { "type": "table",
-      "title": { "en": "Main protection functions", "ar": "وظائف الحماية الرئيسية" },
+      }
+    },
+    {
+      "type": "table",
+      "title": {
+        "en": "Main protection functions",
+        "ar": "وظائف الحماية الرئيسية"
+      },
       "rows": {
         "en": [
-          ["Code", "Function", "What it protects"],
-          ["87T", "Transformer differential", "Faults inside the transformer zone"],
-          ["63", "Buchholz (gas) relay", "Slow faults inside the oil tank"],
-          ["21 / 87L", "Distance or line differential", "The 132 kV lines and cables"],
-          ["87B", "Busbar differential", "The busbars"],
-          ["50/51", "Overcurrent", "The 13.8 kV feeders, and backup for the transformer"],
-          ["50N/51N", "Earth fault", "Earth faults on the feeders and the transformer neutral"]
+          [
+            "Code",
+            "Function",
+            "What it protects"
+          ],
+          [
+            "87T",
+            "Transformer differential",
+            "Faults inside the transformer zone"
+          ],
+          [
+            "63",
+            "Buchholz (gas) relay",
+            "Slow faults inside the oil tank"
+          ],
+          [
+            "21 / 87L",
+            "Distance or line differential",
+            "The 132 kV lines and cables"
+          ],
+          [
+            "87B",
+            "Busbar differential",
+            "The busbars"
+          ],
+          [
+            "50/51",
+            "Overcurrent",
+            "The 13.8 kV feeders, and backup for the transformer"
+          ],
+          [
+            "50N/51N",
+            "Earth fault",
+            "Earth faults on the feeders and the transformer neutral"
+          ]
         ],
         "ar": [
-          ["الرمز", "الوظيفة", "ماذا تحمي"],
-          ["87T", "الحماية التفاضلية للمحول", "الأعطال داخل منطقة المحول"],
-          ["63", "ريليه بوخهولز (الغاز)", "الأعطال البطيئة داخل خزان الزيت"],
-          ["21 / 87L", "حماية المسافة أو التفاضلية للخط", "خطوط وكوابل 132 kV"],
-          ["87B", "الحماية التفاضلية للقضبان", "قضبان التوزيع"],
-          ["50/51", "زيادة التيار", "مغذيات 13.8 kV، وحماية احتياطية للمحول"],
-          ["50N/51N", "العطل الأرضي", "الأعطال الأرضية على المغذيات ونقطة تعادل المحول"]
+          [
+            "الرمز",
+            "الوظيفة",
+            "ماذا تحمي"
+          ],
+          [
+            "87T",
+            "الحماية التفاضلية للمحول",
+            "الأعطال داخل منطقة المحول"
+          ],
+          [
+            "63",
+            "ريليه بوخهولز (الغاز)",
+            "الأعطال البطيئة داخل خزان الزيت"
+          ],
+          [
+            "21 / 87L",
+            "حماية المسافة أو التفاضلية للخط",
+            "خطوط وكوابل 132 kV"
+          ],
+          [
+            "87B",
+            "الحماية التفاضلية للقضبان",
+            "قضبان التوزيع"
+          ],
+          [
+            "50/51",
+            "زيادة التيار",
+            "مغذيات 13.8 kV، وحماية احتياطية للمحول"
+          ],
+          [
+            "50N/51N",
+            "العطل الأرضي",
+            "الأعطال الأرضية على المغذيات ونقطة تعادل المحول"
+          ]
         ]
-      } },
-
-    { "type": "section", "title": { "en": "First calculations", "ar": "الحسابات الأولى" },
-      "sub": { "en": "Firm capacity, rated current and short-circuit current", "ar": "القدرة المؤكدة، والتيار المقنن، وتيار القصر" } },
-
-    { "type": "steps",
-      "title": { "en": "The order we design in", "ar": "ترتيب خطوات التصميم" },
+      }
+    },
+    {
+      "type": "section",
+      "title": {
+        "en": "First calculations",
+        "ar": "الحسابات الأولى"
+      },
+      "sub": {
+        "en": "Firm capacity, rated current and short-circuit current",
+        "ar": "القدرة المؤكدة، والتيار المقنن، وتيار القصر"
+      }
+    },
+    {
+      "type": "steps",
+      "title": {
+        "en": "The order we design in",
+        "ar": "ترتيب خطوات التصميم"
+      },
       "steps": [
-        { "title": { "en": "Load", "ar": "الحمل" }, "text": { "en": "Peak load today and the expected growth", "ar": "أقصى حمل اليوم، والنمو المتوقع" } },
-        { "title": { "en": "Transformers", "ar": "المحولات" }, "text": { "en": "How many, and what MVA, so the firm capacity covers the peak", "ar": "عددها وقدرتها حتى تغطي القدرة المؤكدة أقصى حمل" } },
-        { "title": { "en": "Single line", "ar": "المخطط أحادي الخط" }, "text": { "en": "The busbar scheme on each voltage and the bays you need", "ar": "ترتيب القضبان على كل جهد، والخلايا المطلوبة" } },
-        { "title": { "en": "Ratings", "ar": "التصنيفات" }, "text": { "en": "Rated and short-circuit currents for every piece of equipment", "ar": "التيار المقنن وتيار القصر لكل معدة" } },
-        { "title": { "en": "Studies", "ar": "الدراسات" }, "text": { "en": "Protection settings, earthing grid and insulation coordination", "ar": "ضبط الحماية، وشبكة التأريض، وتنسيق العزل" } }
-      ] },
-
-    { "type": "formula",
-      "title": { "en": "Firm capacity: plan for losing one transformer", "ar": "القدرة المؤكدة: خطط لخسارة محول" },
-      "rule": { "en": "The substation must carry its peak load with any one transformer out of service (N-1).", "ar": "يجب أن تحمل المحطة أقصى حمل لها حتى لو خرج أي محول من الخدمة (N-1)." },
-      "formula": "S_firm = (n − 1) × S_unit",
-      "where": { "en": "n: number of transformers. S_unit: rating of one transformer (MVA).", "ar": "n: عدد المحولات. S_unit: قدرة المحول الواحد (MVA)." },
-      "example": {
-        "title": { "en": "Worked example", "ar": "مثال محسوب" },
-        "rows": [
-          [{ "en": "Transformers", "ar": "عدد المحولات" }, "n = 3"],
-          [{ "en": "Rating of one (example value)", "ar": "قدرة المحول (قيمة مثال)" }, "67 MVA"]
-        ],
-        "result": "S_firm = 2 × 67 = 134 MVA"
+        {
+          "title": {
+            "en": "Load",
+            "ar": "الحمل"
+          },
+          "text": {
+            "en": "Peak load today and the expected growth",
+            "ar": "أقصى حمل اليوم، والنمو المتوقع"
+          }
+        },
+        {
+          "title": {
+            "en": "Transformers",
+            "ar": "المحولات"
+          },
+          "text": {
+            "en": "How many, and what MVA, so the firm capacity covers the peak",
+            "ar": "عددها وقدرتها حتى تغطي القدرة المؤكدة أقصى حمل"
+          }
+        },
+        {
+          "title": {
+            "en": "Single line",
+            "ar": "المخطط أحادي الخط"
+          },
+          "text": {
+            "en": "The busbar scheme on each voltage and the bays you need",
+            "ar": "ترتيب القضبان على كل جهد، والخلايا المطلوبة"
+          }
+        },
+        {
+          "title": {
+            "en": "Ratings",
+            "ar": "التصنيفات"
+          },
+          "text": {
+            "en": "Rated and short-circuit currents for every piece of equipment",
+            "ar": "التيار المقنن وتيار القصر لكل معدة"
+          }
+        },
+        {
+          "title": {
+            "en": "Studies",
+            "ar": "الدراسات"
+          },
+          "text": {
+            "en": "Protection settings, earthing grid and insulation coordination",
+            "ar": "ضبط الحماية، وشبكة التأريض، وتنسيق العزل"
+          }
+        }
+      ]
+    },
+    {
+      "type": "formula",
+      "title": {
+        "en": "Firm capacity: plan for losing one transformer",
+        "ar": "القدرة المؤكدة: خطط لخسارة محول"
       },
-      "note": { "en": "Keep the peak load under 134 MVA, not under 3 × 67 = 201 MVA. Some utilities allow a short overload on the remaining units, so check their planning rules.", "ar": "أقصى حمل يجب أن يبقى تحت 134 MVA وليس 201 MVA. بعض شركات الكهرباء تسمح بتحميل زائد قصير على المحولات المتبقية، فراجع قواعدها." } },
-
-    { "type": "formula",
-      "title": { "en": "Rated current on each side", "ar": "التيار المقنن على كل جهة" },
-      "rule": { "en": "The same MVA gives a much larger current on the 13.8 kV side. That current sizes the incomer breaker and the busbar.", "ar": "نفس القدرة تعطي تياراً أكبر بكثير على جهة 13.8 kV، وهذا التيار يحدد قاطع الدخول وقضيب التوزيع." },
-      "formula": "I = S / (√3 × V)",
-      "where": { "en": "I: current (A). S: rating (VA). V: line voltage (V).", "ar": "I: التيار (A). S: القدرة (VA). V: جهد الخط (V)." },
-      "example": {
-        "title": { "en": "Worked example, 67 MVA", "ar": "مثال محسوب، 67 MVA" },
-        "rows": [
-          [{ "en": "132 kV side", "ar": "جهة 132 kV" }, "67,000,000 / (1.732 × 132,000) = 293 A"],
-          [{ "en": "13.8 kV side", "ar": "جهة 13.8 kV" }, "67,000,000 / (1.732 × 13,800) = 2,803 A"]
-        ],
-        "result": { "en": "13.8 kV incomer: 2,803 A", "ar": "قاطع الدخول 13.8 kV: 2,803 A" }
+      "rule": {
+        "en": "The substation must carry its peak load with any one transformer out of service (N-1).",
+        "ar": "يجب أن تحمل المحطة أقصى حمل لها حتى لو خرج أي محول من الخدمة (N-1)."
       },
-      "note": { "en": "Pick the next standard rating above it: a 3,150 A incomer breaker.", "ar": "نختار التصنيف القياسي الأعلى منه مباشرة: قاطع دخول 3,150 A." } },
-
-    { "type": "formula",
-      "title": { "en": "Short-circuit current on the 13.8 kV bus", "ar": "تيار القصر على قضيب 13.8 kV" },
-      "rule": { "en": "If the grid behind the transformer is very strong, the transformer impedance alone limits the fault current. This gives the worst case.", "ar": "إذا كانت الشبكة خلف المحول قوية جداً، فممانعة المحول وحدها تحدد تيار العطل، وهذه أسوأ حالة." },
-      "formula": "I_sc ≈ I_rated / Z",
-      "where": { "en": "I_rated: rated current on the 13.8 kV side (A). Z: transformer impedance as a decimal (12 % = 0.12).", "ar": "I_rated: التيار المقنن على جهة 13.8 kV بالأمبير. Z: ممانعة المحول كرقم عشري، فمثلاً 12 % تساوي 0.12." },
-      "example": {
-        "title": { "en": "Worked example", "ar": "مثال محسوب" },
-        "rows": [
-          [{ "en": "Rated current", "ar": "التيار المقنن" }, "2,803 A"],
-          [{ "en": "Impedance (example value)", "ar": "الممانعة (قيمة مثال)" }, "Z = 12 % = 0.12"]
-        ],
-        "result": "I_sc ≈ 2,803 / 0.12 ≈ 23.4 kA"
+      "tex": "S_{firm} = (n-1) \\times S_{unit}",
+      "where": {
+        "en": "$n$: number of transformers. $S_{unit}$: rating of one transformer (MVA).",
+        "ar": "$n$: عدد المحولات. $S_{unit}$: قدرة المحول الواحد (MVA)."
       },
-      "note": { "en": "Choose switchgear rated above this with margin; 25 kA and 31.5 kA are standard ratings. Two transformers in parallel on one bus roughly double the fault current, which is one reason the bus section is often kept open.", "ar": "نختار لوحات تصنيفها أعلى من هذه القيمة مع هامش، ومن التصنيفات القياسية 25 kA و 31.5 kA. تشغيل محولين على التوازي على نفس القضيب يضاعف تيار القصر تقريباً، ولهذا يُترك قاطع فصل القضبان مفتوحاً في كثير من المحطات." } },
-
-    { "type": "takeaway",
+      "example": {
+        "title": {
+          "en": "Worked example",
+          "ar": "مثال محسوب"
+        },
+        "rows": [
+          [
+            {
+              "en": "Transformers",
+              "ar": "عدد المحولات"
+            },
+            "$n = 3$"
+          ],
+          [
+            {
+              "en": "Rating of one (example value)",
+              "ar": "قدرة المحول (قيمة مثال)"
+            },
+            "67 MVA"
+          ]
+        ],
+        "result": "$S_{firm} = 2 \\times 67 = 134$ MVA"
+      },
+      "note": {
+        "en": "Keep the peak load under 134 MVA, not under 3 × 67 = 201 MVA. Some utilities allow a short overload on the remaining units, so check their planning rules.",
+        "ar": "أقصى حمل يجب أن يبقى تحت 134 MVA وليس 201 MVA. بعض شركات الكهرباء تسمح بتحميل زائد قصير على المحولات المتبقية، فراجع قواعدها."
+      }
+    },
+    {
+      "type": "formula",
+      "title": {
+        "en": "Rated current on each side",
+        "ar": "التيار المقنن على كل جهة"
+      },
+      "rule": {
+        "en": "The same MVA gives a much larger current on the 13.8 kV side. That current sizes the incomer breaker and the busbar.",
+        "ar": "نفس القدرة تعطي تياراً أكبر بكثير على جهة 13.8 kV، وهذا التيار يحدد قاطع الدخول وقضيب التوزيع."
+      },
+      "tex": "I = \\dfrac{S}{\\sqrt{3}\\,V}",
+      "where": {
+        "en": "$I$: current (A). $S$: rating (VA). $V$: line voltage (V).",
+        "ar": "$I$: التيار (A). $S$: القدرة (VA). $V$: جهد الخط (V)."
+      },
+      "example": {
+        "title": {
+          "en": "Worked example, 67 MVA",
+          "ar": "مثال محسوب، 67 MVA"
+        },
+        "rows": [
+          [
+            {
+              "en": "132 kV side",
+              "ar": "جهة 132 kV"
+            },
+            "$\\frac{67 \\times 10^{6}}{\\sqrt{3} \\times 132{,}000} = 293$ A"
+          ],
+          [
+            {
+              "en": "13.8 kV side",
+              "ar": "جهة 13.8 kV"
+            },
+            "$\\frac{67 \\times 10^{6}}{\\sqrt{3} \\times 13{,}800} = 2{,}803$ A"
+          ]
+        ],
+        "result": {
+          "en": "13.8 kV incomer: 2,803 A",
+          "ar": "قاطع الدخول 13.8 kV: 2,803 A"
+        }
+      },
+      "note": {
+        "en": "Pick the next standard rating above it: a 3,150 A incomer breaker.",
+        "ar": "نختار التصنيف القياسي الأعلى منه مباشرة: قاطع دخول 3,150 A."
+      }
+    },
+    {
+      "type": "formula",
+      "title": {
+        "en": "Short-circuit current on the 13.8 kV bus",
+        "ar": "تيار القصر على قضيب 13.8 kV"
+      },
+      "rule": {
+        "en": "If the grid behind the transformer is very strong, the transformer impedance alone limits the fault current. This gives the worst case.",
+        "ar": "إذا كانت الشبكة خلف المحول قوية جداً، فممانعة المحول وحدها تحدد تيار العطل، وهذه أسوأ حالة."
+      },
+      "tex": "I_{sc} \\approx \\dfrac{I_{rated}}{Z}",
+      "where": {
+        "en": "$I_{rated}$: rated current on the 13.8 kV side (A). $Z$: transformer impedance as a decimal (12 % = 0.12).",
+        "ar": "$I_{rated}$: التيار المقنن على جهة 13.8 kV بالأمبير. $Z$: ممانعة المحول كرقم عشري، فمثلاً 12 % تساوي 0.12."
+      },
+      "example": {
+        "title": {
+          "en": "Worked example",
+          "ar": "مثال محسوب"
+        },
+        "rows": [
+          [
+            {
+              "en": "Rated current",
+              "ar": "التيار المقنن"
+            },
+            "2,803 A"
+          ],
+          [
+            {
+              "en": "Impedance (example value)",
+              "ar": "الممانعة (قيمة مثال)"
+            },
+            "$Z = 12\\% = 0.12$"
+          ]
+        ],
+        "result": "$I_{sc} \\approx 2{,}803 / 0.12 \\approx 23.4$ kA"
+      },
+      "note": {
+        "en": "Choose switchgear rated above this with margin; 25 kA and 31.5 kA are standard ratings. Two transformers in parallel on one bus roughly double the fault current, which is one reason the bus section is often kept open.",
+        "ar": "نختار لوحات تصنيفها أعلى من هذه القيمة مع هامش، ومن التصنيفات القياسية 25 kA و 31.5 kA. تشغيل محولين على التوازي على نفس القضيب يضاعف تيار القصر تقريباً، ولهذا يُترك قاطع فصل القضبان مفتوحاً في كثير من المحطات."
+      }
+    },
+    {
+      "type": "chart",
+      "title": {
+        "en": "Impedance sets the fault current",
+        "ar": "الممانعة تحدد تيار القصر"
+      },
+      "chart": {
+        "kind": "line",
+        "x": [
+          "8",
+          "10",
+          "12",
+          "14",
+          "16"
+        ],
+        "series": [
+          {
+            "values": [
+              35.0,
+              28.0,
+              23.4,
+              20.0,
+              17.5
+            ]
+          }
+        ],
+        "x_label": {
+          "en": "Transformer impedance Z (%)",
+          "ar": "ممانعة المحول Z (%)"
+        },
+        "y_label": {
+          "en": "Fault current on the 13.8 kV bus (kA)",
+          "ar": "تيار القصر على قضيب 13.8 kV (kA)"
+        },
+        "y_min": 10,
+        "y_max": 40,
+        "lines": [
+          {
+            "y": 31.5,
+            "label": {
+              "en": "31.5 kA switchgear",
+              "ar": "لوحات 31.5 kA"
+            }
+          },
+          {
+            "y": 25,
+            "label": {
+              "en": "25 kA switchgear",
+              "ar": "لوحات 25 kA"
+            }
+          }
+        ],
+        "labels": true
+      },
+      "source": {
+        "en": "$I_{sc} \\approx 2{,}803 / Z$, one 67 MVA transformer, very strong grid (example values).",
+        "ar": "$I_{sc} \\approx 2{,}803 / Z$، محول واحد 67 MVA وشبكة قوية جداً (قيم مثال)."
+      },
+      "points": {
+        "en": [
+          "A higher Z gives a lower fault current",
+          "At Z = 12 % the bus sees about 23.4 kA, under a 25 kA rating",
+          "A higher Z also means a larger voltage drop under load, so the choice is a balance"
+        ],
+        "ar": [
+          "كلما زادت Z قلّ تيار القصر",
+          "عند Z = 12 % يصل تيار القصر إلى حوالي 23.4 kA، وهذا أقل من تصنيف 25 kA",
+          "لكن Z الأعلى تعني هبوط جهد أكبر تحت الحمل، فالاختيار موازنة بين الاثنين"
+        ]
+      }
+    },
+    {
+      "type": "takeaway",
       "text": {
         "en": "Size the transformers for N-1 first. On the 13.8 kV side, their MVA and impedance then set the current ratings of almost everything else.",
         "ar": "حدد المحولات على أساس N-1 أولاً. بعدها، قدرتها وممانعتها تحددان تصنيفات التيار لمعظم معدات جهة 13.8 kV."
-      } }
+      }
+    }
   ]
 }

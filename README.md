@@ -25,7 +25,7 @@ You write the content. This repo turns it into a branded slide deck as a PDF, in
 
 Only one language? Add `--lang ar` or `--lang en`. Want to check the layout first without a PDF? Add `--no-pdf`.
 
-You need Node 20+ and Google Chrome. Nothing to install with npm.
+You need Node 20+, Google Chrome and an internet connection (equations and fonts load from a CDN). Nothing to install with npm.
 
 ## What a slide looks like in deck.json
 
@@ -38,6 +38,17 @@ You need Node 20+ and Google Chrome. Nothing to install with npm.
 
 Any text can be a single string (same in both languages) or `{ "en": ..., "ar": ... }`.
 The template shows every slide type: section, bullets, compare, steps, stats, formula, table, image, takeaway.
+
+Equations are LaTeX (`"tex"` on a formula slide, `$...$` inside any text). Bullets slides can carry a bar or line `"chart"` (format at the top of `lib/chart.mjs`) or a photo with numbered `"callouts"`.
+
+## Real photos
+
+```bash
+node tools/find-photo.mjs "power transformer substation"
+node tools/find-photo.mjs "power transformer substation" --get 3 decks/my-topic transformer
+```
+
+The first lists openly licensed photos from Openverse (Wikimedia Commons, Flickr and more; no key needed). The second saves one to `decks/my-topic/img/` and records its credit in `img/credits.json`. The credit prints under the photo on the slide.
 
 The build adds the cover, the "لا إله إلا الله" slide, the presenter page, the agenda, the offer and the thank-you page by itself.
 
@@ -60,3 +71,4 @@ All text is written in the Najdeah voice (`skills/Najdeah-writes.md`) and checke
 ## Example
 
 `decks/pv-mounting-structures/` is a full 25-slide deck in Arabic and English, built from the "7 Structure" lecture.
+`decks/substation-132-13-8kv/` shows photos with credits and callouts, charts, LaTeX formulas and a line-drawing cover.

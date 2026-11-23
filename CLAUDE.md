@@ -15,7 +15,7 @@ Any engineering field is in scope, not only solar. Sister repo: hamood1200/Books
 
 ## The workflow
 
-1. **Ask** (AskUserQuestion, one round): language (ar / en / both), discipline (solar, electrical, mechanical, civil, structural, energy, business, project-management, general...), palette, cover photo (one from brand/photos, the user's own, or none).
+1. **Ask** (AskUserQuestion, one round): language (ar / en / both), discipline (solar, electrical, mechanical, civil, structural, energy, business, project-management, general...), cover picture (a line drawing in `cover.drawing`, a photo, or none).
 2. **Plan**: turn the content into a slide list in `decks/<slug>/deck.json`. Start from `decks/_template/deck.json`. One idea per slide. Group slides into 2 to 5 sections; the agenda is built from the section titles.
 3. **Write** in the voice of `skills/Najdeah-writes.md` (practitioner-mentor: rule of thumb, formula, worked example, decision), then **humanize** every string with `skills/humanizer/SKILL.md`. Arabic: simple Modern Standard Arabic, English numerals, English technical terms kept as they are (MPPT, IEC 61215).
 4. **Check the offer**: `node tools/pick-offer.mjs decks/<slug>`. If the pick is wrong, add keywords to the catalogue or set `"offer": "<id>"`.
@@ -25,7 +25,13 @@ Any engineering field is in scope, not only solar. Sister repo: hamood1200/Books
 
 ## Slide types
 
-`section`, `bullets` (optional image, note), `compare` (2 columns + verdict), `steps` (3 to 5), `stats` (2 to 4), `formula` (rule + formula + worked example), `table` (up to 7 rows), `image`, `takeaway`.
+`section`, `bullets` (optional image or `chart`, note), `compare` (2 columns + verdict), `steps` (3 to 5), `stats` (2 to 4), `formula` (rule + `tex` formula + worked example), `table` (up to 7 rows), `image`, `takeaway`.
+
+- **Equations** are LaTeX, drawn by KaTeX: `"tex": "I = \\frac{S}{\\sqrt{3}\\,V}"` on a formula slide, and `$...$` inline in any text.
+- **Charts**: a `"chart"` block (bar or line) on a bullets slide; `lib/chart.mjs` has the format at the top. Values are real or labelled as example values.
+- **Photos** are real and openly licensed: `node tools/find-photo.mjs "power transformer"` lists Openverse results, `--get <n> decks/<slug> <name>` saves one and writes its credit to `img/credits.json`. The slide prints the credit; never delete it (BY and BY-SA require it).
+- **Callouts**: `"callouts": [{ "x": 45, "y": 18, "label": {...} }]` puts numbered balloons on a photo (x, y in % of the picture) with a legend under it.
+- **Cover drawing**: `"cover": { "drawing": "decks/<slug>/img/sld.svg" }` inlines an SVG line drawing (stroke `currentColor`, class `acc` for red parts) instead of a photo.
 Cover, the remembrance slide, presenter, agenda, offer and closing are added by the build. `"presenter": false` or `"agenda": false` in deck.json turns those off.
 
 ## Limits that keep slides readable
@@ -33,6 +39,7 @@ Cover, the remembrance slide, presenter, agenda, offer and closing are added by 
 - Title under 70 characters. Up to 6 points. A point under 120 characters.
 - One picture per slide. Put deck pictures in `decks/<slug>/img/` with plain names.
 - Images in the user's old decks are low resolution; prefer `fit: "contain"` for diagrams.
+- A photo with callouts plus 5 points with subs is the fullest a slide gets.
 
 ## Where things live
 
@@ -43,9 +50,17 @@ Cover, the remembrance slide, presenter, agenda, offer and closing are added by 
 | `lib/validate.mjs` | errors and warnings |
 | `lib/offers.mjs` | offer scoring and fallback |
 | `lib/text.mjs` | language picking, `**bold**`, `` `term` ``, Latin isolation in Arabic |
-| `theme/slides.css` | the look; tokens from Books-gen |
-| `brand/` | logo, fonts, palettes, photos, presenter details (`brand.json`), offer product art |
+| `theme/slides.css` | the look: an engineering drawing sheet (see below) |
+| `lib/chart.mjs` | bar and line charts as inline SVG |
+| `tools/find-photo.mjs` | open-licence photo search and download with credit |
+| `brand/` | logo, fonts, photos, presenter details (`brand.json`), offer product art |
 | `offers/catalogue.json` | the products, keywords and offer copy |
 | `skills/` | Najdeah-writes voice, humanizer (vendored), slides workflow |
 
-Madani demo fonts have no digits; the @font-face skips 0-9 so numbers fall to Fira Sans. Do not remove the `unicode-range`.
+## The theme
+
+Every slide is an engineering drawing sheet: paper #f4f2eb with a 40px grid, navy #142846 ink, red #c8323c for marks, a double border with zone letters and numbers, and a title block along the bottom (logo, title, section, sheet n / total, najdeah.com). The logo sits first in the title block at 100px tall, plus a larger one on the cover and closing. Section, remembrance and closing slides are navy "blueprint" sheets. Fonts are IBM Plex Sans Arabic, IBM Plex Sans and IBM Plex Mono. Each content slide is numbered §section.slide.
+
+**The build needs internet**: KaTeX and the IBM Plex fonts load from CDNs.
+
+Madani (now only on the remembrance slide) has no digits in the demo fonts; the @font-face skips 0-9. Do not remove the `unicode-range`. `brand/palettes.css` is kept for Books-gen and is not used here.

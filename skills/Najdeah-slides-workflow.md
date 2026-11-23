@@ -6,10 +6,11 @@ Use this when the user hands over content for a free deck. CLAUDE.md has the bin
 
 - **One idea per slide.** If a slide needs two titles, it is two slides.
 - **Pick the type from the idea**, never the other way round:
-  - a list of facts → `bullets` (add a picture when the user's material has one)
+  - a list of facts → `bullets` (add a real photo from `tools/find-photo.mjs`, with `callouts` when the parts matter)
+  - a trend or a comparison of numbers → `bullets` with a `chart`, and the points saying what the chart shows
   - two options → `compare`, always with a one-line `verdict`
   - a process → `steps`
-  - a calculation → `formula`: rule of thumb, formula, worked example with real numbers, what to do with the result
+  - a calculation → `formula`: rule of thumb, LaTeX formula in `tex`, worked example with real numbers, what to do with the result
   - reference data → `table`
   - three or four headline numbers with a source → `stats`
   - the closing thought → `takeaway`
@@ -34,3 +35,4 @@ Use this when the user hands over content for a free deck. CLAUDE.md has the bin
 - The build prints the offer pick and its reason. Read it.
 - OVERFLOW means text spilled. Cut words first; split the slide second; never shrink the type.
 - Look at both language sheets. Arabic runs about 15% longer.
+- Photos: pick ones that show the thing plainly, at 1000px or wider. Check the picture really is what the slide says (search results mislabel things). Callout labels go through the humanizer too.

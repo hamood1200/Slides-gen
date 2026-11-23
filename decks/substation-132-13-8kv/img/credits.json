@@ -1,0 +1,42 @@
+{
+  "decks/substation-132-13-8kv/img/transformer.jpg": {
+    "title": "Transformer",
+    "creator": "cowlet",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "source": "flickr",
+    "page": "https://www.flickr.com/photos/17189662@N00/36528536"
+  },
+  "decks/substation-132-13-8kv/img/gis.jpg": {
+    "title": "A gas insulated switchgear(GIS) in control building for extra high voltage electrical power substation. Sulfur hexafluoride used in the electrical industry as a gaseous dielectric.",
+    "creator": "EU-Ukraine cooperation",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "source": "flickr",
+    "page": "https://www.flickr.com/photos/149400054@N04/54435322007"
+  },
+  "decks/substation-132-13-8kv/img/switchyard.jpg": {
+    "title": "Switchyard of electric substation",
+    "creator": "Novoklimov",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en/",
+    "source": "wikimedia",
+    "page": "https://commons.wikimedia.org/w/index.php?curid=144909901"
+  },
+  "decks/substation-132-13-8kv/img/switchgear.jpg": {
+    "title": "Schaltanlage Hochspannung 3",
+    "creator": "Sensenschmied",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "wikimedia",
+    "page": "https://commons.wikimedia.org/w/index.php?curid=47202465"
+  },
+  "decks/substation-132-13-8kv/img/battery.jpg": {
+    "title": "Shoals Battery Bank",
+    "creator": "Ross Hansen, Shoals Marine Lab Director of Facilities and Planning",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "wikimedia",
+    "page": "https://commons.wikimedia.org/w/index.php?curid=37088782"
+  }
+}
