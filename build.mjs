@@ -7,7 +7,7 @@ import { join, resolve, basename, normalize } from 'node:path';
 import { tmpdir } from 'node:os';
 import { pathToFileURL, fileURLToPath } from 'node:url';
 import { renderDeck } from './lib/render.mjs';
-import { validate, MAX_SLIDES } from './lib/validate.mjs';
+import { validate, maxSlides } from './lib/validate.mjs';
 import { loadCatalogue, pickOffer, offerUrl } from './lib/offers.mjs';
 import { L } from './lib/text.mjs';
 
@@ -64,7 +64,7 @@ if (pick.offer) for (const lang of langs) {
 for (const w of warnings) console.warn('  warn  ' + w);
 if (errors.length) { for (const e of errors) console.error('  ERROR ' + e); process.exit(1); }
 
-console.log(`${slug}: ${plan.length}/${MAX_SLIDES} slides, ${sections.length} sections`);
+console.log(`${slug}: ${plan.length}/${maxSlides(deck)} slides, ${sections.length} sections`);
 console.log(`  offer: ${pick.offer ? pick.offer.id : 'none'} (${pick.reason})`);
 if (pick.ranked) console.log('  ranked: ' + pick.ranked.slice(0, 4).map(r => `${r.offer.id} ${r.score}`).join(' · '));
 

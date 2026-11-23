@@ -98,6 +98,9 @@ html[lang="ar"] ul.pts.dense li .sub{font-size:23px;line-height:1.5}
 .fig .shot{position:relative}
 .fig img{display:block;width:100%;height:auto;max-height:540px;object-fit:cover}
 .fig.contain img{object-fit:contain}
+/* "wide": a landscape drawing takes more of the sheet and sits mid-height */
+.fig.wide{flex-basis:56%;align-self:center}
+.fig.wide img{max-height:600px}
 .fig:has(.leg) img{max-height:480px}
 .fig .credit{font:400 14px/1.35 var(--f-mono);color:var(--muted);margin-top:8px}
 html[lang="ar"] .fig .credit{font-family:var(--f-body);font-size:15px}

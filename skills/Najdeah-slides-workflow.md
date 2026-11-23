@@ -15,7 +15,7 @@ Use this when the user hands over content for a free deck. CLAUDE.md has the bin
   - three or four headline numbers with a source → `stats`
   - the closing thought → `takeaway`
 - **Sections**: 2 to 5. Each section title is a plain noun phrase; it becomes an agenda row.
-- **Budget**: cover + remembrance + presenter + agenda + offer + closing = 6, so the body gets 19 slides at most.
+- **Budget**: cover + remembrance + presenter + agenda + offer + closing = 6, so the body gets 19 slides at most (34 when deck.json sets `"max_slides": 40`). The presenter slide is "About Najdeah", not a person.
 - Old lecture decks often have a title and a picture only. Add the explanation a beginner needs, but only facts you can stand behind. When a number is not in the user's material, label it as an example value and tell the user in the wrap-up.
 
 ## Writing

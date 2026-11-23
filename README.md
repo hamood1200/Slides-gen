@@ -2,7 +2,7 @@
 
 You write the content. This repo turns it into a branded slide deck as a PDF, in Arabic, English or both.
 
-- 25 slides at most
+- 25 slides at most (up to 40 with `"max_slides"` in deck.json)
 - The Najdeah logo on every slide
 - Opens with a "لا إله إلا الله" slide right after the cover
 - One offer in the middle for a Najdeah product that matches the topic, picked automatically

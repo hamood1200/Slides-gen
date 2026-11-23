@@ -1,30 +1,70 @@
 {
-  "_readme": "Presenter and contact details used on the presenter and closing slides. Edit here once; every deck picks it up.",
+  "_readme": "Who the decks come from (Najdeah, not a person) and the contact details on the about and closing slides. Edit here once; every deck picks it up.",
   "presenter": {
-    "name": { "en": "Eng. Nooraldean Najdeah", "ar": "م. نورالدين نجديّة" },
-    "role": { "en": "Renewable-energy engineer and trainer", "ar": "مهندس طاقة متجددة ومدرّب" },
-    "photo": "brand/photos/photo-author-desk.jpg",
+    "eyebrow": {
+      "en": "About Najdeah",
+      "ar": "عن نجديه"
+    },
+    "name": {
+      "en": "Najdeah",
+      "ar": "نجديه"
+    },
+    "role": {
+      "en": "najdeah.com · engineering files and know-how",
+      "ar": "najdeah.com · ملفات ومعرفة هندسية"
+    },
+    "photo": "brand/photos/site-najdeah.png",
+    "photo_position": "top center",
     "bio": {
       "en": [
-        "Mechanical engineer, working in solar and energy efficiency since 2017",
-        "Projects in Jordan, Saudi Arabia and Qatar",
-        "Trained more than 15,000 engineers online and in person",
-        "Founder of the Acadeemi training platform"
+        "Arabic platform for renewables and power engineering",
+        "Guides, project packs and models from real, built projects",
+        {
+          "text": "Every file checked against IEC and NEC",
+          "sub": "Saudi code and Gulf requirements included"
+        },
+        "Editable source files: AutoCAD, Excel, Word",
+        "21,000+ learners from 30+ countries"
       ],
       "ar": [
-        "مهندس ميكانيك، يعمل في الطاقة الشمسية وكفاءة الطاقة منذ 2017",
-        "مشاريع في الأردن والسعودية وقطر",
-        "درّب أكثر من 15,000 مهندس أونلاين وحضورياً",
-        "مؤسس منصة أكاديمي للتدريب"
+        "منصة عربية للطاقة المتجددة وهندسة القوى",
+        "أدلة تصميم وحزم مشاريع ونماذج مالية، مأخوذة من مشاريع نُفّذت على الأرض",
+        {
+          "text": "كل ملف يُراجَع مقابل IEC وNEC قبل أن يُعرض",
+          "sub": "ومعه الكود السعودي والمتطلبات المعتادة في الخليج"
+        },
+        "ملفات أصلية تعدّلها بنفسك: أوتوكاد، وإكسل بمعادلاته، ووورد",
+        "تعلّم من محتواها أكثر من 21,000 مهندس ومتدرب من أكثر من 30 دولة"
       ]
     }
   },
   "site": "najdeah.com",
   "free_url": "https://najdeah.com/free/",
   "contacts": [
-    { "label": { "en": "Website", "ar": "الموقع" }, "value": "najdeah.com" },
-    { "label": { "en": "LinkedIn", "ar": "لينكدإن" }, "value": "Nooralden Najdeah" },
-    { "label": { "en": "Free files", "ar": "ملفات مجانية" }, "value": "najdeah.com/free" }
+    {
+      "label": {
+        "en": "Website",
+        "ar": "الموقع"
+      },
+      "value": "najdeah.com"
+    },
+    {
+      "label": {
+        "en": "Store",
+        "ar": "المتجر"
+      },
+      "value": "najdeah.com/shop"
+    },
+    {
+      "label": {
+        "en": "Free files",
+        "ar": "ملفات مجانية"
+      },
+      "value": "najdeah.com/free"
+    }
   ],
-  "series": { "en": "Najdeah free slides", "ar": "سلايدات نجديّة المجانية" }
+  "series": {
+    "en": "Najdeah free slides",
+    "ar": "سلايدات نجديّة المجانية"
+  }
 }

@@ -5,7 +5,7 @@ Any engineering field is in scope, not only solar. Sister repo: hamood1200/Books
 
 ## The rules that never bend
 
-1. **25 slides at most**, counting cover, presenter, agenda, offer and closing. The build stops above 25.
+1. **25 slides at most**, counting cover, presenter, agenda, offer and closing. A deck may raise this with `"max_slides": 40` in deck.json (the hard ceiling is 40) when the user asks for a longer deck. The build stops above the limit.
 2. **The Najdeah logo is on every slide.** The renderer puts it there; never remove it.
 3. **One offer in the middle of every deck**, for a Najdeah product related to the topic. `"offer": "auto"` picks it (see offers/README.md). Use `"none"` only when the user asks.
 4. **Every piece of writing goes through `skills/humanizer/SKILL.md`.** No exceptions: slide text, offer copy, captions, notes. Read the skill before writing, then run each slide's text through its checklist before the build.
@@ -33,6 +33,10 @@ Any engineering field is in scope, not only solar. Sister repo: hamood1200/Books
 - **Callouts**: `"callouts": [{ "x": 45, "y": 18, "label": {...} }]` puts numbered balloons on a photo (x, y in % of the picture) with a legend under it.
 - **Cover drawing**: `"cover": { "drawing": "decks/<slug>/img/sld.svg" }` inlines an SVG line drawing (stroke `currentColor`, class `acc` for red parts) instead of a photo.
 Cover, the remembrance slide, presenter, agenda, offer and closing are added by the build. `"presenter": false` or `"agenda": false` in deck.json turns those off.
+
+The presenter slide is "About Najdeah" (عن نجديه): decks are credited to the Najdeah site, never to a person. Its text, eyebrow, photo and `photo_position` come from `brand/brand.json`.
+
+When the user supplies a reference PDF (a catalogue or a standard), take figures from it with PyMuPDF (`page.get_pixmap(dpi=200, clip=Rect)`) into `decks/<slug>/img/`, and cite the source on a closing "المراجع" slide instead of credits.json. For landscape drawings, set `"fit": "contain", "wide": true` on the slide so the drawing gets more of the sheet.
 
 ## Limits that keep slides readable
 
