@@ -4,10 +4,11 @@ You write the content. This repo turns it into a branded slide deck as a PDF, in
 
 - 25 slides at most
 - The Najdeah logo on every slide
+- Opens with a "لا إله إلا الله" slide right after the cover
 - One offer in the middle for a Najdeah product that matches the topic, picked automatically
 - Works for any engineering field: solar, electrical, mechanical, civil, structural, project management and more
 
-> **بالعربي باختصار:** تعطي المحتوى، والريبو يطلع سلايدات بتصميم نجديّة (PDF) بالعربي أو الإنجليزي أو الاثنين. الحد الأقصى 25 سلايد، واللوجو على كل سلايد، وفي النص عرض لمنتج من نجديّة له علاقة بالموضوع.
+> **بالعربي باختصار:** تعطي المحتوى، والريبو يطلع سلايدات بتصميم نجديّة (PDF) بالعربي أو الإنجليزي أو الاثنين. الحد الأقصى 25 سلايد، واللوجو على كل سلايد، وأول سلايد بعد الغلاف «لا إله إلا الله»، وفي النص عرض لمنتج من نجديّة له علاقة بالموضوع.
 
 ## Make a deck in four steps
 
@@ -38,7 +39,7 @@ You need Node 20+ and Google Chrome. Nothing to install with npm.
 Any text can be a single string (same in both languages) or `{ "en": ..., "ar": ... }`.
 The template shows every slide type: section, bullets, compare, steps, stats, formula, table, image, takeaway.
 
-The build adds the cover, the presenter page, the agenda, the offer and the thank-you page by itself.
+The build adds the cover, the "لا إله إلا الله" slide, the presenter page, the agenda, the offer and the thank-you page by itself.
 
 ## The offer in the middle
 

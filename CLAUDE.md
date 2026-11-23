@@ -10,7 +10,8 @@ Any engineering field is in scope, not only solar. Sister repo: hamood1200/Books
 3. **One offer in the middle of every deck**, for a Najdeah product related to the topic. `"offer": "auto"` picks it (see offers/README.md). Use `"none"` only when the user asks.
 4. **Every piece of writing goes through `skills/humanizer/SKILL.md`.** No exceptions: slide text, offer copy, captions, notes. Read the skill before writing, then run each slide's text through its checklist before the build.
 5. **Never invent numbers, standards or product claims.** Values come from the user's content, a cited source, or are labelled as example values ("γ, example value"). Offer copy comes from the live product page.
-6. **Clear for everyone.** Short sentences, one idea per slide, everyday words. Explain a term the first time it appears.
+6. **Every deck opens with remembrance.** Slide 2 is "لا إله إلا الله", in Arabic in every language (English decks add the transliteration and meaning). The build adds it; `"dhikr": false` only if the user asks.
+7. **Clear for everyone.** Short sentences, one idea per slide, everyday words. Explain a term the first time it appears.
 
 ## The workflow
 
@@ -25,7 +26,7 @@ Any engineering field is in scope, not only solar. Sister repo: hamood1200/Books
 ## Slide types
 
 `section`, `bullets` (optional image, note), `compare` (2 columns + verdict), `steps` (3 to 5), `stats` (2 to 4), `formula` (rule + formula + worked example), `table` (up to 7 rows), `image`, `takeaway`.
-Cover, presenter, agenda, offer and closing are added by the build. `"presenter": false` or `"agenda": false` in deck.json turns those off.
+Cover, the remembrance slide, presenter, agenda, offer and closing are added by the build. `"presenter": false` or `"agenda": false` in deck.json turns those off.
 
 ## Limits that keep slides readable
 

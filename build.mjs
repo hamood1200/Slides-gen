@@ -30,6 +30,8 @@ const cat = loadCatalogue(ROOT);
 // ---------- plan: the full slide order ----------
 const pick = pickOffer(deck, cat);
 const plan = [{ type: 'cover', _w: 'cover' }];
+// Opening remembrance, on by default. "dhikr": false turns it off.
+if (deck.dhikr !== false) plan.push({ type: 'dhikr', _w: 'dhikr' });
 if (deck.presenter !== false) plan.push({ type: 'presenter', _w: 'presenter' });
 const body = deck.slides.map((s, k) => ({ ...s, _w: `slides[${k}]` }));
 let n = 0;

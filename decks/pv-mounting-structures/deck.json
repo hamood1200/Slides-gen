@@ -91,29 +91,6 @@
     { "type": "section", "title": { "en": "Fixed systems", "ar": "الأنظمة الثابتة" },
       "sub": { "en": "Six ways to mount panels that do not move", "ar": "ست طرق لتركيب ألواح لا تتحرك" } },
 
-    { "type": "table",
-      "title": { "en": "Fixed types at a glance", "ar": "الأنواع الثابتة باختصار" },
-      "rows": {
-        "en": [
-          ["Type", "Typical size", "How common"],
-          ["Roof mounted", "Small", "Very common"],
-          ["Ground mounted", "Large", "Very common"],
-          ["Self-ballasted", "Small to medium", "Common"],
-          ["Shade structure (facade)", "Small", "Rare"],
-          ["BIPV", "Small to medium", "Depends on the country"],
-          ["Carports", "Small to medium", "Common"]
-        ],
-        "ar": [
-          ["النوع", "حجم النظام", "مدى الانتشار"],
-          ["على السطح Roof mounted", "صغير", "منتشر جداً"],
-          ["أرضي Ground mounted", "كبير", "منتشر جداً"],
-          ["بالأثقال Self-ballasted", "صغير إلى متوسط", "منتشر"],
-          ["مظلات على الواجهة", "صغير", "قليل"],
-          ["مدمج بالمبنى BIPV", "صغير إلى متوسط", "حسب البلد"],
-          ["مظلات سيارات Carports", "صغير إلى متوسط", "منتشر"]
-        ]
-      } },
-
     { "type": "bullets",
       "title": { "en": "Roof mounted", "ar": "التركيب على السطح" },
       "points": {
