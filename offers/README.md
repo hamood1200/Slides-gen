@@ -10,6 +10,7 @@
 4. The best score wins if it reaches `min_score`. Otherwise the deck gets `fallback[discipline]`, or `fallback.default`.
 
 Arabic is matched after normalising (أ إ آ → ا, ة → ه, ى → ي, no diacritics), so write keywords in any spelling.
+Arabic keywords match whole words only. A leading و، ب، ل، ف or ال (and وال، بال، لل…) is allowed, a suffix is not: "لوح" will not match "لوحات". Add plurals and other forms as their own keywords.
 
 ## Add a product
 
