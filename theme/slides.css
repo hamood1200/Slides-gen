@@ -1,0 +1,231 @@
+/* Najdeah free slides — one theme for every deck and every engineering field.
+   Tokens come from the Najdeah Books design system (Books-gen/_ds). Do not add colours here:
+   a deck picks one palette class from brand/palettes.css and everything follows --accent / --accent-2.
+   Canvas: 1920×1080 (16:9). All sizes are px at that canvas. */
+
+@import url("https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&family=Fira+Sans:wght@400;500;600;700;800&display=swap");
+
+/* Madani demo cut draws 0-9 as empty boxes: exclude digits so they fall through to Fira Sans.
+   When the licensed files arrive, delete the unicode-range lines. */
+@font-face{font-family:"Madani Arabic";src:url("../brand/fonts/madani-arabic-demo-regular.otf") format("opentype");font-weight:400;unicode-range:U+0-2F,U+3A-10FFFF}
+@font-face{font-family:"Madani Arabic";src:url("../brand/fonts/madani-arabic-demo-bold.otf") format("opentype");font-weight:700;unicode-range:U+0-2F,U+3A-10FFFF}
+@font-face{font-family:"Madani Arabic";src:url("../brand/fonts/madani-arabic-demo-black.otf") format("opentype");font-weight:900;unicode-range:U+0-2F,U+3A-10FFFF}
+
+:root{
+  --navy:#142846; --navy-deep:#0d1b30; --teal:#1a7f85; --teal-deep:#136066; --teal-tint:#e6f1f1;
+  --gold:#9c7c46; --cream:#faf0dc; --ink:#161616; --ink-soft:#3c3c3c; --muted:#6b6b6b;
+  --line:#d8dcdc; --gray-100:#eef2f2; --paper:#fff; --paper-tint:#f4f8f8;
+  /* defaults; overridden by the palette class on <body> */
+  --accent:#f4642f; --accent-2:#f4642f; --bar:#142846; --tint:#e6f1f1;
+
+  --f-display:"Fira Sans","Segoe UI",sans-serif;
+  --f-body:"Fira Sans","Segoe UI",sans-serif;
+  --f-serif:"Tinos","Times New Roman",serif;
+
+  /* English type scale */
+  --t-hero:96px; --t-title:60px; --t-h3:36px; --t-body:34px; --t-small:26px; --t-tiny:20px; --t-stat:120px;
+  --lh:1.38;
+}
+/* Arabic parity rule from Books-gen: Arabic px = English px × 0.80, taller leading.
+   Slides are read from a distance, so slides use ×0.85 (the book's ×0.80 is for 11px body text). */
+html[lang="ar"]{
+  --f-display:"Madani Arabic","Fira Sans",sans-serif;
+  --f-body:"Madani Arabic","Fira Sans",sans-serif;
+  --f-serif:"Madani Arabic","Fira Sans",serif;
+  --t-hero:82px; --t-title:51px; --t-h3:31px; --t-body:29px; --t-small:22px; --t-tiny:17px; --t-stat:102px;
+  --lh:1.7;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:1920px 1080px;margin:0}
+html,body{background:#5a6270}
+body{font-family:var(--f-body);color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact;text-rendering:optimizeLegibility}
+.en{direction:ltr;unicode-bidi:isolate;font-family:"Fira Sans",sans-serif;font-size:.92em}
+html[lang="en"] .en{font-size:1em}
+b,strong{font-weight:700;color:var(--navy)}
+.num{font-family:"Fira Sans",sans-serif;font-variant-numeric:lining-nums}
+
+/* ---------- the slide ---------- */
+.slide{position:relative;width:1920px;height:1080px;overflow:hidden;background:var(--paper);page-break-after:always;break-after:page;margin:0 auto}
+.screen .slide{margin:40px auto;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.slide.light{background:linear-gradient(180deg,#fff 0%,#fff 55%,var(--paper-tint) 100%)}
+.slide.dark{background:linear-gradient(100deg,var(--navy) 0%,var(--navy-deep) 70%,#081325 100%);color:#fff}
+.slide.dark b,.slide.dark strong{color:#fff}
+.slide .wm{position:absolute;inset:0;background:url("../brand/photos/bg-network.jpg") center/cover;opacity:.06;pointer-events:none}
+.slide.dark .wm{opacity:.10;mix-blend-mode:screen}
+
+/* furniture: logo, footer, folio */
+.logo{position:absolute;top:44px;inset-inline-end:72px;height:70px}
+.foot{position:absolute;left:72px;right:72px;bottom:34px;display:flex;align-items:center;gap:24px;font-size:var(--t-tiny);color:var(--muted);border-top:1.5px solid var(--line);padding-top:16px}
+.foot .deck{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.foot .site{font-family:"Fira Sans",sans-serif;letter-spacing:.08em;color:var(--teal);font-weight:600}
+.foot .folio{background:var(--teal);color:#fff;border-radius:4px;min-width:46px;height:34px;display:inline-flex;align-items:center;justify-content:center;font:600 19px "Fira Sans",sans-serif}
+.slide.dark .foot{border-color:rgba(255,255,255,.18);color:rgba(255,255,255,.7)}
+.slide.dark .foot .site{color:#fff}
+
+/* content frame */
+.frame{position:absolute;top:150px;bottom:110px;left:110px;right:110px;display:flex;flex-direction:column}
+.head{margin-bottom:44px;max-width:1500px}
+.eyebrow{font:600 var(--t-tiny)/1.2 "Fira Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
+html[lang="ar"] .eyebrow{font-family:var(--f-display);letter-spacing:0;font-size:var(--t-small);font-weight:700}
+.title{font:800 var(--t-title)/1.12 var(--f-display);color:var(--navy);letter-spacing:-.01em}
+html[lang="ar"] .title{font-weight:900;line-height:1.35;letter-spacing:0}
+.rule{width:110px;height:6px;background:var(--accent);margin-top:26px;border-radius:3px}
+.lead{font-size:var(--t-body);line-height:var(--lh);color:var(--ink-soft);margin-top:22px;max-width:1450px}
+.body{flex:1;min-height:0;display:flex;gap:72px}
+.body > .col{flex:1;min-width:0}
+
+/* bullets */
+ul.pts{list-style:none;display:flex;flex-direction:column;gap:26px}
+ul.pts li{position:relative;padding-inline-start:46px;font-size:var(--t-body);line-height:var(--lh)}
+ul.pts li::before{content:"";position:absolute;inset-inline-start:0;top:.52em;width:16px;height:16px;background:var(--accent);border-radius:3px}
+ul.pts li .sub{display:block;color:var(--muted);font-size:var(--t-small);margin-top:4px}
+ul.pts.dense{gap:16px}
+
+/* figure frame: the system's asymmetric 34px corner */
+.fig{position:relative;flex:0 0 40%;border-radius:34px 0 34px 0;overflow:hidden;background:var(--gray-100);border:5px solid #fff;box-shadow:0 0 0 1.5px var(--line)}
+.fig img{width:100%;height:100%;object-fit:cover;display:block}
+.fig.contain img{object-fit:contain;background:#fff}
+.cap{font-size:var(--t-tiny);color:var(--muted);margin-top:12px}
+
+/* callout / note */
+.note{margin-top:34px;background:var(--tint);border-inline-start:8px solid var(--teal);padding:22px 30px;font-size:var(--t-small);line-height:var(--lh);border-radius:0 10px 10px 0}
+html[dir="rtl"] .note{border-radius:10px 0 0 10px}
+.note .k{font-weight:700;color:var(--teal-deep);margin-inline-end:10px}
+
+/* ---------- cover ---------- */
+.cover .panel{position:absolute;inset:0;padding:0 110px;display:flex;flex-direction:column;justify-content:center;max-width:1180px}
+.cover .logo{inset-inline-end:auto;inset-inline-start:110px;top:70px;height:96px}
+.cover .series{font:600 var(--t-small)/1.2 var(--f-display);color:var(--accent-2);letter-spacing:.12em;text-transform:uppercase;margin-bottom:28px}
+html[lang="ar"] .cover .series{letter-spacing:0}
+.cover h1{font:800 var(--t-hero)/1.05 var(--f-display);letter-spacing:-.015em;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+html[lang="ar"] .cover h1{font-weight:900;line-height:1.3;letter-spacing:0}
+.cover .rule{width:140px;height:8px;margin:40px 0 34px}
+.cover .sub{font-size:var(--t-h3);line-height:1.4;color:rgba(255,255,255,.88);max-width:980px}
+.cover .who{margin-top:56px;font-size:var(--t-small);color:#fff;font-weight:600}
+.cover .who span{display:block;font-weight:400;color:rgba(255,255,255,.7);font-size:var(--t-tiny);margin-top:6px}
+.cover .photo{position:absolute;top:0;bottom:72px;inset-inline-end:0;width:42%;overflow:hidden}
+.cover .photo img{width:100%;height:100%;object-fit:cover}
+.cover .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy) 0%,rgba(20,40,70,.55) 22%,rgba(20,40,70,0) 55%)}
+html[dir="rtl"] .cover .photo::after{background:linear-gradient(270deg,var(--navy) 0%,rgba(20,40,70,.55) 22%,rgba(20,40,70,0) 55%)}
+.cover.has-photo .panel{max-width:1180px}
+.edbar{position:absolute;left:0;right:0;bottom:0;height:72px;background:var(--bar);display:flex;align-items:center;justify-content:space-between;padding:0 110px;color:rgba(255,255,255,.85);font:500 var(--t-tiny) "Fira Sans",sans-serif;letter-spacing:.1em;border-top:4px solid var(--accent)}
+html[lang="ar"] .edbar{font-family:var(--f-display);letter-spacing:0}
+
+/* ---------- agenda ---------- */
+.agenda-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 60px;align-content:start}
+.agenda-grid.one{grid-template-columns:1fr;max-width:1200px}
+.arow{display:flex;align-items:center;gap:28px;background:var(--tint);border-radius:999px;padding:16px 36px 16px 16px;font-size:var(--t-body);line-height:1.3;color:var(--navy);font-weight:600}
+html[dir="rtl"] .arow{padding:16px 16px 16px 36px}
+.arow .n{flex:0 0 66px;height:66px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font:700 28px "Fira Sans",sans-serif}
+
+/* ---------- presenter ---------- */
+.presenter .body{align-items:center}
+.presenter .fig{flex:0 0 720px;height:520px}
+.presenter .name{font:800 var(--t-title)/1.15 var(--f-display);color:var(--navy)}
+html[lang="ar"] .presenter .name{font-weight:900}
+.presenter .role{font-size:var(--t-h3);color:var(--teal);margin:14px 0 40px}
+
+/* ---------- section divider ---------- */
+.section .inner{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 150px}
+.section .big{font:800 300px/1 "Fira Sans",sans-serif;color:transparent;-webkit-text-stroke:3px var(--accent);opacity:.9;margin-bottom:10px}
+.section h2{font:800 var(--t-hero)/1.1 var(--f-display);color:#fff;max-width:1500px}
+html[lang="ar"] .section h2{font-weight:900;line-height:1.35}
+.section .sub{font-size:var(--t-h3);color:rgba(255,255,255,.78);margin-top:30px;max-width:1350px;line-height:1.4}
+
+/* ---------- compare ---------- */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:56px;flex:1;min-height:0}
+.card{border:1.5px solid var(--line);border-radius:0 0 14px 14px;background:#fff;display:flex;flex-direction:column;overflow:hidden}
+.card .ch{padding:24px 36px;font:700 var(--t-h3)/1.25 var(--f-display);color:#fff;background:var(--teal)}
+.card.b .ch{background:var(--accent-2)}
+.card ul.pts{padding:36px 40px;gap:26px}
+.card ul.pts li{font-size:var(--t-body)}
+.verdict{margin-top:30px;font-size:var(--t-small);color:var(--navy);font-weight:600}
+
+/* ---------- steps ---------- */
+.steps{display:grid;gap:30px;flex:1;align-content:center}
+.step{position:relative;background:#fff;border:1.5px solid var(--line);border-top:8px solid var(--teal);border-radius:0 0 14px 14px;padding:34px 30px 30px}
+.step:nth-child(even){border-top-color:var(--accent)}
+.step .n{font:800 64px/1 "Fira Sans",sans-serif;color:var(--teal);opacity:.9}
+.step:nth-child(even) .n{color:var(--accent)}
+.step h4{font:700 var(--t-h3)/1.25 var(--f-display);color:var(--navy);margin:18px 0 12px}
+.step p{font-size:var(--t-small);line-height:var(--lh);color:var(--ink-soft)}
+
+/* ---------- stats ---------- */
+.stats{display:grid;gap:40px;flex:1;align-content:center}
+.stat{border-inline-start:8px solid var(--accent);padding:10px 0 10px 40px}
+html[dir="rtl"] .stat{padding:10px 40px 10px 0}
+.stat .v{font:800 var(--t-stat)/1 "Fira Sans",sans-serif;color:var(--navy);letter-spacing:-.02em;direction:ltr;unicode-bidi:isolate;display:inline-block}
+.stat .u{font-size:.42em;font-weight:600;color:var(--teal);margin-inline-start:8px}
+.stat .l{font-size:var(--t-small);line-height:1.4;color:var(--ink-soft);margin-top:18px}
+.source{font-size:var(--t-tiny);color:var(--muted);margin-top:auto;padding-top:20px}
+
+/* ---------- formula ---------- */
+.fx{display:grid;grid-template-columns:1fr 1fr;gap:60px;flex:1;min-height:0}
+.thumb{display:inline-block;background:var(--cream);color:var(--gold);font:700 var(--t-tiny) "Fira Sans",sans-serif;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:10px 24px;margin-bottom:22px}
+html[lang="ar"] .thumb{font-family:var(--f-display);letter-spacing:0;font-size:var(--t-small)}
+.eq{background:var(--navy);color:#fff;border-radius:0 0 18px 18px;border-top:8px solid var(--accent);padding:40px 44px;font:600 46px/1.35 "Fira Sans",sans-serif;direction:ltr;text-align:center}
+.eq small{display:block;font:400 22px/1.5 "Fira Sans",sans-serif;color:rgba(255,255,255,.7);margin-top:14px;text-align:start}
+html[dir="rtl"] .eq small{direction:rtl;text-align:right;font-family:var(--f-body)}
+.ex{border:1.5px solid var(--line);border-radius:14px;padding:30px 36px;background:#fff}
+.ex h4{font:700 var(--t-small) var(--f-display);color:var(--teal);margin-bottom:16px}
+.ex .row{display:flex;justify-content:space-between;gap:20px;font-size:var(--t-small);padding:12px 0;border-bottom:1px solid var(--gray-100)}
+.ex .row .v{font-family:"Fira Sans",sans-serif;font-weight:600;color:var(--navy);direction:ltr;unicode-bidi:isolate}
+.ex .res{margin-top:18px;background:var(--tint);border-radius:10px;padding:18px 22px;font-size:var(--t-small);font-weight:700;color:var(--teal-deep);display:flex;justify-content:space-between}
+
+/* ---------- table ---------- */
+table.tb{width:100%;border-collapse:collapse;font-size:var(--t-small)}
+table.tb th{background:var(--navy);color:#fff;font:600 var(--t-small) var(--f-display);text-align:start;padding:18px 24px}
+table.tb td{padding:16px 24px;border-bottom:1.5px solid var(--line);vertical-align:top;line-height:1.4}
+table.tb tr:nth-child(even) td{background:var(--paper-tint)}
+table.tb td:first-child{font-weight:700;color:var(--navy)}
+
+/* ---------- image ---------- */
+.imgfull{flex:1;min-height:0;border-radius:34px 0 34px 0;overflow:hidden;border:5px solid #fff;box-shadow:0 0 0 1.5px var(--line);background:#fff}
+.imgfull img{width:100%;height:100%;object-fit:contain}
+
+/* ---------- takeaway ---------- */
+.takeaway .inner{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 200px}
+.takeaway q{quotes:none;font:700 64px/1.3 var(--f-display);color:var(--navy);max-width:1450px}
+html[lang="ar"] .takeaway q{font-size:54px;line-height:1.6;font-weight:900}
+.takeaway .by{margin-top:34px;font-size:var(--t-small);color:var(--teal);font-weight:600}
+
+/* ---------- offer (mid-deck) ---------- */
+.offer{background:linear-gradient(100deg,#fff 0%,#fff 52%,var(--tint) 52%,var(--tint) 100%)}
+html[dir="rtl"] .offer{background:linear-gradient(260deg,#fff 0%,#fff 52%,var(--tint) 52%,var(--tint) 100%)}
+.offer .wrap{position:absolute;top:150px;bottom:110px;left:110px;right:110px;display:grid;grid-template-columns:1.1fr .9fr;gap:90px;align-items:center}
+.offer .tag{display:inline-flex;gap:12px;align-items:center;background:var(--cream);color:var(--gold);border-radius:999px;padding:10px 26px;font:700 var(--t-tiny) var(--f-display);letter-spacing:.06em;margin-bottom:28px}
+html[lang="ar"] .offer .tag{letter-spacing:0;font-size:var(--t-small)}
+.offer h3{font:800 64px/1.12 var(--f-display);color:var(--navy)}
+html[lang="ar"] .offer h3{font-weight:900;font-size:54px;line-height:1.4}
+.offer p.pitch{font-size:var(--t-small);line-height:var(--lh);color:var(--ink-soft);margin:26px 0 30px;max-width:900px}
+.offer ul.pts{gap:16px}
+.offer ul.pts li{font-size:var(--t-small)}
+.offer .cta{display:inline-flex;align-items:center;gap:18px;margin-top:40px;background:var(--accent);color:#fff;border-radius:999px;padding:20px 40px;font:700 var(--t-small) var(--f-display);text-decoration:none}
+.offer .cta .u{font:500 var(--t-tiny) "Fira Sans",sans-serif;opacity:.9;direction:ltr}
+.offer .art{height:100%;display:flex;align-items:center;justify-content:center}
+.offer .art img{max-width:100%;max-height:100%;object-fit:contain;mix-blend-mode:multiply}
+.offer .art .lib{width:560px;background:var(--navy);color:#fff;border-radius:34px 0 34px 0;padding:56px;border-top:8px solid var(--accent)}
+.offer .art .lib img{height:70px;width:auto;margin-bottom:40px;mix-blend-mode:normal}
+.offer .art .lib div{font:600 var(--t-small)/1.5 var(--f-display);padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+
+/* ---------- closing ---------- */
+.closing .inner{position:absolute;inset:0 0 72px;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0 140px;gap:80px}
+.closing h2{font:800 120px/1 var(--f-display);color:#fff}
+html[lang="ar"] .closing h2{font-weight:900;font-size:104px;line-height:1.3}
+.closing .who{margin-top:30px;font-size:var(--t-h3);color:#fff}
+.closing .who span{display:block;font-size:var(--t-small);color:rgba(255,255,255,.7);margin-top:8px}
+.closing .logo{position:static;height:110px;margin-bottom:56px}
+.closing .ct{border-inline-start:4px solid var(--accent);padding-inline-start:40px}
+.closing .ct div{display:flex;flex-direction:column;margin-bottom:28px}
+.closing .ct .k{font-size:var(--t-tiny);color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.12em}
+html[lang="ar"] .closing .ct .k{letter-spacing:0;font-size:var(--t-small)}
+.closing .ct .v{font:600 var(--t-h3) "Fira Sans",sans-serif;color:#fff;direction:ltr;unicode-bidi:isolate}
+html[dir="rtl"] .closing .ct .v{text-align:right}
+
+/* contact sheet: out/<slug>/<slug>-<lang>.html#sheet */
+.sheet{display:grid;grid-template-columns:repeat(4,480px);gap:16px;padding:16px;background:#d9d6cf;width:max-content}
+.sheet .slide{zoom:.25;margin:0}
+/* overflow marker written by the build check */
+.slide[data-overflow]::after{content:"OVERFLOW";z-index:99;position:absolute;top:0;left:0;background:#e2334e;color:#fff;font:700 24px sans-serif;padding:8px 16px}
+@media print{.slide[data-overflow]::after{display:none}}

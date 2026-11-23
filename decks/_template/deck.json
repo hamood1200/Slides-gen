@@ -1,0 +1,84 @@
+{
+  "_readme": "Copy this folder to decks/<your-slug>/ and replace the text. Every slide type is shown once. Delete what you do not need. Any text can be one string (same in both languages) or { \"en\": \"...\", \"ar\": \"...\" }.",
+
+  "slug": "template",
+  "discipline": "general",
+  "languages": ["ar", "en"],
+  "palette": "palette-05-teal",
+  "offer": "auto",
+
+  "cover": {
+    "title": { "en": "Deck title in a few words", "ar": "عنوان العرض بكلمات قليلة" },
+    "subtitle": { "en": "One line on what the audience will be able to do after it", "ar": "سطر واحد عن ما سيستطيع الحضور عمله بعد العرض" },
+    "photo": null,
+    "year": "2026"
+  },
+
+  "slides": [
+    { "type": "section", "title": { "en": "First part", "ar": "الجزء الأول" }, "sub": { "en": "A short line under the section title", "ar": "سطر قصير تحت عنوان القسم" } },
+
+    { "type": "bullets",
+      "title": { "en": "Bullets, with an optional picture", "ar": "نقاط، مع صورة إن وجدت" },
+      "lead": { "en": "An optional line above the points.", "ar": "سطر اختياري فوق النقاط." },
+      "points": {
+        "en": ["Up to 6 points", { "text": "A point with a second line", "sub": "The smaller line explains it" }, "Use **bold** for one key word at most"],
+        "ar": ["حتى 6 نقاط", { "text": "نقطة مع سطر ثانٍ", "sub": "السطر الأصغر يشرحها" }, "استخدم **الخط العريض** لكلمة مهمة واحدة فقط"]
+      },
+      "note": { "en": "An optional callout under the points.", "ar": "ملاحظة اختيارية تحت النقاط." },
+      "image": null },
+
+    { "type": "compare",
+      "title": { "en": "Option A or option B", "ar": "الخيار أ أم الخيار ب" },
+      "columns": [
+        { "title": { "en": "Option A", "ar": "الخيار أ" }, "points": { "en": ["First point", "Second point"], "ar": ["النقطة الأولى", "النقطة الثانية"] } },
+        { "title": { "en": "Option B", "ar": "الخيار ب" }, "points": { "en": ["First point", "Second point"], "ar": ["النقطة الأولى", "النقطة الثانية"] } }
+      ],
+      "verdict": { "en": "When to pick which, in one line.", "ar": "متى نختار كل واحد، بسطر واحد." } },
+
+    { "type": "steps",
+      "title": { "en": "A process in steps", "ar": "خطوات العمل" },
+      "steps": [
+        { "title": { "en": "Collect", "ar": "اجمع" }, "text": { "en": "What goes in first", "ar": "ما نحتاجه أولاً" } },
+        { "title": { "en": "Calculate", "ar": "احسب" }, "text": { "en": "What you work out", "ar": "ما نحسبه" } },
+        { "title": { "en": "Check", "ar": "راجع" }, "text": { "en": "What you compare it with", "ar": "ما نقارن به" } },
+        { "title": { "en": "Decide", "ar": "قرّر" }, "text": { "en": "What you choose", "ar": "ما نختاره" } }
+      ] },
+
+    { "type": "section", "title": { "en": "Second part", "ar": "الجزء الثاني" } },
+
+    { "type": "stats",
+      "title": { "en": "Numbers that matter", "ar": "أرقام مهمة" },
+      "stats": [
+        { "value": "3", "unit": "×", "label": { "en": "What this number means", "ar": "معنى هذا الرقم" } },
+        { "value": "25", "unit": "%", "label": { "en": "What this number means", "ar": "معنى هذا الرقم" } },
+        { "value": "40", "unit": "°C", "label": { "en": "What this number means", "ar": "معنى هذا الرقم" } }
+      ],
+      "source": { "en": "Source: where the numbers come from", "ar": "المصدر: من أين جاءت الأرقام" } },
+
+    { "type": "formula",
+      "title": { "en": "A rule, a formula and an example", "ar": "قاعدة ومعادلة ومثال" },
+      "rule": { "en": "The rule of thumb in one sentence.", "ar": "القاعدة العملية بجملة واحدة." },
+      "formula": "P = V × I",
+      "where": { "en": "P: power (W). V: voltage (V). I: current (A).", "ar": "P: القدرة (W). V: الجهد (V). I: التيار (A)." },
+      "example": {
+        "title": { "en": "Worked example", "ar": "مثال محسوب" },
+        "rows": [[{ "en": "Voltage", "ar": "الجهد" }, "230 V"], [{ "en": "Current", "ar": "التيار" }, "10 A"]],
+        "result": "P = 2,300 W"
+      },
+      "note": { "en": "What to do with the result.", "ar": "ماذا نفعل بالنتيجة." } },
+
+    { "type": "table",
+      "title": { "en": "A small table", "ar": "جدول صغير" },
+      "rows": {
+        "en": [["Item", "Value", "Note"], ["First", "10", "Short note"], ["Second", "20", "Short note"]],
+        "ar": [["البند", "القيمة", "ملاحظة"], ["الأول", "10", "ملاحظة قصيرة"], ["الثاني", "20", "ملاحظة قصيرة"]]
+      } },
+
+    { "type": "image",
+      "title": { "en": "One big picture", "ar": "صورة واحدة كبيرة" },
+      "image": "brand/photos/photo-sunset-array.jpg",
+      "caption": { "en": "A caption that says what to look at.", "ar": "تعليق يقول على ماذا ننظر." } },
+
+    { "type": "takeaway", "text": { "en": "The one sentence you want people to remember.", "ar": "الجملة الوحيدة التي تريد أن يتذكرها الحضور." } }
+  ]
+}

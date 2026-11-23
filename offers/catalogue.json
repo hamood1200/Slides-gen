@@ -1,0 +1,480 @@
+{
+  "_readme": "One entry per offer. The picker scores every deck against `keywords` (title hits count x3), keeps only offers whose `disciplines` include the deck's discipline (or 'any'), and falls back to `fallback` when nothing scores >= min_score. Keep keywords lowercase; Arabic keywords are matched without diacritics. See offers/README.md.",
+  "min_score": 3,
+  "fallback": {
+    "default": "najdeah-space",
+    "solar": "solar-plant-guide"
+  },
+  "utm": "utm_source=free-slides&utm_medium=pdf&utm_campaign={slug}",
+  "offers": [
+    {
+      "id": "pv-structures",
+      "product_id": 5539,
+      "url": "https://najdeah.com/pv-structures/",
+      "image": "brand/offers/pv-structures.webp",
+      "disciplines": [
+        "solar",
+        "civil",
+        "structural",
+        "mechanical"
+      ],
+      "keywords": [
+        "structure",
+        "mounting",
+        "clamp",
+        "rail",
+        "purlin",
+        "ballast",
+        "wind load",
+        "snow load",
+        "uplift",
+        "carport",
+        "tracker",
+        "tracking",
+        "galvanized",
+        "aluminum",
+        "aluminium",
+        "corrosion",
+        "pile",
+        "foundation",
+        "asce 7",
+        "sbc 301",
+        "steel section",
+        "هيكل",
+        "هياكل",
+        "تركيب",
+        "حمل الرياح",
+        "احمال",
+        "رياح",
+        "ثقالات",
+        "مظلات",
+        "كربورت",
+        "متتبع",
+        "مجلفن",
+        "المنيوم",
+        "ألمنيوم",
+        "صدأ",
+        "تآكل",
+        "أساسات",
+        "خوازيق"
+      ],
+      "title": {
+        "en": "PV Mounting Structures: Design Guide",
+        "ar": "هياكل تركيب الألواح الشمسية: دليل التصميم"
+      },
+      "pitch": {
+        "en": "Wind and uplift loads to ASCE 7-10, steel and aluminium sections, ballast and corrosion classes, worked through on real structures.",
+        "ar": "أحمال الرياح والرفع حسب ASCE 7-10، مقاطع الحديد والألمنيوم، الثقالات وفئات التآكل، مع أمثلة محلولة على هياكل حقيقية."
+      },
+      "points": {
+        "en": [
+          "8 wind-load cases solved step by step",
+          "Ballast check for uplift and sliding",
+          "Corrosion classes C1 to C5 (ISO 12944-2)"
+        ],
+        "ar": [
+          "8 حالات لأحمال الرياح محلولة خطوة بخطوة",
+          "فحص الثقالات ضد الرفع والانزلاق",
+          "فئات التآكل من C1 إلى C5 حسب ISO 12944-2"
+        ]
+      }
+    },
+    {
+      "id": "solar-plant-guide",
+      "product_id": 1396,
+      "url": "https://najdeah.com/product/solar-powerplants-v2/",
+      "image": "brand/offers/solar-plant-guide.webp",
+      "disciplines": [
+        "solar",
+        "electrical"
+      ],
+      "keywords": [
+        "solar",
+        "pv",
+        "photovoltaic",
+        "panel",
+        "module",
+        "inverter",
+        "string",
+        "mppt",
+        "pvsyst",
+        "dc/ac",
+        "irradiance",
+        "radiation",
+        "psh",
+        "peak sun",
+        "tilt",
+        "azimuth",
+        "shading",
+        "sld",
+        "voc",
+        "isc",
+        "bifacial",
+        "power plant",
+        "on grid",
+        "off grid",
+        "طاقة شمسية",
+        "الطاقة الشمسية",
+        "شمسي",
+        "ألواح",
+        "الواح",
+        "لوح",
+        "انفرتر",
+        "عاكس",
+        "محول",
+        "سلسلة",
+        "اشعاع",
+        "إشعاع",
+        "زاوية الميل",
+        "محطة",
+        "محطات",
+        "تظليل"
+      ],
+      "title": {
+        "en": "Solar PV Plant Design Guide, 2nd Edition",
+        "ar": "دليل تصميم محطات الطاقة الشمسية، الإصدار الثاني"
+      },
+      "pitch": {
+        "en": "The expanded second edition: the full design sequence, IEC and NEC, and Gulf requirements, with worked examples and Excel files.",
+        "ar": "الإصدار الثاني الموسّع: تسلسل التصميم كاملاً، ومعايير IEC وNEC، ومتطلبات الخليج، مع أمثلة محلولة وملفات إكسل."
+      },
+      "points": {
+        "en": [
+          "From the first sketch to commissioning",
+          "Saudi code, SEC and DEWA requirements",
+          "Worked examples and Excel files"
+        ],
+        "ar": [
+          "من أول رسم تخطيطي حتى التشغيل التجريبي",
+          "الكود السعودي والشركة السعودية للكهرباء وهيئة دبي",
+          "أمثلة محلولة وملفات إكسل"
+        ]
+      }
+    },
+    {
+      "id": "ppa-guide",
+      "product_id": 5363,
+      "url": "https://najdeah.com/ppa/",
+      "image": "brand/offers/ppa-guide.webp",
+      "disciplines": [
+        "solar",
+        "energy",
+        "business",
+        "project-management"
+      ],
+      "keywords": [
+        "ppa",
+        "power purchase",
+        "tariff",
+        "ipp",
+        "offtaker",
+        "off-taker",
+        "bankability",
+        "bankable",
+        "tender",
+        "contract",
+        "lender",
+        "developer",
+        "wheeling",
+        "net metering",
+        "اتفاقية شراء الطاقة",
+        "شراء الطاقة",
+        "تعرفة",
+        "تعرفه",
+        "عقد",
+        "عقود",
+        "مطور",
+        "ممول",
+        "تمويل",
+        "مناقصة",
+        "مناقصات"
+      ],
+      "title": {
+        "en": "Solar PPA Projects Guide",
+        "ar": "دليل مشاريع الـ PPA للطاقة الشمسية"
+      },
+      "pitch": {
+        "en": "What a solar PPA is, how each part works and what each clause does to the money. Every topic has a rule of thumb, a formula and a worked example.",
+        "ar": "ما هي اتفاقية شراء الطاقة الشمسية، وكيف يعمل كل جزء فيها، وماذا يفعل كل بند بالمال. لكل موضوع قاعدة عملية ومعادلة ومثال محسوب."
+      },
+      "points": {
+        "en": [
+          "Two running examples: 20 MW self-consumption and 100 MW grid",
+          "Good and bad wording for each clause, priced",
+          "Arabic 98 pages, English 118 pages"
+        ],
+        "ar": [
+          "مثالان جاريان: استهلاك ذاتي 20 ميجاوات وشبكة 100 ميجاوات",
+          "الصيغة الجيدة والسيئة لكل بند، وكم تكلّف",
+          "بالعربية 98 صفحة وبالإنجليزية 118 صفحة"
+        ]
+      }
+    },
+    {
+      "id": "ppa-excel",
+      "product_id": 2664,
+      "url": "https://najdeah.com/product/ppa-excel-model/",
+      "image": "brand/offers/ppa-excel.webp",
+      "disciplines": [
+        "solar",
+        "energy",
+        "business",
+        "finance"
+      ],
+      "keywords": [
+        "lcoe",
+        "irr",
+        "npv",
+        "payback",
+        "cash flow",
+        "cashflow",
+        "financial model",
+        "feasibility",
+        "capex",
+        "opex",
+        "debt",
+        "equity",
+        "dscr",
+        "economics",
+        "نموذج مالي",
+        "دراسة جدوى",
+        "جدوى",
+        "تدفق نقدي",
+        "استرداد",
+        "تكلفة",
+        "تكاليف",
+        "عائد",
+        "اقتصاديات"
+      ],
+      "title": {
+        "en": "50 MW PPA Financial Model (Excel)",
+        "ar": "نموذج مالي لاتفاقية شراء الطاقة 50 ميجاوات على إكسل"
+      },
+      "pitch": {
+        "en": "A fully editable Excel financial model for solar projects up to 50 MW, every formula visible.",
+        "ar": "نموذج مالي تفصيلي قابل للتعديل بالكامل على إكسل لمشاريع شمسية حتى 50 ميجاوات، وكل معادلة فيه ظاهرة."
+      },
+      "points": {
+        "en": [
+          "CAPEX, OPEX and cash flow",
+          "Project and equity IRR, LCOE and debt schedule",
+          "Scenario comparison for feasibility and tenders"
+        ],
+        "ar": [
+          "التكلفة الرأسمالية والتشغيلية والتدفق النقدي",
+          "معدل العائد للمشروع وحقوق الملكية، وLCOE وجدول الدين",
+          "مقارنة السيناريوهات لدراسات الجدوى والمناقصات"
+        ]
+      }
+    },
+    {
+      "id": "excel-bundle",
+      "product_id": 2642,
+      "url": "https://najdeah.com/product/excelbundle/",
+      "image": "brand/offers/excel-bundle.webp",
+      "disciplines": [
+        "solar",
+        "electrical"
+      ],
+      "keywords": [
+        "calculation",
+        "sizing",
+        "excel",
+        "spreadsheet",
+        "boq",
+        "voltage drop",
+        "cable sizing",
+        "cable",
+        "earthing",
+        "حساب",
+        "حسابات",
+        "تحجيم",
+        "إكسل",
+        "اكسل",
+        "جدول كميات",
+        "هبوط الجهد",
+        "مقطع الكابل",
+        "كوابل",
+        "كابل",
+        "تأريض",
+        "losses",
+        "schedule",
+        "فواقد",
+        "برنامج زمني"
+      ],
+      "title": {
+        "en": "Solar Excel Bundle, 1 to 5 MW",
+        "ar": "حزمة إكسل للطاقة الشمسية، من 1 إلى 5 ميجاوات"
+      },
+      "pitch": {
+        "en": "Nine editable Excel files for 1 to 5 MW solar projects, the calculations and the financial work, formulas visible.",
+        "ar": "تسعة ملفات إكسل قابلة للتعديل لمشاريع شمسية بين 1 و5 ميجاوات، للحسابات والعمل المالي، ومعادلاتها ظاهرة."
+      },
+      "points": {
+        "en": [
+          "Cable sizing, voltage drop, earthing and losses",
+          "Project schedule and BOQ",
+          "25-year cash-flow model"
+        ],
+        "ar": [
+          "مقاطع الكابلات، هبوط الجهد، التأريض والفواقد",
+          "البرنامج الزمني وجدول الكميات",
+          "نموذج تدفق نقدي لمدة 25 سنة"
+        ]
+      }
+    },
+    {
+      "id": "word-bundle",
+      "product_id": 2761,
+      "url": "https://najdeah.com/product/word-bundle/",
+      "image": "brand/offers/word-bundle.webp",
+      "disciplines": [
+        "solar",
+        "electrical",
+        "project-management",
+        "business"
+      ],
+      "keywords": [
+        "report",
+        "documentation",
+        "document",
+        "specification",
+        "data sheet",
+        "o&m",
+        "operation and maintenance",
+        "maintenance",
+        "template",
+        "testing and commissioning",
+        "commissioning",
+        "تقرير",
+        "توثيق",
+        "وثائق",
+        "مستندات",
+        "مواصفات",
+        "تشغيل وصيانة",
+        "صيانة",
+        "قوالب",
+        "اختبار",
+        "تشغيل تجريبي"
+      ],
+      "title": {
+        "en": "Editable Word Templates for Solar Projects",
+        "ar": "قوالب وورد قابلة للتعديل لمشاريع الطاقة الشمسية"
+      },
+      "pitch": {
+        "en": "Four Word documents for the paper side of a solar project, written, formatted and ready to adapt under your logo.",
+        "ar": "أربع وثائق وورد للجانب الورقي من مشروع شمسي، مكتوبة ومنسّقة وجاهزة للتعديل باسم شركتك."
+      },
+      "points": {
+        "en": [
+          "O&M plan",
+          "Electrical design document and technical data sheet",
+          "Testing and commissioning plan"
+        ],
+        "ar": [
+          "خطة تشغيل وصيانة",
+          "وثيقة التصميم الكهربائي ونموذج البيانات الفنية",
+          "خطة الاختبار والتشغيل التجريبي"
+        ]
+      }
+    },
+    {
+      "id": "3mw-premium",
+      "product_id": 2540,
+      "url": "https://najdeah.com/product/3mwproject-premium/",
+      "image": "brand/offers/3mw-premium.webp",
+      "disciplines": [
+        "solar"
+      ],
+      "keywords": [
+        "epc",
+        "utility scale",
+        "utility-scale",
+        "mw",
+        "megawatt",
+        "drawings",
+        "layout",
+        "installation",
+        "commissioning",
+        "construction",
+        "full project",
+        "design to delivery",
+        "ميجاوات",
+        "ميغاواط",
+        "مخططات",
+        "مشروع كامل",
+        "تنفيذ",
+        "تركيب",
+        "تشغيل",
+        "إنشاء",
+        "تسليم"
+      ],
+      "title": {
+        "en": "3 MW Solar Project: Full Editable Package",
+        "ar": "مشروع شمسي 3 ميجاوات: الحزمة الكاملة القابلة للتعديل"
+      },
+      "pitch": {
+        "en": "Every engineering, technical and financial file of a 3 MW solar plant, all editable. Change them for your own site.",
+        "ar": "الملفات الهندسية والفنية والمالية كاملة لمحطة شمسية 3 ميجاوات، وكلها قابلة للتعديل. عدّلها على موقعك أنت."
+      },
+      "points": {
+        "en": [
+          "AutoCAD drawings and a PVsyst model",
+          "STAAD.Pro structure files and a SketchUp 3D model",
+          "Word proposals and a PDF set"
+        ],
+        "ar": [
+          "مخططات أوتوكاد ونموذج PVsyst",
+          "ملفات STAAD.Pro الإنشائية ومجسم SketchUp",
+          "عروض وورد ومجموعة ملفات PDF"
+        ]
+      }
+    },
+    {
+      "id": "najdeah-space",
+      "product_id": 5441,
+      "url": "https://najdeah.com/najdeah-space/",
+      "image": null,
+      "disciplines": [
+        "any"
+      ],
+      "keywords": [
+        "career",
+        "engineer",
+        "engineering",
+        "graduate",
+        "skills",
+        "learning",
+        "library",
+        "templates",
+        "مهندس",
+        "هندسة",
+        "خريج",
+        "مهارات",
+        "تعلم",
+        "مكتبة"
+      ],
+      "title": {
+        "en": "Najdeah Space",
+        "ar": "مساحة نجديّة"
+      },
+      "pitch": {
+        "en": "One subscription to the Najdeah library: the guides, Excel tools, Word templates and project files.",
+        "ar": "اشتراك واحد لمكتبة نجديّة: الأدلة وأدوات إكسل وقوالب وورد وملفات المشاريع."
+      },
+      "points": {
+        "en": [
+          "Every guide and tool in one place",
+          "Read and download from any device",
+          "6 months, 1 year or 5 years"
+        ],
+        "ar": [
+          "كل الأدلة والأدوات في مكان واحد",
+          "تصفّح وتحميل من أي جهاز",
+          "ستة أشهر أو سنة أو خمس سنوات"
+        ]
+      },
+      "verify": "Points 1-2 are general; confirm against the Space page before publishing."
+    }
+  ]
+}

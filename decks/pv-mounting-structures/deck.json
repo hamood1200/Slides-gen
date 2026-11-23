@@ -1,0 +1,256 @@
+{
+  "slug": "pv-mounting-structures",
+  "discipline": "solar",
+  "languages": ["ar", "en"],
+  "palette": "palette-08-teal-orange",
+  "offer": "auto",
+
+  "cover": {
+    "title": { "en": "PV mounting structures", "ar": "هياكل تركيب الألواح الشمسية" },
+    "subtitle": {
+      "en": "The parts, the main system types, and two quick checks for heat and row spacing",
+      "ar": "مكونات الهيكل، وأنواع الأنظمة، وفحصان سريعان للحرارة والمسافة بين الصفوف"
+    },
+    "photo": "brand/photos/cover-ground-mount.jpg",
+    "year": "2026"
+  },
+
+  "slides": [
+    { "type": "section", "title": { "en": "What a structure is made of", "ar": "مكونات الهيكل" },
+      "sub": { "en": "Base, profiles and clamps", "ar": "القاعدة والبروفايلات والكلامبات" } },
+
+    { "type": "bullets",
+      "title": { "en": "Concrete blocks", "ar": "البلوكات الخرسانية" },
+      "points": {
+        "en": [
+          "Used on flat roofs and on open ground",
+          "They hold the frame down by their own weight, so the roof is not drilled",
+          { "text": "Size them for wind", "sub": "Each block has to resist uplift and sliding at the design wind speed" },
+          "Check that the roof slab can carry the extra weight before you place them"
+        ],
+        "ar": [
+          "تُستخدم على الأسطح المستوية وعلى الأرض المفتوحة",
+          "تثبّت الهيكل بوزنها، فلا نحتاج إلى ثقب السطح",
+          { "text": "حجمها يحدده الهواء", "sub": "كل بلوكة لازم تقاوم الرفع والانزلاق عند سرعة الرياح التصميمية" },
+          "تأكد أن سقف المبنى يتحمل الوزن الإضافي قبل وضعها"
+        ]
+      },
+      "image": "decks/pv-mounting-structures/img/concrete-blocks.jpg" },
+
+    { "type": "bullets",
+      "title": { "en": "Profiles and cross sections", "ar": "البروفايلات والمقاطع" },
+      "lead": { "en": "The frame is built from standard sections. The loads decide which one you use.", "ar": "الهيكل يُبنى من مقاطع قياسية، والأحمال هي التي تحدد أي مقطع نستخدم." },
+      "points": {
+        "en": [
+          "Open sections: angle, tee, channel, I-beam",
+          "Hollow sections: square (SHS), rectangular (RHS) and circular (CHS)",
+          "Span, wind, snow and module weight set the size and thickness"
+        ],
+        "ar": [
+          "مقاطع مفتوحة: زاوية، حرف T، مجرى C، و I-beam",
+          "مقاطع مجوفة: مربعة SHS ومستطيلة RHS ودائرية CHS",
+          "البحر والرياح والثلج ووزن الألواح هي التي تحدد المقاس والسماكة"
+        ]
+      },
+      "image": "decks/pv-mounting-structures/img/profile-sections.jpg", "fit": "contain" },
+
+    { "type": "compare",
+      "title": { "en": "Galvanized steel or aluminium", "ar": "حديد مجلفن أم ألمنيوم" },
+      "columns": [
+        { "title": { "en": "Galvanized steel", "ar": "حديد مجلفن" },
+          "points": {
+            "en": ["Cheaper per tonne", "Used for high and large systems", "Corrodes where the zinc coat is cut or drilled", "Needs a rubber pad between the rail and the module frame"],
+            "ar": ["أرخص سعراً", "يُستخدم في الأنظمة العالية والكبيرة", "يصدأ في أماكن القص والثقب إذا لم تُعالج", "يحتاج قطعة مطاط بين الحديد وإطار اللوح"]
+          } },
+        { "title": { "en": "Aluminium", "ar": "ألمنيوم" },
+          "points": {
+            "en": ["The more expensive option", "Used for low systems, mostly rooftops", "Light, and it does not rust", "Sits on the module frame without rubber, since both are aluminium"],
+            "ar": ["الأغلى بين الخيارين", "يُستخدم في الأنظمة المنخفضة، غالباً على الأسطح", "خفيف ولا يصدأ", "يُركّب على إطار اللوح مباشرة بدون مطاط لأن الاثنين ألمنيوم"]
+          } }
+      ],
+      "verdict": { "en": "Large ground plant on a budget: galvanized steel. Light rooftop where weight matters: aluminium.", "ar": "محطة أرضية كبيرة بميزانية محدودة: حديد مجلفن. سطح خفيف والوزن مهم: ألمنيوم." } },
+
+    { "type": "bullets",
+      "title": { "en": "Mid clamps and end clamps", "ar": "الكلامبات الوسطية والطرفية" },
+      "points": {
+        "en": [
+          { "text": "Mid clamp", "sub": "Sits between two modules and holds both with one bolt" },
+          { "text": "End clamp", "sub": "Holds the last module at each end of the row" },
+          "Clamp only inside the zones the module manual allows",
+          "Tighten to the torque the clamp maker gives"
+        ],
+        "ar": [
+          { "text": "الكلامب الوسطي", "sub": "يجلس بين لوحين ويمسك الاثنين ببرغي واحد" },
+          { "text": "الكلامب الطرفي", "sub": "يمسك آخر لوح في بداية الصف ونهايته" },
+          "ثبّت الكلامب فقط ضمن المناطق المسموحة في كتالوج اللوح",
+          "اشدّ البراغي على عزم الشد الذي تحدده الشركة المصنعة"
+        ]
+      },
+      "image": "decks/pv-mounting-structures/img/mid-end-clamps.jpg", "fit": "contain" },
+
+    { "type": "section", "title": { "en": "Fixed systems", "ar": "الأنظمة الثابتة" },
+      "sub": { "en": "Six ways to mount panels that do not move", "ar": "ست طرق لتركيب ألواح لا تتحرك" } },
+
+    { "type": "table",
+      "title": { "en": "Fixed types at a glance", "ar": "الأنواع الثابتة باختصار" },
+      "rows": {
+        "en": [
+          ["Type", "Typical size", "How common"],
+          ["Roof mounted", "Small", "Very common"],
+          ["Ground mounted", "Large", "Very common"],
+          ["Self-ballasted", "Small to medium", "Common"],
+          ["Shade structure (facade)", "Small", "Rare"],
+          ["BIPV", "Small to medium", "Depends on the country"],
+          ["Carports", "Small to medium", "Common"]
+        ],
+        "ar": [
+          ["النوع", "حجم النظام", "مدى الانتشار"],
+          ["على السطح Roof mounted", "صغير", "منتشر جداً"],
+          ["أرضي Ground mounted", "كبير", "منتشر جداً"],
+          ["بالأثقال Self-ballasted", "صغير إلى متوسط", "منتشر"],
+          ["مظلات على الواجهة", "صغير", "قليل"],
+          ["مدمج بالمبنى BIPV", "صغير إلى متوسط", "حسب البلد"],
+          ["مظلات سيارات Carports", "صغير إلى متوسط", "منتشر"]
+        ]
+      } },
+
+    { "type": "bullets",
+      "title": { "en": "Roof mounted", "ar": "التركيب على السطح" },
+      "points": {
+        "en": ["Small systems on homes, shops and factories", "Uses roof space that is already there", "The roof type sets the fixing: drilled anchors, clamps on the sheet, or ballast"],
+        "ar": ["أنظمة صغيرة على البيوت والمحلات والمصانع", "يستغل مساحة موجودة أصلاً", "نوع السقف يحدد طريقة التثبيت: براغي، أو كلامبات على الصاج، أو أثقال"]
+      },
+      "image": "decks/pv-mounting-structures/img/roof-mounted.jpg" },
+
+    { "type": "bullets",
+      "title": { "en": "Ground mounted", "ar": "التركيب الأرضي" },
+      "points": {
+        "en": ["The usual choice for large plants", "Posts are driven, screwed or set in concrete", "Soil tests decide the foundation type and depth"],
+        "ar": ["الخيار المعتاد في المحطات الكبيرة", "الأعمدة تُدق أو تُبرغى أو تُصب بالخرسانة", "فحص التربة يحدد نوع الأساس وعمقه"]
+      },
+      "image": "decks/pv-mounting-structures/img/ground-mounted.jpg" },
+
+    { "type": "bullets",
+      "title": { "en": "Self-ballasted arrays", "ar": "الأنظمة المثبتة بالأثقال" },
+      "points": {
+        "en": ["Low frames held by weight, with no roof penetrations", "Small to medium systems on flat roofs", "Ballast weight comes from the wind calculation, never from a guess"],
+        "ar": ["هياكل منخفضة تثبت بالوزن بدون أي ثقب في السطح", "أنظمة صغيرة إلى متوسطة على الأسطح المستوية", "وزن الأثقال يأتي من حساب الرياح، وليس من التقدير"]
+      },
+      "image": "decks/pv-mounting-structures/img/self-ballasted.jpg" },
+
+    { "type": "bullets",
+      "title": { "en": "Facades and BIPV", "ar": "الواجهات والألواح المدمجة BIPV" },
+      "points": {
+        "en": [
+          { "text": "Shade structures on the facade", "sub": "Panels double as sun shades over windows. Small systems, rare." },
+          { "text": "Building integrated PV (BIPV)", "sub": "The panel is part of the wall or the roof itself. Small to medium systems; how common depends on the country." }
+        ],
+        "ar": [
+          { "text": "مظلات على الواجهة", "sub": "الألواح تعمل كمظلة فوق الشبابيك. أنظمة صغيرة وقليلة الانتشار." },
+          { "text": "الألواح المدمجة بالمبنى BIPV", "sub": "اللوح يصبح جزءاً من الجدار أو السقف نفسه. أنظمة صغيرة إلى متوسطة، وانتشارها يختلف من بلد لآخر." }
+        ]
+      },
+      "image": "decks/pv-mounting-structures/img/bipv-facade.jpg" },
+
+    { "type": "bullets",
+      "title": { "en": "Carports", "ar": "مظلات السيارات" },
+      "points": {
+        "en": ["Parking shade and power from the same steel", "Small to medium systems, and common", "Clearance height and column spacing come from the car park layout"],
+        "ar": ["تظليل للمواقف وإنتاج كهرباء من نفس الهيكل", "أنظمة صغيرة إلى متوسطة ومنتشرة", "ارتفاع المظلة وتباعد الأعمدة يحددهما تصميم الموقف"]
+      },
+      "image": "decks/pv-mounting-structures/img/carport.jpg" },
+
+    { "type": "section", "title": { "en": "Tracking and adjustable systems", "ar": "أنظمة التتبع والأنظمة القابلة للتعديل" },
+      "sub": { "en": "Panels that move with the sun", "ar": "ألواح تتحرك مع الشمس" } },
+
+    { "type": "bullets",
+      "title": { "en": "Fixed, adjustable, tracking", "ar": "ثابت، قابل للتعديل، متتبع" },
+      "points": {
+        "en": [
+          { "text": "Fixed", "sub": "One tilt all year. Simple and cheap to maintain." },
+          { "text": "Adjustable", "sub": "The tilt is changed by hand a few times a year." },
+          { "text": "Tracking", "sub": "A motor turns the panels through the day." }
+        ],
+        "ar": [
+          { "text": "ثابت", "sub": "زاوية ميل واحدة طوال السنة. بسيط وصيانته رخيصة." },
+          { "text": "قابل للتعديل", "sub": "نغيّر زاوية الميل يدوياً عدة مرات في السنة." },
+          { "text": "متتبع", "sub": "محرك يدير الألواح خلال اليوم." }
+        ]
+      },
+      "image": "decks/pv-mounting-structures/img/fixed-adjustable-tracking.png", "fit": "contain" },
+
+    { "type": "compare",
+      "title": { "en": "Single axis or double axis", "ar": "محور واحد أم محوران" },
+      "columns": [
+        { "title": { "en": "Single axis", "ar": "محور واحد" },
+          "points": {
+            "en": ["Turns east to west to follow the sun each day", "One motor per row or per group of rows", "The common choice for large ground plants"],
+            "ar": ["يدور من الشرق إلى الغرب ليتبع الشمس كل يوم", "محرك واحد لكل صف أو لمجموعة صفوف", "الخيار الشائع في المحطات الأرضية الكبيرة"]
+          } },
+        { "title": { "en": "Double axis", "ar": "محوران" },
+          "points": {
+            "en": ["Also changes tilt to follow the sun through the seasons", "Catches the most energy per panel", "More moving parts, more cost and more maintenance"],
+            "ar": ["يغيّر زاوية الميل أيضاً ليتبع الشمس مع الفصول", "يلتقط أكبر طاقة لكل لوح", "أجزاء متحركة أكثر، وتكلفة وصيانة أعلى"]
+          } }
+      ],
+      "verdict": { "en": "Compare the extra energy with the extra cost and upkeep in your energy model before you choose.", "ar": "قارن الطاقة الإضافية مع التكلفة والصيانة الإضافية في نموذج الطاقة قبل أن تختار." } },
+
+    { "type": "section", "title": { "en": "Heat and row spacing", "ar": "الحرارة والمسافة بين الصفوف" },
+      "sub": { "en": "Two checks to do on every layout", "ar": "فحصان لازم نعملهم على كل تصميم" } },
+
+    { "type": "table",
+      "title": { "en": "How much hotter the cells run", "ar": "كم ترتفع حرارة الخلايا" },
+      "lead": { "en": "Less air behind the panel means a hotter cell. The mounting type sets how much air gets there.", "ar": "كلما قلّ الهواء خلف اللوح ارتفعت حرارة الخلية، وطريقة التركيب هي التي تحدد كمية الهواء." },
+      "rows": {
+        "en": [
+          ["Mounting type", "Cell temperature above air"],
+          ["Ground mounted and carports", "+20 °C"],
+          ["Roof mounted", "+30 °C"],
+          ["Facade", "+35 °C"],
+          ["BIPV", "+45 °C"]
+        ],
+        "ar": [
+          ["طريقة التركيب", "ارتفاع حرارة الخلية عن الهواء"],
+          ["أرضي ومظلات السيارات", "+20 °C"],
+          ["على السطح", "+30 °C"],
+          ["واجهات", "+35 °C"],
+          ["مدمج بالمبنى BIPV", "+45 °C"]
+        ]
+      } },
+
+    { "type": "formula",
+      "title": { "en": "What the heat costs you", "ar": "كم تخسر بسبب الحرارة" },
+      "rule": { "en": "Every degree above 25 °C takes a fixed share of power. The datasheet gives that share.", "ar": "كل درجة فوق 25 °C تأخذ نسبة ثابتة من القدرة، والنسبة مكتوبة في كتالوج اللوح." },
+      "formula": "Loss % = γ × (Tcell − 25)",
+      "where": { "en": "γ: power temperature coefficient from the datasheet (%/°C). Tcell = air temperature + the rise from the table.", "ar": "γ: معامل الحرارة للقدرة من الكتالوج (%/°C). حرارة الخلية = حرارة الهواء + الارتفاع من الجدول." },
+      "example": {
+        "title": { "en": "Rooftop on a 40 °C day", "ar": "نظام على سطح في يوم 40 °C" },
+        "rows": [
+          [{ "en": "Air temperature", "ar": "حرارة الهواء" }, "40 °C"],
+          [{ "en": "Rise for roof mounted", "ar": "الارتفاع للتركيب على السطح" }, "+30 °C"],
+          [{ "en": "Cell temperature", "ar": "حرارة الخلية" }, "70 °C"],
+          [{ "en": "γ, example value", "ar": "قيمة γ للمثال" }, "−0.35 %/°C"]
+        ],
+        "result": { "en": "≈ 16 % below rating", "ar": "أقل بحوالي 16 % من القدرة الاسمية" }
+      },
+      "note": { "en": "The same panel on a ground mount runs at 60 °C and loses about 12 %.", "ar": "نفس اللوح على هيكل أرضي يعمل على 60 °C ويخسر حوالي 12 %." } },
+
+    { "type": "formula",
+      "title": { "en": "Space between rows", "ar": "المسافة بين الصفوف" },
+      "rule": { "en": "Leave one and a half times the row height between rows so the front row does not shade the one behind it.", "ar": "اترك مسافة تساوي مرة ونصف ارتفاع الصف، حتى لا يظلل الصف الأمامي الصف الذي خلفه." },
+      "formula": "D = 1.5 × h",
+      "where": { "en": "h: height of the top edge of the row above its bottom edge. D: clear gap to the next row.", "ar": "h: ارتفاع الحافة العلوية للصف عن حافته السفلية. D: المسافة الفارغة حتى الصف التالي." },
+      "example": {
+        "title": { "en": "Quick example", "ar": "مثال سريع" },
+        "rows": [
+          [{ "en": "Row height h", "ar": "ارتفاع الصف h" }, "1.2 m"],
+          [{ "en": "Factor", "ar": "المعامل" }, "1.5"]
+        ],
+        "result": "D = 1.8 m"
+      },
+      "note": { "en": "This is a first pass. Confirm it with a shading study for your latitude.", "ar": "هذا تقدير أولي. تأكد منه بدراسة تظليل حسب خط العرض في موقعك." } },
+
+    { "type": "takeaway",
+      "text": { "en": "Pick the structure from the site and the loads first. The price comparison comes after that.", "ar": "اختر الهيكل حسب الموقع والأحمال أولاً، وبعدها قارن الأسعار." } }
+  ]
+}

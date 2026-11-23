@@ -1,0 +1,14 @@
+{
+  "name": "slides-gen",
+  "private": true,
+  "type": "module",
+  "description": "Najdeah free slide decks: deck.json in, branded PDF out (Arabic, English or both).",
+  "scripts": {
+    "build": "node build.mjs",
+    "offer": "node tools/pick-offer.mjs",
+    "shot": "node tools/shot.mjs",
+    "sync:humanizer": "node tools/sync-humanizer.mjs",
+    "sync:catalogue": "node tools/sync-catalogue.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

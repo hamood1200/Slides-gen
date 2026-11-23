@@ -1,0 +1,30 @@
+{
+  "_readme": "Presenter and contact details used on the presenter and closing slides. Edit here once; every deck picks it up.",
+  "presenter": {
+    "name": { "en": "Eng. Nooraldean Najdeah", "ar": "م. نورالدين نجديّة" },
+    "role": { "en": "Renewable-energy engineer and trainer", "ar": "مهندس طاقة متجددة ومدرّب" },
+    "photo": "brand/photos/photo-author-desk.jpg",
+    "bio": {
+      "en": [
+        "Mechanical engineer, working in solar and energy efficiency since 2017",
+        "Projects in Jordan, Saudi Arabia and Qatar",
+        "Trained more than 15,000 engineers online and in person",
+        "Founder of the Acadeemi training platform"
+      ],
+      "ar": [
+        "مهندس ميكانيك، يعمل في الطاقة الشمسية وكفاءة الطاقة منذ 2017",
+        "مشاريع في الأردن والسعودية وقطر",
+        "درّب أكثر من 15,000 مهندس أونلاين وحضورياً",
+        "مؤسس منصة أكاديمي للتدريب"
+      ]
+    }
+  },
+  "site": "najdeah.com",
+  "free_url": "https://najdeah.com/free/",
+  "contacts": [
+    { "label": { "en": "Website", "ar": "الموقع" }, "value": "najdeah.com" },
+    { "label": { "en": "LinkedIn", "ar": "لينكدإن" }, "value": "Nooralden Najdeah" },
+    { "label": { "en": "Free files", "ar": "ملفات مجانية" }, "value": "najdeah.com/free" }
+  ],
+  "series": { "en": "Najdeah free slides", "ar": "سلايدات نجديّة المجانية" }
+}
