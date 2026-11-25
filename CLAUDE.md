@@ -15,7 +15,7 @@ Any engineering field is in scope, not only solar. Sister repo: hamood1200/Books
 
 ## The workflow
 
-The same five steps every time, in this order. Colleagues run it through the `slides` skill (`skills/slides/SKILL.md`, `/najdeah:slides` once the plugin is installed); inside this repo follow it by hand.
+The same five steps every time, in this order. Colleagues run it through the `slides` skill (`skills/slides/SKILL.md`, `/slides-gen:slides` once the plugin is installed); inside this repo follow it by hand.
 
 1. **Topic and language.** Ask what the deck is about and which language (ar / en / both). Pick the discipline yourself from the topic.
 2. **Sources.** Ask for the sources: files, PDFs, links, notes. **Content comes only from them.** No outside facts, numbers or standards; if a slide needs something the sources do not have, tell the user and leave it out (or ask for another source). Cite them on a closing "المراجع" / "References" slide.

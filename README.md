@@ -10,16 +10,16 @@ You write the content. This repo turns it into a branded slide deck as a PDF, in
 
 > **بالعربي باختصار:** تعطي المحتوى، والريبو يطلع سلايدات بتصميم نجديّة (PDF) بالعربي أو الإنجليزي أو الاثنين. الحد الأقصى 25 سلايد، واللوجو على كل سلايد، وأول سلايد بعد الغلاف «لا إله إلا الله»، وفي النص عرض لمنتج من نجديّة له علاقة بالموضوع.
 
-## For colleagues: use it from Claude Code (recommended)
+## Use it from Claude Code (recommended)
 
-Install once (you need read access to this GitHub repo, plus Node 20+, Google Chrome and internet):
+Install once (you need Node 20+, Google Chrome and internet):
 
 ```
 /plugin marketplace add hamood1200/Slides-gen
-/plugin install najdeah@najdeah
+/plugin install slides-gen@slides-gen
 ```
 
-Then in any folder, type `/najdeah:slides` (or just ask for slides). Claude walks you through the same steps every time:
+Then in any folder, type `/slides-gen:slides` (or just ask for slides). Claude walks you through the same steps every time:
 
 1. **الموضوع واللغة**: what the deck is about, Arabic, English or both.
 2. **المصادر**: the files, PDFs and links to take the content from. Nothing goes on the slides that is not in them.
@@ -27,7 +27,7 @@ Then in any folder, type `/najdeah:slides` (or just ask for slides). Claude walk
 4. **التصميم**: you see the ten designs below and answer with a number.
 5. **الـ PDF**: Claude writes, checks and builds. You approve the contact sheet, then get the PDF in `./<deck>/out/`.
 
-To get updates: `/plugin marketplace update najdeah`.
+To get updates: `/plugin marketplace update slides-gen`.
 
 ## The ten designs
 

@@ -1,13 +1,13 @@
 {
-  "name": "najdeah",
-  "description": "Najdeah tools for Claude Code: free slide decks as PDF.",
+  "name": "slides-gen",
+  "description": "Engineering slide decks as PDF from your own sources, in ten designs, Arabic or English.",
   "owner": {
     "name": "Najdeah",
     "url": "https://najdeah.com"
   },
   "plugins": [
     {
-      "name": "najdeah",
+      "name": "slides-gen",
       "source": "./",
       "description": "Najdeah free slide decks: topic and sources in, a branded PDF out, in one of ten designs."
     }
