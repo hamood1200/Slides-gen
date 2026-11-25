@@ -1,0 +1,30 @@
+/* Blueprint: every sheet is a diazo print. White linework on blueprint blue, cyan for marks.
+   Same construction as the drawing sheet (frame, zones, title block), inverted. */
+.slide,.slide.dark{--ink:#f4f8fc;--ink-2:rgba(244,248,252,.84);--muted:rgba(244,248,252,.6);--red:#9fe3ff;--rule:rgba(244,248,252,.38);--hair:rgba(244,248,252,.2);
+  --grid:rgba(255,255,255,.09);--paper:#1d5590;--bp:#163f6c;--white:rgba(255,255,255,.06);
+  background-color:var(--paper);background-size:40px 40px}
+.slide.dark{background-color:var(--bp)}
+.slide::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:8px 8px;pointer-events:none}
+.foot{background:var(--paper)}
+.slide.dark .foot{background:var(--bp)}
+.frm{border-width:2px}
+/* boards, tables and panels: outlined, never filled white */
+.fig,.card,.step,.stats,.eq,.ex,table.tb,.imgfull,.cht{background:transparent;border-color:var(--ink)}
+.fig img{filter:grayscale(1) contrast(1.05);mix-blend-mode:screen;opacity:.92}
+.fig{background:#0f3560}
+.note{background:transparent;border-color:var(--red)}
+.ball{background:#163f6c}
+.card .ch::before{color:#163f6c;background:var(--ink)}
+.card.b .ch::before{background:var(--red)}
+.ex .res{background:var(--ink);color:#163f6c}
+.ex .res .katex{color:#163f6c}
+table.tb th{background:transparent;color:var(--ink);border-bottom:2px solid var(--ink)}
+.offer .cta{background:transparent;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--red)}
+.offer .art img{mix-blend-mode:normal}
+.cht{background:transparent}
+.cht .grid{stroke:rgba(255,255,255,.18)}
+.cht .val,.cht .reflab{stroke:#1d5590}
+.cht .bar.s0{fill:#f4f8fc}.cht .ln.s0{stroke:#f4f8fc}.cht .dot.s0{fill:#1d5590;stroke:#f4f8fc}
+.cht .bar.s1{fill:#9fe3ff}.cht .ln.s1{stroke:#9fe3ff}.cht .dot.s1{fill:#1d5590;stroke:#9fe3ff}
+.legend i.s0{background:#f4f8fc}.legend i.s1{background:#9fe3ff}
+.cover .dwg .fig img{mix-blend-mode:normal;filter:grayscale(1) contrast(1.1) brightness(.9);opacity:1}

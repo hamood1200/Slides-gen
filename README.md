@@ -10,7 +10,45 @@ You write the content. This repo turns it into a branded slide deck as a PDF, in
 
 > **بالعربي باختصار:** تعطي المحتوى، والريبو يطلع سلايدات بتصميم نجديّة (PDF) بالعربي أو الإنجليزي أو الاثنين. الحد الأقصى 25 سلايد، واللوجو على كل سلايد، وأول سلايد بعد الغلاف «لا إله إلا الله»، وفي النص عرض لمنتج من نجديّة له علاقة بالموضوع.
 
-## Make a deck in four steps
+## For colleagues: use it from Claude Code (recommended)
+
+Install once (you need read access to this GitHub repo, plus Node 20+, Google Chrome and internet):
+
+```
+/plugin marketplace add hamood1200/Slides-gen
+/plugin install najdeah@najdeah
+```
+
+Then in any folder, type `/najdeah:slides` (or just ask for slides). Claude walks you through the same steps every time:
+
+1. **الموضوع واللغة**: what the deck is about, Arabic, English or both.
+2. **المصادر**: the files, PDFs and links to take the content from. Nothing goes on the slides that is not in them.
+3. **عدد السلايدات**: Claude proposes a number, you confirm it (25 at most).
+4. **التصميم**: you see the ten designs below and answer with a number.
+5. **الـ PDF**: Claude writes, checks and builds. You approve the contact sheet, then get the PDF in `./<deck>/out/`.
+
+To get updates: `/plugin marketplace update najdeah`.
+
+## The ten designs
+
+![The ten designs](theme/gallery-en.png)
+
+| # | id | Look |
+|---|---|---|
+| 1 | drawing | Engineering drawing sheet: paper, grid, title block |
+| 2 | blueprint | White lines on blueprint blue |
+| 3 | datasheet | A maker's catalogue page, green tabs |
+| 4 | hoarding | Site safety board: yellow, black, hazard stripes |
+| 5 | notebook | Field notebook: squared paper, blue ink |
+| 6 | report | Consultant report: navy and teal, formal |
+| 7 | journal | Technical journal: cream paper, serif, oxblood |
+| 8 | swiss | Swiss grid: black, white, one red |
+| 9 | scada | Control room screen: dark, green and amber |
+| 10 | print | Black on white only, for printing and copying |
+
+Pick one with `"theme": "<id>"` in deck.json, or `--theme <id>` on the build.
+
+## By hand: make a deck in four steps
 
 1. Copy the template:
    ```bash

@@ -1,0 +1,74 @@
+/* Datasheet: a cable maker's catalogue page. White sheet, a grey header band with a green tab
+   that carries the slide's reference, square bullets, ruled tables, Barlow figures. No frame, no grid. */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@500;600&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap");
+:root{--ink:#1d2320;--ink-2:#3f4743;--muted:#6c7570;--red:#17804f;--paper:#ffffff;--white:#fff;--rule:#cfd4d0;--hair:#e2e6e3;--grid:transparent;--bp:#155f3d;
+  --f-body:"Barlow","Noto Sans Arabic",sans-serif;--f-mono:"Barlow Semi Condensed","Barlow",sans-serif;--band:#eef1ee}
+html[lang="ar"]{--f-body:"Noto Sans Arabic","Barlow",sans-serif}
+.en{font-family:"Barlow",sans-serif}
+.slide{background-image:none}
+.slide.dark{--ink:#fff;--ink-2:rgba(255,255,255,.86);--muted:rgba(255,255,255,.7);--red:#bfe8d0;--rule:rgba(255,255,255,.35);background-color:var(--bp)}
+.frm,.zn{display:none}
+/* header band; the eyebrow becomes the green tab at its reading-start end */
+.slide:not(.dark)::before{content:"";position:absolute;top:0;left:0;right:0;height:64px;background:var(--band);border-bottom:1px solid var(--rule)}
+.head{position:static}
+.eyebrow{position:absolute;top:-92px;inset-inline-start:-112px;height:64px;padding:0 40px 0 112px;padding-inline:112px 40px;display:flex;align-items:center;background:var(--red);color:#fff;font:600 24px/1 var(--f-mono);letter-spacing:.04em;margin:0}
+html[lang="ar"] .eyebrow{font:600 24px/1 var(--f-body)}
+.title{font-weight:600;letter-spacing:-.01em}
+html[lang="ar"] .title{font-weight:700}
+.head{padding-bottom:22px;border-bottom:1px solid var(--rule)}
+/* square bullets, solid hairlines */
+ul.pts li{border-bottom:1px solid var(--hair);padding-inline-start:46px}
+ul.pts li::before{content:"";width:14px;height:14px;background:var(--red);top:29px}
+ul.pts li:first-child::before{top:19px}
+ul.pts.dense li::before{top:25px}
+ul.pts.dense li:first-child::before{top:19px}
+.fig{border:1px solid var(--rule);padding:0;background:#fff}
+.fig .credit{padding:8px 14px;margin:0;border-top:1px solid var(--rule);background:var(--band)}
+.note{border:0;border-inline-start:5px solid var(--red);background:var(--band);border-radius:0}
+.note .k{color:var(--red)}
+/* panels */
+.card,.step,.stats,.eq,.ex,table.tb,.imgfull,.cht{border:1px solid var(--rule)}
+.card .ch{background:var(--band);border-bottom:1px solid var(--rule)}
+.card .ch::before{background:var(--ink)}
+.card.b .ch::before{background:var(--red)}
+.step{border-top:5px solid var(--red)}
+.step:not(:last-child)::after,.step:not(:last-child)::before{display:none}
+.step .n::before{content:"0"}
+.stat .v{font-family:"Barlow",sans-serif;font-weight:600;color:var(--ink)}
+.stat .u{color:var(--red)}
+.thumb{border:0;background:var(--band);color:var(--red);font-family:var(--f-mono)}
+.eq::before{content:"EQ.";font-family:var(--f-mono)}
+.ex h4{background:var(--band);font-family:var(--f-mono);border-bottom:1px solid var(--rule)}
+.ex .res{background:var(--red)}
+table.tb th{background:var(--band);color:var(--ink);border-bottom:2px solid var(--red)}
+table.tb tbody tr:nth-child(even) td{background:#f6f8f6}
+.agenda-grid{border-top:3px solid var(--red)}
+.arow{border-bottom:1px solid var(--hair)}
+.arow .n::before{content:""}
+.verdict{border-color:var(--red);background:var(--band);padding:14px 20px}
+.takeaway .inner::before{content:"SUMMARY";color:var(--red)}
+.takeaway q{border-color:var(--red)}
+.offer .tag{border:0;background:var(--red);color:#fff}
+.offer .cta{background:var(--red);box-shadow:none}
+.offer .art .lib{box-shadow:none;border:0}
+/* section: a green divider page with a big figure */
+.section .big{color:#fff;-webkit-text-stroke:0;font:600 240px/1 "Barlow",sans-serif}
+.section .big::before{content:none}
+/* footer: a plain catalogue foot strip */
+.foot{left:0;right:0;bottom:0;height:104px;padding:0 64px;border-top:1px solid var(--rule);background:var(--band)}
+.slide.dark .foot{background:rgba(0,0,0,.14);border-color:rgba(255,255,255,.25)}
+.foot > div{border-inline-start:1px solid var(--rule)}
+.slide.dark .foot > div{border-color:rgba(255,255,255,.25)}
+.foot .lg{flex:0 0 250px;border:0;border-inline-end:0}
+.foot .lg img{height:72px}
+.foot small{font-family:var(--f-mono);letter-spacing:.06em}
+.foot b{font-weight:600;font-size:22px}
+.foot .sh b,.foot .web b{font-family:"Barlow",sans-serif}
+.cover .series{font:600 24px/1.2 var(--f-mono);color:var(--red);letter-spacing:.04em}
+.cover .who{border-top:1px solid var(--rule)}
+.cover .dwg .fig{border:0}
+.cht .bar.s0{fill:var(--ink)}.cht .bar.s1{fill:var(--red)}.cht .ln.s1{stroke:var(--red)}.cht .dot.s1{stroke:var(--red)}.legend i.s1{background:var(--red)}
+.cht .ref{stroke:var(--red)}.cht .reflab{fill:var(--red)}
+.ball{border-color:var(--red);color:var(--red)}
+.leg i{border-color:var(--red);color:var(--red)}
+.head{margin-bottom:12px}

@@ -1,0 +1,8 @@
+{
+  "name": "najdeah",
+  "version": "1.0.0",
+  "description": "Najdeah free slide decks: topic and sources in, a branded PDF out, in one of ten designs (Arabic, English or both).",
+  "author": { "name": "Najdeah", "url": "https://najdeah.com" },
+  "homepage": "https://najdeah.com",
+  "keywords": ["slides", "pdf", "arabic", "engineering", "najdeah"]
+}

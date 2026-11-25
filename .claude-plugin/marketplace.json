@@ -1,0 +1,15 @@
+{
+  "name": "najdeah",
+  "description": "Najdeah tools for Claude Code: free slide decks as PDF.",
+  "owner": {
+    "name": "Najdeah",
+    "url": "https://najdeah.com"
+  },
+  "plugins": [
+    {
+      "name": "najdeah",
+      "source": "./",
+      "description": "Najdeah free slide decks: topic and sources in, a branded PDF out, in one of ten designs."
+    }
+  ]
+}

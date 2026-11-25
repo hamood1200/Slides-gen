@@ -1,0 +1,51 @@
+/* Swiss grid: white, black, one red. A strict left column, oversized numerals, flush-left type,
+   heavy top rule. Nothing decorative that the grid does not need. */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Readex+Pro:wght@400;500;600;700&display=swap");
+:root{--ink:#0d0d0d;--ink-2:#2a2a2a;--muted:#6b6b6b;--red:#e3001b;--paper:#fff;--white:#fff;--rule:#0d0d0d;--hair:#dcdcdc;--grid:transparent;--bp:#0d0d0d;
+  --f-body:"Archivo","Readex Pro",sans-serif;--f-mono:"Archivo",sans-serif}
+html[lang="ar"]{--f-body:"Readex Pro","Archivo",sans-serif}
+.slide{background-image:none}
+.frm,.zn{display:none}
+.slide:not(.dark)::before{content:"";position:absolute;top:0;left:64px;right:64px;height:14px;background:var(--ink)}
+.title{font-weight:800;letter-spacing:-.025em}
+html[lang="ar"] .title{font-weight:700;letter-spacing:0}
+.eyebrow{color:var(--red);font:700 24px/1 var(--f-body);letter-spacing:0}
+.head{border-bottom:0;padding-bottom:12px}
+ul.pts li{border-bottom:0;border-top:2px solid var(--ink)}
+ul.pts li::before{content:none}
+ul.pts li{padding-inline-start:0}
+.fig{border:0;padding:0}
+.fig img{filter:grayscale(1) contrast(1.08)}
+.note{border:0;border-radius:0;background:var(--red);color:#fff}
+.note .k,.note *{color:#fff}
+.card,.step,.stats,.eq,.ex,table.tb,.cht{border:0;border-top:6px solid var(--ink);background:transparent}
+.card .ch{background:transparent}
+.card .ch::before{background:var(--ink)}
+.card.b{border-top-color:var(--red)}
+.card.b .ch::before{background:var(--red)}
+.step .n{color:var(--red);font-weight:900}
+.stat .v{font-weight:900;letter-spacing:-.04em;color:var(--ink)}
+.stat .u{color:var(--red)}
+.ex h4{background:transparent;border-bottom:2px solid var(--ink)}
+.ex .res{background:var(--ink)}
+table.tb th{background:transparent;color:var(--ink);border-bottom:4px solid var(--ink)}
+.verdict{border:0;background:var(--ink);color:#fff;padding:14px 22px}
+.offer .cta{background:var(--red);box-shadow:none}
+/* section: full red, white numeral */
+.slide.dark{--ink:#fff;--ink-2:#fff;--muted:rgba(255,255,255,.75);--red:#fff;--rule:rgba(255,255,255,.5);background-color:#0d0d0d}
+.slide.section{background-color:#e3001b}
+.section .big{color:#fff;-webkit-text-stroke:0;font:900 380px/.85 "Archivo",sans-serif;letter-spacing:-.06em}
+.section .big::before{content:none}
+.foot{left:64px;right:64px;bottom:0;height:100px;padding:0;background:transparent;border-top:2px solid var(--ink)}
+.slide.dark .foot{background:transparent}
+.foot > div{border:0}
+.foot .lg{flex:0 0 230px;border:0}
+.foot .lg img{height:68px}
+.foot small{letter-spacing:0;text-transform:none;font-weight:600}
+.foot .web b{color:var(--red)}
+.cover .series{color:var(--red);font-weight:700}
+.cover .who{border-top:6px solid var(--ink)}
+.cht .bar.s0{fill:var(--ink)}.cht .bar.s1{fill:var(--red)}.cht .ln.s1{stroke:var(--red)}.legend i.s1{background:var(--red)}
+.ball{border-color:var(--red);color:var(--red)}
+.leg i{border-color:var(--red);color:var(--red)}
+.head{margin-bottom:22px}

@@ -1,0 +1,52 @@
+/* Consultant report: the page a client signs off. White, a navy masthead strip, one teal rule,
+   Kufi headings, numbered clauses. Quiet on purpose. */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;600;700&family=Noto+Sans+Arabic:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap");
+:root{--ink:#14233b;--ink-2:#34425a;--muted:#6a7487;--red:#0f7c80;--paper:#fff;--white:#fff;--rule:#c9d0da;--hair:#e4e8ee;--grid:transparent;--bp:#14233b;
+  --f-body:"Source Sans 3","Noto Sans Arabic",sans-serif;--f-mono:"Source Sans 3",sans-serif}
+html[lang="ar"]{--f-body:"Noto Sans Arabic","Source Sans 3",sans-serif}
+.slide{background-image:none}
+.frm,.zn{display:none}
+.slide:not(.dark)::before{content:"";position:absolute;top:0;left:0;right:0;height:18px;background:var(--ink)}
+.slide:not(.dark)::after{content:"";position:absolute;top:18px;inset-inline-start:0;width:340px;height:6px;background:var(--red)}
+.title{font-weight:600;letter-spacing:-.005em}
+html[lang="ar"] .title{font-family:"Noto Kufi Arabic",sans-serif;font-weight:600;line-height:1.45}
+.eyebrow{color:var(--red);font:600 22px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase}
+html[lang="ar"] .eyebrow{font:600 22px/1 var(--f-body);letter-spacing:0}
+.head{border-bottom:1px solid var(--rule);padding-bottom:20px}
+ul.pts li{border-bottom:1px solid var(--hair)}
+ul.pts li::before{content:"";width:22px;height:2px;background:var(--red);top:34px}
+ul.pts li:first-child::before{top:24px}
+.fig{border:0;padding:0}
+.fig .credit{border-top:1px solid var(--rule);padding-top:8px}
+.note{border:0;border-top:2px solid var(--red);border-radius:0;background:#f2f7f7}
+.note .k{color:var(--red)}
+.card,.step,.stats,.eq,.ex,table.tb,.cht{border:1px solid var(--rule)}
+.card .ch{background:#f4f6f9;border-bottom:1px solid var(--rule)}
+.card .ch::before{background:var(--ink)}
+.card.b .ch::before{background:var(--red)}
+.step{border-top:3px solid var(--ink)}
+.step .n{color:var(--red)}
+.stat .v{font-weight:600;color:var(--ink)}
+.stat .u{color:var(--red)}
+.ex h4{background:#f4f6f9;border-bottom:1px solid var(--rule)}
+.ex .res{background:var(--ink)}
+table.tb th{background:var(--ink);color:#fff}
+table.tb tbody tr:nth-child(even) td{background:#f7f9fb}
+.verdict{border:0;border-inline-start:4px solid var(--red);background:#f2f7f7;padding:14px 22px}
+.offer .cta{background:var(--red);box-shadow:none}
+.slide.dark{--ink:#fff;--ink-2:rgba(255,255,255,.86);--muted:rgba(255,255,255,.66);--red:#6fd0d3;--rule:rgba(255,255,255,.3);background-color:#14233b}
+.section .big{color:transparent;-webkit-text-stroke:2px #6fd0d3;font:600 230px/1 "Source Sans 3",sans-serif}
+.section .big::before{content:none}
+.foot{left:64px;right:64px;bottom:0;height:100px;padding:0;background:transparent;border-top:1px solid var(--rule)}
+.slide.dark .foot{background:transparent}
+.foot > div{border-inline-start:1px solid var(--hair)}
+.slide.dark .foot > div{border-color:rgba(255,255,255,.18)}
+.foot .lg{flex:0 0 230px;border:0}
+.foot .lg img{height:68px}
+.cover .series{color:var(--red);font-weight:600}
+.cover .who{border-top:1px solid var(--rule)}
+.cht .bar.s0{fill:var(--ink)}.cht .bar.s1{fill:var(--red)}.cht .ln.s1{stroke:var(--red)}.legend i.s1{background:var(--red)}
+.ball{border-color:var(--red);color:var(--red)}
+.leg i{border-color:var(--red);color:var(--red)}
+.head{margin-bottom:14px}
+html[lang="ar"] .title{line-height:1.3}

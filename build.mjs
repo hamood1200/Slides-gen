@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-// node build.mjs decks/<slug> [--lang ar|en|both] [--no-pdf] [--no-sheet]
-// Writes out/<slug>/<slug>-<lang>.html, .pdf and -sheet.png. No npm packages; needs Google Chrome.
+// node build.mjs <deck folder> [--lang ar|en|both] [--theme <id>] [--out <dir>] [--no-pdf] [--no-sheet]
+// Writes <slug>-<lang>.html, .pdf and -sheet.png to out/<slug>/ (decks inside this repo) or <deck folder>/out/ (anywhere else).
+// No npm packages; needs Google Chrome.
 import { readFileSync, writeFileSync, mkdirSync, existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { join, resolve, basename, normalize } from 'node:path';
@@ -23,6 +24,12 @@ const deck = JSON.parse(readFileSync(deckPath, 'utf8'));
 const slug = deck.slug || basename(resolve(deckDir));
 const want = opt('--lang') || (deck.languages?.length > 1 ? 'both' : deck.languages?.[0]) || 'both';
 const langs = want === 'both' ? ['ar', 'en'] : [want];
+
+// the design: deck.json "theme" (or --theme), one of theme/themes.json; "drawing" is the default
+const THEMES = JSON.parse(readFileSync(new URL('theme/themes.json', ROOT), 'utf8')).themes;
+const themeId = opt('--theme') || deck.theme || 'drawing';
+const theme = THEMES.find(x => x.id === themeId);
+if (!theme) { console.error(`  ERROR unknown theme "${themeId}". Pick one of: ${THEMES.map(x => x.id).join(', ')}`); process.exit(1); }
 
 const brand = JSON.parse(readFileSync(new URL('brand/brand.json', ROOT), 'utf8'));
 const cat = loadCatalogue(ROOT);
@@ -64,12 +71,18 @@ if (pick.offer) for (const lang of langs) {
 for (const w of warnings) console.warn('  warn  ' + w);
 if (errors.length) { for (const e of errors) console.error('  ERROR ' + e); process.exit(1); }
 
-console.log(`${slug}: ${plan.length}/${maxSlides(deck)} slides, ${sections.length} sections`);
+console.log(`${slug}: theme ${theme.id}, ${plan.length}/${maxSlides(deck)} slides, ${sections.length} sections`);
 console.log(`  offer: ${pick.offer ? pick.offer.id : 'none'} (${pick.reason})`);
 if (pick.ranked) console.log('  ranked: ' + pick.ranked.slice(0, 4).map(r => `${r.offer.id} ${r.score}`).join(' · '));
 
 // ---------- render ----------
-const outDir = new URL(`out/${slug}/`, ROOT);
+const repo = fileURLToPath(ROOT);
+const deckBase = deckDir.endsWith('.json') ? resolve(deckDir, '..') : resolve(deckDir);
+const inRepo = deckBase.startsWith(resolve(repo, 'decks'));
+const outDir = opt('--out') ? pathToFileURL(resolve(opt('--out')) + '/') : inRepo ? new URL(`out/${slug}/`, ROOT) : pathToFileURL(join(deckBase, 'out') + '/');
+// a picture path is looked up in the deck folder, then the working folder, then this repo (brand/, theme/)
+const apath = p => [resolve(deckBase, p), resolve(p), resolve(repo, p)].find(existsSync) || resolve(repo, p);
+const aurl = p => pathToFileURL(apath(p)).href;
 mkdirSync(outDir, { recursive: true });
 const CHROME = process.env.CHROME || ['/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', '/usr/bin/google-chrome', '/usr/bin/chromium'].find(existsSync);
 const chrome = (extra, url) => {
@@ -82,23 +95,23 @@ const chrome = (extra, url) => {
 
 // photo credits (tools/find-photo.mjs writes them) and the optional cover drawing, an SVG file inlined
 // so it picks up the theme's fonts and colours
-const repo = fileURLToPath(ROOT);
 const credits = {};
-const credFile = resolve(deckDir.endsWith('.json') ? resolve(deckDir, '..') : deckDir, 'img/credits.json');
+const credFile = resolve(deckBase, 'img/credits.json');
 if (existsSync(credFile)) for (const [k, v] of Object.entries(JSON.parse(readFileSync(credFile, 'utf8')))) credits[normalize(k)] = v;
 for (const s of [deck.cover, ...deck.slides]) {
   for (const img of [s.image || s.photo].flatMap(v => v && typeof v === 'object' ? Object.values(v) : [v]))   // an image may differ per language
   if (img && !/^https?:/.test(img) && !credits[normalize(img)] && !img.startsWith('brand/')) console.warn(`  warn  no credit for ${img}; add it with tools/find-photo.mjs or to img/credits.json`);
 }
-const drawing = deck.cover.drawing ? readFileSync(resolve(repo, deck.cover.drawing), 'utf8') : null;
+const drawing = deck.cover.drawing ? readFileSync(apath(deck.cover.drawing), 'utf8') : null;
 
 let bad = 0;
 for (const lang of langs) {
-  const html = renderDeck(deck, plan, lang, { brand, credits: new Proxy(credits, { get: (o, k) => o[normalize(String(k))] }), drawing });
+  const html = renderDeck(deck, plan, lang, { brand, theme, url: aurl, path: apath, credits: new Proxy(credits, { get: (o, k) => o[normalize(String(k))] }), drawing });
   const file = new URL(`${slug}-${lang}.html`, outDir);
   writeFileSync(file, html);
   const url = pathToFileURL(fileURLToPath(file)).href;
-  console.log(`  ${lang}: out/${slug}/${slug}-${lang}.html`);
+  const rel = f => fileURLToPath(new URL(f, outDir));
+  console.log(`  ${lang}: ${rel(`${slug}-${lang}.html`)}`);
   if (!CHROME) { console.warn('  Chrome not found; set CHROME=/path/to/chrome for PDF and checks'); continue; }
 
   const dom = chrome(['--dump-dom'], url);
@@ -110,11 +123,11 @@ for (const lang of langs) {
   if (!flag('--no-sheet')) {
     const rows = Math.ceil(plan.length / 4);
     chrome([`--screenshot=${fileURLToPath(new URL(`${slug}-${lang}-sheet.png`, outDir))}`, `--window-size=1984,${rows * 286 + 16}`], url + '#sheet');
-    console.log(`  ${lang}: out/${slug}/${slug}-${lang}-sheet.png`);
+    console.log(`  ${lang}: ${rel(`${slug}-${lang}-sheet.png`)}`);
   }
   if (!flag('--no-pdf')) {
     chrome([`--print-to-pdf=${fileURLToPath(new URL(`${slug}-${lang}.pdf`, outDir))}`, '--no-pdf-header-footer'], url);
-    console.log(`  ${lang}: out/${slug}/${slug}-${lang}.pdf`);
+    console.log(`  ${lang}: ${rel(`${slug}-${lang}.pdf`)}`);
   }
 }
 if (bad) { console.error(`\n${bad} slide(s) overflow. Shorten the text or split the slide, then build again.`); process.exit(2); }

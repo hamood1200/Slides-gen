@@ -1,0 +1,53 @@
+/* Technical journal: a printed article page. Cream stock, Naskh and serif headlines,
+   a double rule under the running head, one oxblood accent. */
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap");
+:root{--ink:#221d18;--ink-2:#3e362e;--muted:#786d60;--red:#7a1f2b;--paper:#f3ede1;--white:#fbf8f1;--rule:#b8ab95;--hair:#ddd3c1;--grid:transparent;--bp:#221d18;
+  --f-body:"Source Serif 4","Noto Naskh Arabic",serif;--f-mono:"Source Serif 4",serif}
+html[lang="ar"]{--f-body:"Noto Naskh Arabic","Source Serif 4",serif}
+.slide{background-image:none}
+.frm,.zn{display:none}
+.title{font-family:"Source Serif 4",serif;font-weight:600;letter-spacing:-.01em}
+html[lang="ar"] .title{font-family:"Amiri",serif;font-weight:700;line-height:1.35}
+.eyebrow{color:var(--red);font:italic 600 24px/1 "Source Serif 4",serif;letter-spacing:.02em}
+html[lang="ar"] .eyebrow{font:600 24px/1 var(--f-body)}
+.head{border-bottom:0;padding-bottom:22px;box-shadow:0 1px 0 var(--ink),0 6px 0 -3px var(--paper),0 6px 0 -2px var(--ink)}
+ul.pts li{border-bottom:1px solid var(--hair)}
+ul.pts li::before{content:"■";width:auto;height:auto;background:none;color:var(--red);font:12px/1 serif;top:32px}
+ul.pts li:first-child::before{top:22px}
+.fig{border:0;padding:0;background:transparent}
+.fig img{filter:sepia(.12) contrast(1.02)}
+.fig .credit{font-style:italic}
+.note{border:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);border-radius:0;background:transparent}
+.note .k{color:var(--red);font-style:italic}
+.card,.step,.stats,.eq,.ex,table.tb,.cht{border:0;border-top:2px solid var(--ink);background:transparent}
+.card .ch{background:transparent;border-bottom:1px solid var(--rule)}
+.card .ch::before{background:var(--ink)}
+.card.b .ch::before{background:var(--red)}
+.step .n{color:var(--red);font-style:italic}
+.stat .v{font-family:"Source Serif 4",serif;font-weight:600;color:var(--ink)}
+.stat .u{color:var(--red)}
+.eq{border-bottom:1px solid var(--rule)}
+.ex h4{background:transparent;border-bottom:1px solid var(--rule);font-style:italic}
+.ex .res{background:var(--red)}
+table.tb th{background:transparent;color:var(--ink);border-bottom:1px solid var(--ink)}
+table.tb tbody tr:nth-child(even) td{background:rgba(255,255,255,.45)}
+.verdict{border:0;border-top:1px solid var(--red);border-bottom:1px solid var(--red);color:var(--red);padding:12px 0;background:transparent}
+.takeaway q{border-color:var(--red)}
+.offer .cta{background:var(--red);box-shadow:none}
+/* no black pages: section, dhikr and closing stay on the same stock */
+.slide.dark{--ink:#221d18;--ink-2:#3e362e;--muted:#786d60;--red:#7a1f2b;--rule:#b8ab95;background-color:var(--paper)}
+.section .big{color:var(--red);-webkit-text-stroke:0;font:italic 600 240px/1 "Source Serif 4",serif}
+.section .big::before{content:none}
+.foot{left:64px;right:64px;bottom:0;height:100px;padding:0;background:transparent;border-top:1px solid var(--ink)}
+.slide.dark .foot{background:transparent}
+.foot > div{border-inline-start:1px solid var(--hair)}
+.foot .lg{flex:0 0 230px;border:0}
+.foot .lg img{height:68px}
+.foot small{font-style:italic;letter-spacing:.02em;text-transform:none}
+.cover .series{color:var(--red);font-style:italic}
+.cover .who{border-top:1px solid var(--ink)}
+.cht .bar.s0{fill:var(--ink)}.cht .bar.s1{fill:var(--red)}.cht .ln.s1{stroke:var(--red)}.legend i.s1{background:var(--red)}
+.ball{border-color:var(--red);color:var(--red)}
+.leg i{border-color:var(--red);color:var(--red)}
+.head{margin-bottom:12px}
+html[lang="ar"] .title{line-height:1.25}

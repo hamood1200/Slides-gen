@@ -1,0 +1,205 @@
+{
+  "_readme": "The deck tools/themes.mjs draws in every design for the preview sheet. --title swaps in the user's own title.",
+  "slug": "theme-sample",
+  "languages": [
+    "ar",
+    "en"
+  ],
+  "offer": "none",
+  "presenter": false,
+  "agenda": false,
+  "cover": {
+    "title": {
+      "en": "Sizing a cable for a solar plant",
+      "ar": "اختيار مقطع الكيبل لمحطة شمسية"
+    },
+    "subtitle": {
+      "en": "Current, voltage drop and the derating that people forget",
+      "ar": "التيار وهبوط الجهد، والـ derating اللي كثير ناس بتنساه"
+    },
+    "photo": "brand/photos/cover-ground-mount.jpg"
+  },
+  "slides": [
+    {
+      "type": "section",
+      "title": {
+        "en": "Current first",
+        "ar": "التيار أولاً"
+      },
+      "sub": {
+        "en": "What the cable has to carry, and in what heat",
+        "ar": "شو لازم يحمل الكيبل، وبأي حرارة"
+      }
+    },
+    {
+      "type": "bullets",
+      "title": {
+        "en": "Three checks before you pick a size",
+        "ar": "ثلاث فحوصات قبل ما تختار المقطع"
+      },
+      "points": {
+        "en": [
+          {
+            "text": "Ampacity after derating",
+            "sub": "Soil, grouping and ambient temperature all cut it"
+          },
+          {
+            "text": "Voltage drop",
+            "sub": "Keep DC strings under 1 to 1.5%"
+          },
+          "Short-circuit withstand of the screen"
+        ],
+        "ar": [
+          {
+            "text": "الـ Ampacity بعد الـ derating",
+            "sub": "التربة وتجميع الكوابل وحرارة الجو كلها بتنزّله"
+          },
+          {
+            "text": "هبوط الجهد",
+            "sub": "خلّيه تحت 1 إلى 1.5% على الـ DC strings"
+          },
+          "تحمّل الـ Screen لتيار القصر"
+        ]
+      },
+      "image": "brand/photos/photo-rooftop-array.jpg"
+    },
+    {
+      "type": "formula",
+      "title": {
+        "en": "Voltage drop on a DC string",
+        "ar": "هبوط الجهد على DC string"
+      },
+      "rule": {
+        "en": "Double the length: the current goes out and comes back.",
+        "ar": "اضرب الطول باثنين، لأن التيار بيروح وبيرجع."
+      },
+      "tex": "\\Delta V = \\frac{2\\,L\\,I\\,\\rho}{A}",
+      "where": {
+        "en": "L length (m), I current (A), ρ = 0.0175 Ω·mm²/m for copper, A section (mm²)",
+        "ar": "L الطول (m)، I التيار (A)، ρ = 0.0175 Ω·mm²/m للنحاس، A المقطع (mm²)"
+      },
+      "example": {
+        "rows": [
+          [
+            {
+              "en": "Length",
+              "ar": "الطول"
+            },
+            "60 m"
+          ],
+          [
+            {
+              "en": "Current",
+              "ar": "التيار"
+            },
+            "13 A"
+          ],
+          [
+            {
+              "en": "Section",
+              "ar": "المقطع"
+            },
+            "6 mm²"
+          ]
+        ],
+        "result": "ΔV ≈ 4.6 V"
+      }
+    },
+    {
+      "type": "stats",
+      "title": {
+        "en": "Example values for one string",
+        "ar": "قيم مثال لـ string واحد"
+      },
+      "stats": [
+        {
+          "value": "13",
+          "unit": "A",
+          "label": {
+            "en": "String current",
+            "ar": "تيار الـ string"
+          }
+        },
+        {
+          "value": "0.6",
+          "unit": "%",
+          "label": {
+            "en": "Voltage drop at 780 V",
+            "ar": "هبوط الجهد على 780 V"
+          }
+        },
+        {
+          "value": "6",
+          "unit": "mm²",
+          "label": {
+            "en": "Copper section",
+            "ar": "مقطع النحاس"
+          }
+        }
+      ],
+      "source": {
+        "en": "Example values, not a design",
+        "ar": "قيم مثال، مش تصميم"
+      }
+    },
+    {
+      "type": "compare",
+      "title": {
+        "en": "Copper or aluminium",
+        "ar": "نحاس أو ألمنيوم"
+      },
+      "columns": [
+        {
+          "title": {
+            "en": "Copper",
+            "ar": "نحاس"
+          },
+          "points": {
+            "en": [
+              "Smaller section",
+              "Easy terminations"
+            ],
+            "ar": [
+              "مقطع أصغر",
+              "تركيب الأطراف أسهل"
+            ]
+          }
+        },
+        {
+          "title": {
+            "en": "Aluminium",
+            "ar": "ألمنيوم"
+          },
+          "points": {
+            "en": [
+              "Cheaper per metre",
+              "Needs bimetal lugs"
+            ],
+            "ar": [
+              "أرخص بالمتر",
+              "بدّه Bimetal lugs"
+            ]
+          }
+        }
+      ],
+      "verdict": {
+        "en": "Long AC runs: aluminium. Short DC strings: copper.",
+        "ar": "الخطوط الـ AC الطويلة ألمنيوم، والـ DC strings القصيرة نحاس."
+      }
+    },
+    {
+      "type": "section",
+      "title": {
+        "en": "Laying and checks",
+        "ar": "التمديد والفحص"
+      }
+    },
+    {
+      "type": "takeaway",
+      "text": {
+        "en": "Pick the size on the worst day: hottest soil, longest run, full current.",
+        "ar": "اختار المقطع على أسوأ يوم: أسخن تربة، وأطول مسافة، وأعلى تيار."
+      }
+    }
+  ]
+}

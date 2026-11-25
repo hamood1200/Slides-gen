@@ -154,9 +154,9 @@ html[lang="ar"] .presenter .role{font-family:var(--f-body)}
 
 /* ---------- section divider: blueprint ---------- */
 .section .inner{position:absolute;top:92px;bottom:196px;left:150px;right:150px;display:flex;flex-direction:column;justify-content:center}
-.section .big{font:600 200px/1 var(--f-mono);color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.85);margin-bottom:24px;direction:ltr;align-self:flex-start}
-.section .big::before{content:"§";-webkit-text-stroke:2px #ff7b7f;margin-inline-end:20px}
-.section h2{font:700 var(--t-hero)/1.12 var(--f-body);color:#fff;max-width:1500px}
+.section .big{font:600 200px/1 var(--f-mono);color:transparent;-webkit-text-stroke:2px var(--ink-2);margin-bottom:24px;direction:ltr;align-self:flex-start}
+.section .big::before{content:"§";-webkit-text-stroke:2px var(--red);margin-inline-end:20px}
+.section h2{font:700 var(--t-hero)/1.12 var(--f-body);color:var(--ink);max-width:1500px}
 html[lang="ar"] .section h2{line-height:1.3}
 .section .sub{font-size:var(--t-h3);color:var(--ink-2);margin-top:26px;max-width:1350px;line-height:1.42}
 
@@ -249,25 +249,25 @@ html[lang="ar"] .offer h3{font-size:54px;line-height:1.35}
 
 /* ---------- dhikr (opening remembrance): blueprint ---------- */
 .dhikr .inner{position:absolute;top:92px;bottom:196px;left:112px;right:112px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.dhikr .pre{font:500 22px/1 var(--f-mono);color:#ff7b7f;letter-spacing:.14em;text-transform:uppercase;margin-bottom:30px}
+.dhikr .pre{font:500 22px/1 var(--f-mono);color:var(--red);letter-spacing:.14em;text-transform:uppercase;margin-bottom:30px}
 html[lang="ar"] .dhikr .pre{letter-spacing:0;font:600 36px/1 var(--f-body)}
-.dhikr .phrase{font:900 170px/1.5 "Madani Arabic","IBM Plex Sans Arabic",sans-serif;color:#fff}
-.dhikr .tr{margin-top:24px;font:italic 400 var(--t-h3)/1.3 "IBM Plex Sans",sans-serif;color:rgba(255,255,255,.88)}
-.dhikr .tr span{display:block;font-style:normal;font-size:var(--t-small);color:rgba(255,255,255,.62);margin-top:12px}
+.dhikr .phrase{font:900 170px/1.5 "Madani Arabic","IBM Plex Sans Arabic",sans-serif;color:var(--ink)}
+.dhikr .tr{margin-top:24px;font:italic 400 var(--t-h3)/1.3 "IBM Plex Sans",sans-serif;color:var(--ink-2)}
+.dhikr .tr span{display:block;font-style:normal;font-size:var(--t-small);color:var(--muted);margin-top:12px}
 
 /* ---------- closing: blueprint ---------- */
 .closing .inner{position:absolute;top:92px;bottom:196px;left:140px;right:140px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:80px}
-.closing h2{font:700 116px/1.05 var(--f-body);color:#fff}
+.closing h2{font:700 116px/1.05 var(--f-body);color:var(--ink)}
 html[lang="ar"] .closing h2{font-size:104px;line-height:1.3}
-.closing .who{margin-top:30px;font-size:var(--t-h3);color:#fff;font-weight:600}
-.closing .who span{display:block;font-size:var(--t-small);color:rgba(255,255,255,.7);margin-top:8px;font-weight:400}
+.closing .who{margin-top:30px;font-size:var(--t-h3);color:var(--ink);font-weight:600}
+.closing .who span{display:block;font-size:var(--t-small);color:var(--muted);margin-top:8px;font-weight:400}
 .closing .clogo{height:130px;width:auto;margin-bottom:46px;display:block}
-.closing .ct{border:2px solid #fff;padding:6px 40px}
-.closing .ct div{display:flex;flex-direction:column;padding:20px 0;border-bottom:1px dashed rgba(255,255,255,.3)}
+.closing .ct{border:2px solid var(--ink);padding:6px 40px}
+.closing .ct div{display:flex;flex-direction:column;padding:20px 0;border-bottom:1px dashed var(--rule)}
 .closing .ct div:last-child{border:0}
-.closing .ct .k{font:500 16px/1 var(--f-mono);color:#ff7b7f;text-transform:uppercase;letter-spacing:.12em}
+.closing .ct .k{font:500 16px/1 var(--f-mono);color:var(--red);text-transform:uppercase;letter-spacing:.12em}
 html[lang="ar"] .closing .ct .k{letter-spacing:0;font:600 22px/1.2 var(--f-body)}
-.closing .ct .v{font:600 var(--t-h3) var(--f-mono);color:#fff;direction:ltr;unicode-bidi:isolate;margin-top:10px}
+.closing .ct .v{font:600 var(--t-h3) var(--f-mono);color:var(--ink);direction:ltr;unicode-bidi:isolate;margin-top:10px}
 html[dir="rtl"] .closing .ct .v{text-align:right}
 
 /* contact sheet: out/<slug>/<slug>-<lang>.html#sheet */
@@ -309,3 +309,6 @@ html[lang="ar"] .cht text[direction="rtl"]{font-family:var(--f-body)}
 .legend i.s0{background:var(--ink)} .legend i.s1{background:var(--red)} .legend i.s2{background:#7d8ca3} .legend i.s3{background:#b9a27a}
 .chart figcaption{font:400 var(--t-tiny) var(--f-mono);color:var(--muted);margin-top:10px}
 html[lang="ar"] .chart figcaption{font-family:var(--f-body)}
+/* preview tile for tools/themes.mjs: #pick=1,4,5,3 shows those slides in a 2×2 grid */
+.sheet.pick{grid-template-columns:repeat(2,576px);background:#d9d6cf}
+.sheet.pick .slide{zoom:.3}

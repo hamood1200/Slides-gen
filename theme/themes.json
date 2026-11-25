@@ -1,0 +1,15 @@
+{
+  "_readme": "The ten designs. deck.json \"theme\": \"<id>\" picks one; theme/slides.css is the base (drawing), theme/themes/<id>.css restyles it. logo: auto = white on dark slides, white = always white, color = always the colour logo. tools/themes.mjs draws the preview sheet.",
+  "themes": [
+    { "id": "drawing",   "logo": "auto",  "name": { "en": "Drawing sheet",     "ar": "لوحة هندسية" },     "about": { "en": "Paper, grid, title block, navy and red marks", "ar": "ورق وشبكة وجدول عنوان، كحلي مع علامات حمراء" } },
+    { "id": "blueprint", "logo": "white", "name": { "en": "Blueprint",         "ar": "بلوبرنت" },          "about": { "en": "White lines on blueprint blue, every slide", "ar": "خطوط بيضاء على أزرق البلوبرنت بكل السلايدات" } },
+    { "id": "datasheet", "logo": "auto",  "name": { "en": "Datasheet",         "ar": "داتا شيت" },         "about": { "en": "A maker's catalogue page: white, grey bands, green tabs", "ar": "صفحة كتالوج مصنّع: أبيض، أشرطة رمادية، تبويبات خضراء" } },
+    { "id": "hoarding",  "logo": "auto",  "name": { "en": "Site hoarding",     "ar": "لوحة موقع" },        "about": { "en": "Safety yellow, black, hazard stripes, heavy type", "ar": "أصفر السلامة والأسود وشريط التحذير وخط عريض" } },
+    { "id": "notebook",  "logo": "color",  "name": { "en": "Field notebook",    "ar": "دفتر الموقع" },      "about": { "en": "Squared paper, margin line, ink blue, hand-lettered titles", "ar": "ورق مربعات وهامش أحمر وحبر أزرق وعناوين بخط اليد" } },
+    { "id": "report",    "logo": "auto",  "name": { "en": "Consultant report", "ar": "تقرير استشاري" },    "about": { "en": "White page, navy masthead, teal rule, quiet and formal", "ar": "صفحة بيضاء وترويسة كحلية وخط تركوازي، رسمي وهادئ" } },
+    { "id": "journal",   "logo": "color", "name": { "en": "Technical journal", "ar": "مجلة تقنية" },       "about": { "en": "Cream paper, serif headlines, oxblood accent", "ar": "ورق كريمي وعناوين بخط النسخ ولون خمري" } },
+    { "id": "swiss",     "logo": "auto" , "name": { "en": "Swiss grid",        "ar": "شبكة سويسرية" },     "about": { "en": "White, black, one red, huge numbers, strict grid", "ar": "أبيض وأسود وأحمر واحد وأرقام ضخمة وشبكة صارمة" } },
+    { "id": "scada",     "logo": "white", "name": { "en": "Control room",      "ar": "غرفة تحكم" },        "about": { "en": "Dark HMI panels, status green and amber, mono labels", "ar": "شاشات تحكم داكنة بأخضر وكهرماني وخط مونو" } },
+    { "id": "print",     "logo": "color", "name": { "en": "Print and copy",    "ar": "للطباعة" },          "about": { "en": "Black on white only, thick rules, survives a photocopier", "ar": "أسود على أبيض فقط وخطوط سميكة، يتحمّل التصوير" } }
+  ]
+}
